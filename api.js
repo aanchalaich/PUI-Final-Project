@@ -16,6 +16,10 @@ req.headers({
 	"useQueryString": true
 });*/
 
+//const { readFile } = require("fs");
+
+//new File([""], "Analysis.xlsx");
+
 var outsideResolve;
 var outsideReject;
 var financialData;
@@ -49,7 +53,42 @@ function getToken() {
 			console.log(res.body);
 			//console.log(outsideResolve);
 
-			'use strict'
+			'use strict';
+
+			const fs = require('fs');
+
+		
+
+			//APIData = JSON.parse(sessionStorage.getItem('APIData')) || {};
+
+			let APIData = {
+				'previousClose': ((outsideResolve.previousClose.raw === 'undefined') ? 'N/A' : outsideResolve.previousClose.raw),
+				'Open': ((outsideResolve.regularMarketOpen.raw === 'undefined') ? 'N/A' : outsideResolve.regularMarketOpen.raw),
+				'Volume': ((outsideResolve.regularMarketVolume.raw === 'undefined') ? 'N/A' : outsideResolve.regularMarketVolume.raw),
+				'averageVolume': ((outsideResolve.averageDailyVolume10Day.raw === 'undefined') ? 'N/A' : outsideResolve.averageDailyVolume10Day.raw),
+				'marketCap': ((outsideResolve.marketCap.raw === 'undefined') ? 'N/A' : outsideResolve.marketCap.raw),
+				'Beta': ((outsideResolve.beta.raw === 'undefined') ? 'N/A' : outsideResolve.beta.raw),
+				'DPS': ((outsideResolve.dividendRate.raw === 'undefined') ? 'None' : outsideResolve.dividendRate.raw),
+				'dividendYield': ((outsideResolve.dividendYield.raw === 'undefined') ? 'N/A' : outsideResolve.dividendYield.raw),
+				'targetPrice': ((financialData.targetMedianPrice.raw === 'undefined') ? 'N/A' : financialData.targetMedianPrice.raw),
+				'psRatio': ((outsideResolve.priceToSalesTrailing12Months.raw === 'undefined') ? 'N/A' : outsideResolve.priceToSalesTrailing12Months.raw),
+				'pbRatio': 'pbRatio',
+				'peRatio': ((indexTrend.peRatio.raw === 'undefined') ? 'N/A' : indexTrend.peRatio.raw),
+				'epsRatio': 'EPS Ratio',
+				'evSalesRatio': 'EV/Sales Ratio',
+				'evEbitdaRatio': 'EV/EBITDA Ratio',
+				'evNoplatRatio': 'EV/NOPLAT Ratio',
+				'evCapitalRatio': 'EV/Capital Ratio'
+			};
+
+			//localStorage.setItem('APIData', JSON.stringify(APIData));
+
+			let APIDataFinal = JSON.stringify(APIData);
+			fs.writeFileSync('APIData.json', APIDataFinal);
+
+
+
+
 
 			const Excel = require('exceljs')
 
@@ -81,13 +120,19 @@ function getToken() {
 
 
 
-			worksheet.getRow(2).values = [outsideResolve.previousClose.raw, outsideResolve.regularMarketOpen.raw, outsideResolve.regularMarketVolume.raw, 
-				outsideResolve.averageDailyVolume10Day.raw, outsideResolve.marketCap.raw, outsideResolve.beta.raw, outsideResolve.dividendRate.raw, 
-				outsideResolve.dividendYield.raw, financialData.targetMedianPrice, outsideResolve.priceToSalesTrailing12Montyhs.raw, 'pbRatio', indexTrend.peRatio.raw, 'epsRatio', 'evSalesRatio', 'evEbitdaRatio', 'evNoplatRatio', 'evCapitalRatio'];
+			worksheet.getRow(2).values = [((outsideResolve.previousClose.raw === 'undefined') ? 'N/A' : outsideResolve.previousClose.raw), ((outsideResolve.regularMarketOpen.raw === 'undefined') ? 'N/A' : outsideResolve.regularMarketOpen.raw), ((outsideResolve.regularMarketVolume.raw === 'undefined') ? 'N/A' : outsideResolve.regularMarketVolume.raw),
+			((outsideResolve.averageDailyVolume10Day.raw === 'undefined') ? 'N/A' : outsideResolve.averageDailyVolume10Day.raw), ((outsideResolve.marketCap.raw === 'undefined') ? 'N/A' : outsideResolve.marketCap.raw), ((outsideResolve.beta.raw === 'undefined') ? 'N/A' : outsideResolve.beta.raw), ((outsideResolve.dividendRate.raw === 'undefined') ? 'N/A' : outsideResolve.dividendRate.raw),
+			((outsideResolve.dividendYield.raw === 'undefined') ? 'N/A' : outsideResolve.dividendYield.raw), ((financialData.targetMedianPrice.raw === 'undefined') ? 'N/A' : financialData.targetMedianPrice.raw), ((outsideResolve.priceToSalesTrailing12Months.raw === 'undefined') ? 'N/A' : outsideResolve.priceToSalesTrailing12Months.raw),
+				'pbRatio', ((indexTrend.peRatio.raw === 'undefined') ? 'N/A' : indexTrend.peRatio.raw), 'epsRatio', 'evSalesRatio', 'evEbitdaRatio', 'evNoplatRatio', 'evCapitalRatio'];
+
+
 
 			workbook.xlsx.writeFile('Analysis.xlsx');
 
+
 			return outsideResolve;
+
+
 
 			//return resolve(res.body.summaryDetail);
 
@@ -95,6 +140,24 @@ function getToken() {
 
 	})
 }
+
+/*function gbid(s) { return document.getElementById(s); }
+
+function GetData(filename, id, cell, row) {
+	//readFile(filename);
+	var excel_file = excel.Workbooks.Open("I:\\Analysis.xlsx");
+	var sht = excel.Worksheets("Sheet1");
+
+	document.getElementById(id).innerText = sht.Cells(cell, row).Value;
+
+	excel_file.Close();
+	excel.Quit();
+
+
+}*/
+
+
+
 
 //getToken().then(myAsyncFunc);
 
@@ -117,6 +180,27 @@ function getToken() {
 
 //console.log(response);
 
+function getData(id) {
+	
+	'use strict';
+
+	const fs = require('fs');
+
+	let rawdata = fs.readFileSync('APIData.json');
+	let apidata = JSON.parse(rawdata);
+	//console.log(apidata);
+	
+	//console.log("yeet");
+	//console.log(apidata.Open);
+
+	document.getElementById(id).innerHTML = JSON.stringify(apidata.Open);
+	alert('success');
+	return apidata[0];
+}
+
+//console.log(getData());
+
+
 function didItSave(message, callback) {
 
 	console.log('done');
@@ -125,7 +209,7 @@ function didItSave(message, callback) {
 
 }
 
-console.log(didItSave('It worked!', getToken()));
+//console.log(didItSave('It worked!', getToken()));
 
 /*'use strict'
 
@@ -164,11 +248,11 @@ worksheet.getRow(2).values = [outsideResolve.previousClose.raw, outsideResolve.r
 
 //var array;
 
-/*const myAsyncFunc = (result) => { 
+/*const myAsyncFunc = (result) => {
 	array = result;
 	console.log(array);
 	//worksheet.getRow(2).values
-	
+
  };
 
 
