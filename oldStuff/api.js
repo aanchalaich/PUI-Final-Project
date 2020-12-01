@@ -1,4 +1,3 @@
-
 /*var unirest = require("unirest");
 
 var req = unirest("GET", "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-analysis");
@@ -25,8 +24,10 @@ var outsideReject;
 var financialData;
 var indexTrend;
 
+
 function getToken() {
 	return new Promise((resolve, reject) => {
+		
 		var unirest = require("unirest");
 
 		var req = unirest("GET", "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-analysis");
@@ -49,15 +50,15 @@ function getToken() {
 			outsideResolve = res.body.summaryDetail;
 			financialData = res.body.financialData;
 			indexTrend = res.body.indexTrend;
-			console.log("what the hell");
-			console.log(res.body);
+			//console.log("what the hell");
+			//console.log(res.body);
 			//console.log(outsideResolve);
 
 			'use strict';
 
 			const fs = require('fs');
 
-		
+
 
 			//APIData = JSON.parse(sessionStorage.getItem('APIData')) || {};
 
@@ -74,23 +75,34 @@ function getToken() {
 				'psRatio': ((outsideResolve.priceToSalesTrailing12Months.raw === 'undefined') ? 'N/A' : outsideResolve.priceToSalesTrailing12Months.raw),
 				'pbRatio': 'pbRatio',
 				'peRatio': ((indexTrend.peRatio.raw === 'undefined') ? 'N/A' : indexTrend.peRatio.raw),
-				'epsRatio': 'EPS Ratio',
-				'evSalesRatio': 'EV/Sales Ratio',
-				'evEbitdaRatio': 'EV/EBITDA Ratio',
-				'evNoplatRatio': 'EV/NOPLAT Ratio',
-				'evCapitalRatio': 'EV/Capital Ratio'
 			};
+
+			
 
 			//localStorage.setItem('APIData', JSON.stringify(APIData));
 
-			let APIDataFinal = JSON.stringify(APIData);
+			var APIDataFinal = JSON.stringify(APIData);
+			var datajson = fs.readFileSync(`APIData.js`);
+			//var data = JSON.parse(datajson);
+
+			var newData = Object.assign({}, API, APIDataFinal);
 			fs.writeFileSync('APIData.json', APIDataFinal);
 
+			
+
+			
+			//fs.writeFileSync('APIData.js', createObject);
+			//global.globalString=APIDataFinal;
+			//console.log(global.globalString);
+			//exports.globalData = APIDataFinal;
+			//var globaldata = require('./globalData.js');
+			//globaldata = APIDataFinal;
 
 
 
 
-			const Excel = require('exceljs')
+
+			/*const Excel = require('exceljs')
 
 			// need to create a workbook object. Almost everything in ExcelJS is based off of the workbook object.
 			let workbook = new Excel.Workbook()
@@ -127,10 +139,12 @@ function getToken() {
 
 
 
-			workbook.xlsx.writeFile('Analysis.xlsx');
+			workbook.xlsx.writeFile('Analysis.xlsx');*/
 
 
-			return outsideResolve;
+
+
+			return APIDataFinal;
 
 
 
@@ -180,25 +194,31 @@ function GetData(filename, id, cell, row) {
 
 //console.log(response);
 
-function getData(id) {
-	
+
+
+
+
+/*function getData(id) {
+
 	'use strict';
 
-	const fs = require('fs');
+	//var requirejs = require("requirejs");
 
-	let rawdata = fs.readFileSync('APIData.json');
-	let apidata = JSON.parse(rawdata);
+	//const fs = require('fs');
+
+	//let rawdata = fs.readFileSync('APIData.json');
+	let apidata = JSON.parse('APIData.json');
 	//console.log(apidata);
-	
+
 	//console.log("yeet");
 	//console.log(apidata.Open);
 
-	document.getElementById(id).innerHTML = JSON.stringify(apidata.Open);
-	alert('success');
-	return apidata[0];
-}
+	//document.getElementById(id).innerHTML = JSON.stringify(apidata.Open);
+	//lert('success');
+	//return apidata[0];
+};*/
 
-//console.log(getData());
+
 
 
 function didItSave(message, callback) {
@@ -263,3 +283,13 @@ worksheet.getRow(2).values = [outsideResolve.previousClose.raw, outsideResolve.r
 
 
 workbook.xlsx.writeFile('Analysis.xlsx');*/
+
+async function setData() {
+	var x = await getToken();
+	//var msg = require('./globalData.js');
+	//(async () => console.log(await getToken()))()
+	console.log(await(getToken()));
+}
+
+console.log(setData());
+
