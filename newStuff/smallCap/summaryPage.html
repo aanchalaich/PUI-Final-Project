@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--styles-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <script src="interactive.js"></script>
+
+
+
+
+
+
+    <!--javascript-->
+
+    <!--<script data-main="config" src="require.js">
+    </script>
+
+    <script>
+        require(['config'], function() {
+            //require(['jqueryFile']);
+            require(['api']);
+            alert('yo');
+        });
+    </script>-->
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col" style="padding: 50px; background-color: violet;">span 4</div>
+            <div class="col" style="padding: 50px; background-color: khaki;">span 4</div>
+            <div class="col" style="padding: 50px; background-color: violet;">span 4</div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="padding: 30px; background-color: khaki;">
+                <p>Summary Page</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="padding: 30px; background-color: khaki;">
+                <p>Description goes here</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="padding: 50px; background-color: violet;">
+                <div class="row">
+                    <div class="col" style="background-color: khaki;"><button
+                            onclick="changeImage('headImage', 'images/price.png')">
+                            <p>Price</p>
+                        </button></div>
+                    <div class="col" style="background-color: khaki;"><button
+                            onclick="changeImage('headImage', 'images/previousClose.png')">
+                            <p>Previous Close</p>
+                        </button></div>
+                    <div class="col" style="background-color: khaki;"><button
+                            onclick="changeImage('headImage', 'images/open.png')">
+                            <p>Open</p>
+                        </button></div>
+                    <div class="col" style="background-color: khaki;"><button
+                            onclick="changeImage('headImage', 'images/volume.png')">
+                            <p>Volume</p>
+                        </button></div>
+                </div>
+                <div class="row">
+                    <div class="col" style="background-color: khaki;"><button
+                            onclick="changeImage('headImage', 'images/marketCap.png')">
+                            <p>Market Cap</p>
+                        </button></div>
+                    <div class="col" style="background-color: khaki;"><button
+                            onclick="changeImage('headImage', 'images/beta.png')">
+                            <p>Beta</p>
+                        </button></div>
+                    <div class="col" style="background-color: khaki;"><button
+                            onclick="changeImage('headImage', 'images/peRatio.png')">
+                            <p>PE Ratio</p>
+                        </button></div>
+                    <div class="col" style="background-color: khaki;"><button
+                            onclick="changeImage('headImage', 'images/epsRatio.png')">
+                            <p>EPS Ratio</p>
+                        </button></div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col" style="background-color: khaki;"><button
+                            onclick="changeImage('headImage', 'images/1YrTargetPrice.png')">
+                            <p>1 Yr Target Est</p>
+                        </button></div>
+                    <div class="col" style="background-color: khaki;"></div>
+                    <div class="col" style="background-color: khaki;"></div>
+                    <div class="col" style="background-color: khaki;"></div>
+                </div>
+
+
+
+
+            </div>
+            <div class="col" style="padding: 50px; background-color: violet;"><img id="headImage" src="images/price.png"
+                    alt="Login Icon">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="padding: 30px; background-color: khaki;">
+                <p>This is what the section is....</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="padding: 30px; background-color: khaki;">
+                <p>This is why the section is important to look at for investing purposes....</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="padding: 30px; background-color: khaki;">
+                <p>Fun fact about this section....</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="padding: 30px; background-color: khaki;">
+                <p>Specific info about the stock you picked...</p>
+            </div>
+        </div>
+
+
+
+</body>
+
+</html>
