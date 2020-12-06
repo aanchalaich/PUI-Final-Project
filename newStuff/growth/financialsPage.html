@@ -65,36 +65,20 @@
 
         <div class="row">
             <div class="col animated fadeIn" style="padding: 30px; ">
-                <p >Financials Page</p>
+                <p style="font-size: xx-large;">Financials Page</p>
             </div>
         </div>
 
         <div class="row">
-            <div class="col animated fadeIn" style="padding: 30px; ">
-                <p>The Financials Page displays the three financial statements (Balance Sheet, Income Statement, Cash Flow) from previous years.
+            <div class="col animated fadeIn slower" style="padding: 160px; background-color: lightblue;">
+                <p style="text-align: left;">The Financials Page displays the three financial statements (Balance Sheet, Income Statement, Cash Flow) from previous years.
                     These statements are very comprehensive and provide a detailed look at each of the line items for the statements.
                 </p>
             </div>
         </div>
 
         <div class="row">
-            <div id="currentPriceHeading" class="col" style="padding: 50px; ">
-                <div class="row">
-                    <div class="col" ><button class="animated fadeIn"><p>Statement</p></button></div>
-                    <div class="col" ><button class="animated fadeIn"><p>Balance Sheet</p></button></div>
-                    <div class="col" ><button class="animated fadeIn"><p>Cash Flow</p></button></div>
-                    <div class="col" ></div>
-                </div>
-            </div>
-            <div class="col animated fadeIn" ><img src="images/nameImage.png" alt="Login Icon"  >
-            </div>
-        </div>
-
-
-       
-
-        <div class="row">
-            <div class="col animated fadeIn" style="padding: 30px; ">
+            <div class="col wow fadeIn" data-wow-delay="0.8s" style="padding: 160px; background-color: white;">
                 <p><ul>The Financials section will help you in your stock research by:
                     <li>Displayinf full financial statements for current and previous fiscal years and quarters.</li>
                     <li>Every line item is displayed for full detail and transparency</li>
@@ -102,13 +86,64 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col animated fadeIn" style="padding: 30px; ">
-                <p>Amazon's 2019 annual EPS was $23.50, a 13.5% increase from the previous year.  This is tremendous growth for the company,
-                    solidifying Amazon's stance as a growth stock.
-                </p>
+        <div class="row wow fadeIn" data-wow-delay="0.8s" style="background-color: lightblue;">
+            <div class="container wow fadeIn" data-wow-delay="0.8s">
+
+                <div class="row">
+                    <div class="col" style="padding-bottom: 100px; ">
+
+                        <p class="wow fadeIn" data-wow-delay="0.8s" style="text-align: center; margin-bottom: 50px;">
+                            Click on a button to learn more about the features of this page!
+                        </p>
+
+                        <div class="row">
+                            <div class="col"><button class="animated fadeIn"
+                                    onclick="changeImage('headImage', 'images/valuationMeasures.png')">
+                                    <p>Income Statement</p>
+                                </button></div>
+                            <div class="col"><button class="animated fadeIn"
+                                    onclick="changeImage('headImage', 'images/profitability.png')">
+                                    <p>Balance Sheet</p>
+                                </button></div>
+                            <div class="col"><button class="animated fadeIn"
+                                    onclick="changeImage('headImage', 'images/managementEffectiveness.png')">
+                                    <p>Statement of Cash Flows</p>
+                                </button></div>
+                            <div class="col"><button class="animated fadeIn"
+                                    onclick="changeImage('headImage', 'images/incomeStatement.png')">
+                                    <p>Income Statement</p>
+                                </button></div>
+                        </div>
+                       
+                    </div>
+
+                </div>
             </div>
         </div>
+
+        <div class="row wow fadeIn" data-wow-delay="0.8s" style="padding: 50px;">
+            <div class="col wow fadeIn" data-wow-delay="0.8s" style="padding: 50px;"><img id="headImage"
+                    src="images/nameImage.png" alt="Login Icon">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col wow fadeIn" data-wow-delay="0.8s" style="padding-right: 160px; padding-left: 160px; ">
+                <div class="col animated fadeIn" style="padding: 30px; ">
+                    <p>Amazon's 2019 annual EPS was $23.50, a 13.5% increase from the previous year.  This is tremendous growth for the company,
+                        solidifying Amazon's stance as a growth stock. </p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        
+
+        
 
         
 
