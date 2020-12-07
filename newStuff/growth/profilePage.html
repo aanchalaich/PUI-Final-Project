@@ -103,11 +103,12 @@
                 <div class="row">
                     <div class="col" style="padding-bottom: 100px;">
 
-                        <p class= "wow fadeIn" data-wow-delay="0.8s" style="text-align: center; margin-bottom: 50px;">Click on a button to learn more about the features of this page!
+                        <p class="wow fadeIn" data-wow-delay="0.8s" style="text-align: center; margin-bottom: 50px;">
+                            Click on a button to learn more about the features of this page!
                         </p>
 
                         <div class="row">
-                           
+
                             <div class="col"><button class="mx-auto"
                                     onclick="changeImage('headImage', 'images/nameImage.png')">
                                     <p>Name</p>
@@ -137,8 +138,8 @@
 
 
         <div class="row wow fadeIn" data-wow-delay="0.8s">
-            <div class="col wow fadeIn" data-wow-delay="0.8s" style="padding: 50px;"><img id="headImage" src="images/nameImage.png"
-                    alt="Login Icon">
+            <div class="col wow fadeIn" data-wow-delay="0.8s" style="padding: 50px;"><img id="headImage"
+                    src="images/nameImage.png" alt="Login Icon">
             </div>
         </div>
 
@@ -147,8 +148,7 @@
 
 
         <div class="row">
-            <div class="col wow fadeIn" data-wow-delay="0.6s"
-                style="padding-right: 160px; padding-left: 160px; ">
+            <div class="col wow fadeIn" data-wow-delay="0.6s" style="padding-right: 160px; padding-left: 160px; ">
                 <p> Jeff Bezos's salary is only $81,840, a little more than the median American
                     average salary!
                     He has never even taken a stock award - he simply owns 16% of Amazon. What can we learn from
@@ -163,119 +163,14 @@
 
 
 
-        <div id="container" class="svg-container wow fadeIn" data-wow-delay="0.6s" >
+        <div id="container" class="svg-container wow fadeIn" data-wow-delay="0.6s">
+
+
             <script>
-                //------------------------1. PREPARATION-------------------------//
-                //-----------------------------SVG-------------------------------//
-                const width = 500;
-                const height = 500;
-                const margin = 0;
-
-                const adj = 30;
-                var paddingLeft = 50, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
-                // we are appending SVG first
-                const svg = d3.select("div#container").append("svg")
-                    .attr("preserveAspectRatio", "xMinYMin meet")
-                    .attr("viewBox", "-"
-                        + adj + " -"
-                        + adj + " "
-                        + (width + adj * 3) + " "
-                        + (height + adj * 3))
-
-                    .classed("svg-content", true);
-
-                //-----------------------------DATA------------------------------//
 
 
 
-
-
-                var nameObj = {
-                    "Year": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-                    "Rev": [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522],
-                    "Salary": [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
-                };
-
-                const dataset = nameObj;
-
-                const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
-                const rev = [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522];
-                const salary = [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840];
-
-                finalArray = {
-                    x: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-                    y: [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522]
-                };
-
-                finalArray2 = {
-                    x: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-                    y: [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
-                };
-
-                var rearrangedData = finalArray.x.map(function (d, i) {
-                    return { x: d, y: finalArray.y[i] };
-
-                })
-
-                var rearrangedData2 = finalArray2.x.map(function (d, i) {
-                    return { x: d, y: finalArray.y[i] };
-
-                })
-
-
-
-                var xscale = d3.scaleTime()
-                    .domain([d3.min(finalArray.x), d3.max(finalArray.x)])
-                    .range([paddingLeft, width - paddingRight]);
-                svg.append("g")
-                    .attr("transform", "translate(0," + width / 2 + ")")
-                    .call(d3.axisBottom(xscale).tickFormat(d3.format("d")));
-
-
-                var yscale = d3.scaleLinear()
-                    .domain([d3.min(finalArray.y), 300000])
-                    .range([height / 2 - paddingBottom, paddingTop]);
-                svg.append("g")
-                    .attr("transform", "translate(50, 10)")
-                    .call(d3.axisLeft(yscale));
-
-
-
-                var yscale2 = d3.scaleLinear()
-                    .domain([d3.min(finalArray2.y), d3.max(finalArray2.y)])
-                    .range([height / 2 - paddingBottom, paddingTop]);
-                svg.append("g")
-                    .attr("transform", "translate(50, 10)")
-                    .call(d3.axisLeft(yscale));
-
-
-
-                var valueline = d3.line()
-                    .x(function (d) { return xscale(d.x); })
-                    .y(function (d) { return yscale(d.y); });
-
-                var valueline2 = d3.line()
-                    .x(function (d) { return xscale(d.x); })
-                    .y(function (d) { return yscale2(d.y); });
-
-
-
-
-                svg.append("path")
-                    .attr("fill", "none")
-                    .attr("stroke", "steelblue")
-                    .attr("stroke-width", 1.5)
-                    .attr("d", valueline(rearrangedData));
-
-                svg.append("path")
-                    .attr("fill", "none")
-                    .attr("stroke", "red")
-                    .attr("stroke-width", 1.5)
-                    .attr("d", valueline2(rearrangedData2));
-
-
-
-
+               
             </script>
         </div>
     </div>

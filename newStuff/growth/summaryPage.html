@@ -186,14 +186,14 @@
 
         <div id="container" class="svg-container wow fadeIn" data-wow-delay="0.8s">
             <script>
-                //------------------------1. PREPARATION-------------------------//
+            //------------------------1. PREPARATION-------------------------//
                 //-----------------------------SVG-------------------------------//
                 const width = 500;
                 const height = 500;
                 const margin = 5;
 
                 const adj = 30;
-                var paddingLeft = 50, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
+                var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
                 // we are appending SVG first
                 const svg = d3.select("div#container").append("svg")
                     .attr("preserveAspectRatio", "xMinYMin meet")
@@ -225,7 +225,7 @@
 
                 finalArray = {
                     x: ['AMZN', 'EBAY', 'BABA', 'GOOG', 'BAIDU'],
-                    y: [92.47, 7.07, 28.71, 35.32, 11.23]
+                    y: [3812.78, 62.65, 338.88, 1839.17, 168.32]
                 };
 
 
@@ -254,7 +254,7 @@
 
 
                 var yscale = d3.scaleLinear()
-                    .domain([0, 100])
+                    .domain([0, 4000])
                     .range([height, 0]);
                 svg.append("g")
                     .call(d3.axisLeft(yscale));
