@@ -72,3 +72,16 @@ div {
 div.row{
   margin-top:20px;
 }
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+
+}
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+  
