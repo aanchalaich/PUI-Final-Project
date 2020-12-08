@@ -1058,19 +1058,22 @@ function oneYr() {
 
 function earningsEstimate() {
     d3.select("SVG").remove();
-    var margin = { top: 10, right: 30, bottom: 30, left: 40 },
-        width = 400 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
+    const width = 50;
+    const height = 150;
+    const margin = 5;
 
-    // append the svg object to the body of the page
-    var svg = d3.select("div#container")
-        .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
+    const adj = width * 0.9;
+    var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
+    // we are appending SVG first
+    const svg = d3.select("div#container").append("svg")
+        .attr("preserveAspectRatio", "xMinYMin meet")
+        .attr("viewBox", "-"
+            + 200 + " -"
+            + 30 + " "
+            + 550 + " "
+            + 200)
 
+        .classed("svg-content", true);
     // create dummy data
     var data = [4.51, 7.09, 11.16]
 
@@ -1088,10 +1091,13 @@ function earningsEstimate() {
         .domain([0, 24])
         .range([height, 0]);
     svg.call(d3.axisLeft(y))
+    .attr('class', 'axisWhite');
+
 
     // a few features for the box
-    var center = 200
-    var width = 100
+    var center = 75
+
+
 
     // Show the main vertical line
     svg
@@ -1127,19 +1133,22 @@ function earningsEstimate() {
 
 function revenueEstimate() {
     d3.select("SVG").remove();
-    var margin = { top: 10, right: 30, bottom: 30, left: 40 },
-        width = 400 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
+    const width = 50;
+    const height = 150;
+    const margin = 5;
 
-    // append the svg object to the body of the page
-    var svg = d3.select("div#container")
-        .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
+    const adj = width * 0.9;
+    var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
+    // we are appending SVG first
+    const svg = d3.select("div#container").append("svg")
+        .attr("preserveAspectRatio", "xMinYMin meet")
+        .attr("viewBox", "-"
+            + 200 + " -"
+            + 30 + " "
+            + 550 + " "
+            + 200)
 
+        .classed("svg-content", true);
     // create dummy data
     var data = [119.44, 111.99, 123.18]
 
@@ -1157,10 +1166,11 @@ function revenueEstimate() {
         .domain([0, 150])
         .range([height, 0]);
     svg.call(d3.axisLeft(y))
+    .attr('class', 'axisWhite');
+
 
     // a few features for the box
-    var center = 200
-    var width = 100
+    var center = 75
 
     // Show the main vertical line
     svg
@@ -1247,7 +1257,7 @@ function growth() {
         .enter()
         .append("rect")
         .attr("class", "bar field1")
-        .style("fill", "blue")
+        .attr("fill", "#69b3a2")
         .attr("x", d => xScale1('field1'))
         .attr("y", d => yScale(d.field1))
         .attr("width", xScale1.bandwidth())
@@ -1261,7 +1271,7 @@ function growth() {
         .enter()
         .append("rect")
         .attr("class", "bar field2")
-        .style("fill", "red")
+        .attr("fill", "#ffffff")
         .attr("x", d => xScale1('field2'))
         .attr("y", d => yScale(d.field2))
         .attr("width", xScale1.bandwidth())
@@ -1273,12 +1283,16 @@ function growth() {
     svg.append("g")
         .attr("class", "x axis")
         .attr("transform", `translate(0,${height - margin.top - margin.bottom})`)
-        .attr("stroke", "white")
+        .attr("class", "axisWhite")
+        .attr("fill", "white")
+        .style("font-size","30px")
         .call(xAxis);
     // Add the Y Axis
     svg.append("g")
         .attr("class", "y axis")
-        .attr("stroke", "white")
+        .attr("class", "axisWhite")
+        .attr("fill", "white")
+        .style("font-size","30px")
         .call(yAxis);
 }
 
