@@ -19,8 +19,8 @@ body {
 
 button {
     background: #eeeeee;
-    height: 180px;
-    width: 180px;
+    height: 150px;
+    width: 150px;
    
     border: 0;
 
@@ -32,8 +32,8 @@ button {
 
   button:hover {
     background: #99cccc;
-    height: 180px;
-    width: 180px;
+    height: 150px;
+    width: 150px;
     
     border: 0;
    
@@ -85,4 +85,13 @@ div.row{
   transform: translateY(0px);
   opacity: 1;
 }
-  
+
+.axisWhite {
+  stroke: white;
+}
+
+.ticks path {
+  stroke: white;
+  opacity: 0.3;
+}
+

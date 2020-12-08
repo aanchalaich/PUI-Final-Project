@@ -12,32 +12,32 @@ function corpGov() {
 
 
 
-    document.getElementById("funFact").innerText = "Jeff Bezos's salary is only $81,840, a little more than the median American average salary!" + 
-    "  He has never even taken a stock award - he simply owns 16% of Amazon." +
-    "  What can we learn from this?" +
-    "  Since Jeff Bezos's salary is directly tied to company performance, he has a personal stake in making sure Amazon does well."
+    document.getElementById("funFact").innerText = "Jeff Bezos's salary is only $81,840, a little more than the median American average salary!" +
+        "  He has never even taken a stock award - he simply owns 16% of Amazon." +
+        "  What can we learn from this?" +
+        "  Since Jeff Bezos's salary is directly tied to company performance, he has a personal stake in making sure Amazon does well."
 
 
     d3.select("SVG").remove()
 
-    const width = 500;
-    const height = 500;
+    const width = 400;
+    const height = 400;
     const margin = 0;
 
-    const adj = 30;
+    const adj = width * 0.3;
     var paddingLeft = 50, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
     // we are appending SVG first
     const svg = d3.select("div#container").append("svg")
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", "-"
-            + adj + " -"
-            + adj + " "
+            + 150 + " -"
+            + 50 + " "
             + (width + adj * 3) + " "
             + (height + adj * 3))
 
         .classed("svg-content", true);
 
-  
+
 
 
     //-----------------------------DATA------------------------------//
@@ -82,10 +82,12 @@ function corpGov() {
 
     var xscale = d3.scaleTime()
         .domain([d3.min(finalArray.x), d3.max(finalArray.x)])
-        .range([paddingLeft, width - paddingRight]);
+        .range([paddingLeft, width]);
     svg.append("g")
         .attr("transform", "translate(0," + width / 2 + ")")
+        .attr('class', 'axisWhite')
         .call(d3.axisBottom(xscale).tickFormat(d3.format("d")));
+
 
 
     var yscale = d3.scaleLinear()
@@ -93,7 +95,9 @@ function corpGov() {
         .range([height / 2 - paddingBottom, paddingTop]);
     svg.append("g")
         .attr("transform", "translate(50, 10)")
+        .attr('class', 'axisWhite')
         .call(d3.axisLeft(yscale));
+
 
 
 
@@ -102,6 +106,7 @@ function corpGov() {
         .range([height / 2 - paddingBottom, paddingTop]);
     svg.append("g")
         .attr("transform", "translate(50, 10)")
+        .attr('class', 'axisWhite')
         .call(d3.axisLeft(yscale));
 
 
@@ -119,13 +124,13 @@ function corpGov() {
 
     svg.append("path")
         .attr("fill", "none")
-        .attr("stroke", "steelblue")
+        .attr("stroke", "teal")
         .attr("stroke-width", 1.5)
         .attr("d", valueline(rearrangedData));
 
     svg.append("path")
         .attr("fill", "none")
-        .attr("stroke", "red")
+        .attr("stroke", "teal")
         .attr("stroke-width", 1.5)
         .attr("d", valueline2(rearrangedData2));
 }
@@ -166,8 +171,8 @@ function segment() {
     };
 
     // set the dimensions and margins of the diagram
-    const margin = { top: 20, right: 200, bottom: 30, left: 200 },
-        width = 660 - margin.left - margin.right,
+    const margin = { top: 20, right: 200, bottom: 30, left: 500 },
+        width = 1500 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
     // declares a tree layout and assigns the size
@@ -195,6 +200,7 @@ function segment() {
         .enter().append("path")
         .attr("class", "link")
         .style("stroke", d => d.data.level)
+        .style("stroke", 'white')
         .attr("d", d => {
             return "M" + d.y + "," + d.x
                 + "C" + (d.y + d.parent.y) / 2 + "," + d.x
@@ -218,6 +224,7 @@ function segment() {
     // adds the text to the node
     node.append("text")
         .attr("dy", ".35em")
+        .attr('stroke', 'white')
         .attr("x", d => d.children ? (d.data.value + 5) * -1 : d.data.value + 5)
         .attr("y", d => d.children && d.depth !== 0 ? -(d.data.value + 5) : d)
         .style("text-anchor", d => d.children ? "end" : "start")
@@ -225,26 +232,26 @@ function segment() {
 }
 
 function peRatio() {
-    document.getElementById("funFact").innerText = "You can see from the Summary Page that Amazon has a very high PE ratio of 90+." + 
-    "  Generally, the lower the PE ratio the more undervalued a stock is and the better of a buy it could be." +
-    "  However, Amazon is expected to have much higher growth than companies like Apply or Microsoft, so its PE ratio is actually a good signal." +
-    " This is one reason why it is considered a growth company."
+    document.getElementById("funFact").innerText = "You can see from the Summary Page that Amazon has a very high PE ratio of 90+." +
+        "  Generally, the lower the PE ratio the more undervalued a stock is and the better of a buy it could be." +
+        "  However, Amazon is expected to have much higher growth than companies like Apply or Microsoft, so its PE ratio is actually a good signal." +
+        " This is one reason why it is considered a growth company."
 
     d3.select("SVG").remove();
-    const width = 500;
-    const height = 500;
+    const width = 200;
+    const height = 100;
     const margin = 5;
 
-    const adj = 30;
-    var paddingLeft = 50, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
+    const adj = width * 0.9;
+    var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
     // we are appending SVG first
     const svg = d3.select("div#container").append("svg")
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", "-"
-            + adj + " -"
-            + adj + " "
-            + (width + adj * 3) + " "
-            + (height + adj * 3))
+            + 200 + " -"
+            + 30 + " "
+            + 550 + " "
+            + 200)
 
         .classed("svg-content", true);
 
@@ -294,16 +301,14 @@ function peRatio() {
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end")
-        .attr('fill','white');
-
+        .attr('class', 'axisWhite');
 
     var yscale = d3.scaleLinear()
         .domain([0, 100])
         .range([height, 0]);
     svg.append("g")
         .call(d3.axisLeft(yscale))
-        .attr('fill','white');
-
+        .attr('class', 'axisWhite');
 
 
     svg.selectAll("mybar")
@@ -319,25 +324,25 @@ function peRatio() {
 
 function price() {
 
-    document.getElementById("funFact").innerText = "The price of Amazon as of the close of 12/04/2020 was 3,162.58." + 
-    "  We can compare this across companies and see that Amazon leads in price above its peers." +
-    "  So is Amazon truly worth as much as the market says it is, or could it be overvalued?" 
+    document.getElementById("funFact").innerText = "The price of Amazon as of the close of 12/04/2020 was 3,162.58." +
+        "  We can compare this across companies and see that Amazon leads in price above its peers." +
+        "  So is Amazon truly worth as much as the market says it is, or could it be overvalued?"
 
     d3.select("SVG").remove();
-    const width = 500;
-    const height = 500;
+    const width = 200;
+    const height = 100;
     const margin = 5;
 
-    const adj = 30;
+    const adj = width * 0.9;
     var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
     // we are appending SVG first
     const svg = d3.select("div#container").append("svg")
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", "-"
-            + adj + " -"
-            + adj + " "
-            + (width + adj * 3) + " "
-            + (height + adj * 3))
+            + 200 + " -"
+            + 30 + " "
+            + 550 + " "
+            + 200)
 
         .classed("svg-content", true);
 
@@ -387,16 +392,14 @@ function price() {
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end")
-        .attr('fill','white');
-
+        .attr('class', 'axisWhite');
 
     var yscale = d3.scaleLinear()
         .domain([0, 3500])
         .range([height, 0]);
     svg.append("g")
         .call(d3.axisLeft(yscale))
-        .attr('fill','white');
-
+        .attr('class', 'axisWhite');
 
 
     svg.selectAll("mybar")
@@ -412,25 +415,26 @@ function price() {
 
 function previousClose() {
 
-    document.getElementById("funFact").innerText = "The previous close of Amazon as of 12/04/2020 was 3,186.73." + 
-    "  A stock's closing price is the standard benchmark used by investors to track its performance over time." +
-    "  So we can rely on the previous closing price of Amazon and its peers as a solid indicator of the way the market is valuing the companies." 
+    document.getElementById("funFact").innerText = "The previous close of Amazon as of 12/04/2020 was 3,186.73." +
+        "  A stock's closing price is the standard benchmark used by investors to track its performance over time." +
+        "  So we can rely on the previous closing price of Amazon and its peers as a solid indicator of the way the market is valuing the companies."
 
     d3.select("SVG").remove();
-    const width = 500;
-    const height = 500;
+    d3.select("SVG").remove();
+    const width = 200;
+    const height = 100;
     const margin = 5;
 
-    const adj = 30;
+    const adj = width * 0.9;
     var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
     // we are appending SVG first
     const svg = d3.select("div#container").append("svg")
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", "-"
-            + adj + " -"
-            + adj + " "
-            + (width + adj * 3) + " "
-            + (height + adj * 3))
+            + 200 + " -"
+            + 30 + " "
+            + 550 + " "
+            + 200)
 
         .classed("svg-content", true);
 
@@ -480,7 +484,7 @@ function previousClose() {
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end")
-        .attr('fill','white');
+        .attr('class', 'axisWhite')
 
 
     var yscale = d3.scaleLinear()
@@ -488,7 +492,7 @@ function previousClose() {
         .range([height, 0]);
     svg.append("g")
         .call(d3.axisLeft(yscale))
-        .attr('fill','white');
+        .attr('class', 'axisWhite')
 
 
 
@@ -569,16 +573,14 @@ function open() {
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end")
-        .attr('fill','white');
-
+        .attr('class', 'axisWhite');
 
     var yscale = d3.scaleLinear()
         .domain([0, 3500])
         .range([height, 0]);
     svg.append("g")
         .call(d3.axisLeft(yscale))
-        .attr('fill','white');
-
+        .attr('class', 'axisWhite');
 
 
     svg.selectAll("mybar")
@@ -593,26 +595,27 @@ function open() {
 }
 
 function volume() {
-    document.getElementById("funFact").innerText = "Now here is some interesting data - Alibaba (Baba) is leading in volume amongst its peer group." + 
-    "  What does this mean?" +
-    "  It means the market activity for Alibaba is much stronger than that of Amazon, and the security is more liquid as well." 
+    document.getElementById("funFact").innerText = "Now here is some interesting data - Alibaba (Baba) is leading in volume amongst its peer group." +
+        "  What does this mean?" +
+        "  It means the market activity for Alibaba is much stronger than that of Amazon, and the security is more liquid as well."
 
 
     d3.select("SVG").remove();
-    const width = 500;
-    const height = 500;
+    d3.select("SVG").remove();
+    const width = 200;
+    const height = 100;
     const margin = 5;
 
-    const adj = 30;
+    const adj = width * 0.9;
     var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
     // we are appending SVG first
     const svg = d3.select("div#container").append("svg")
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", "-"
-            + adj + " -"
-            + adj + " "
-            + (width + adj * 3) + " "
-            + (height + adj * 3))
+            + 200 + " -"
+            + 30 + " "
+            + 550 + " "
+            + 200)
 
         .classed("svg-content", true);
 
@@ -662,16 +665,14 @@ function volume() {
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end")
-        .attr('fill','white');
-
+        .attr('class', 'axisWhite');
 
     var yscale = d3.scaleLinear()
         .domain([0, 20000])
         .range([height, 0]);
     svg.append("g")
         .call(d3.axisLeft(yscale))
-        .attr('fill','white');
-
+        .attr('class', 'axisWhite');
 
 
     svg.selectAll("mybar")
@@ -688,25 +689,26 @@ function volume() {
 
 function marketCap() {
 
-    document.getElementById("funFact").innerText = "Not suprisingly, Amazon is in the top of its peer group for market share, followed closely by Google and Alibaba." + 
-    " Now you can start to see why its share price is so high -  its market Cap is high but volume is low, creating an almost inflated share price."  
+    document.getElementById("funFact").innerText = "Not suprisingly, Amazon is in the top of its peer group for market share, followed closely by Google and Alibaba." +
+        " Now you can start to see why its share price is so high -  its market Cap is high but volume is low, creating an almost inflated share price."
 
 
     d3.select("SVG").remove();
-    const width = 500;
-    const height = 500;
+    d3.select("SVG").remove();
+    const width = 200;
+    const height = 100;
     const margin = 5;
 
-    const adj = 30;
+    const adj = width * 0.9;
     var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
     // we are appending SVG first
     const svg = d3.select("div#container").append("svg")
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", "-"
-            + adj + " -"
-            + adj + " "
-            + (width + adj * 3) + " "
-            + (height + adj * 3))
+            + 200 + " -"
+            + 30 + " "
+            + 550 + " "
+            + 200)
 
         .classed("svg-content", true);
 
@@ -756,16 +758,14 @@ function marketCap() {
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end")
-        .attr('fill','white');
-
+        .attr('class', 'axisWhite');
 
     var yscale = d3.scaleLinear()
         .domain([0, 1600])
         .range([height, 0]);
     svg.append("g")
         .call(d3.axisLeft(yscale))
-        .attr('fill','white');
-
+        .attr('class', 'axisWhite');
 
 
     svg.selectAll("mybar")
@@ -781,26 +781,27 @@ function marketCap() {
 
 function beta() {
 
-    document.getElementById("funFact").innerText = "Amazon's beta is 1.2." + 
-    " In fact, its beta and that of its peers are all above 1, indicating more fluctuation in stock price in comparison to the overall market." +
-    " Amazon's beta is right around 1 so it is relatively stable in price fluctuations, a given considerig its diverse lines of business."
+    document.getElementById("funFact").innerText = "Amazon's beta is 1.2." +
+        " In fact, its beta and that of its peers are all above 1, indicating more fluctuation in stock price in comparison to the overall market." +
+        " Amazon's beta is right around 1 so it is relatively stable in price fluctuations, a given considerig its diverse lines of business."
 
 
     d3.select("SVG").remove();
-    const width = 500;
-    const height = 500;
+    d3.select("SVG").remove();
+    const width = 200;
+    const height = 100;
     const margin = 5;
 
-    const adj = 30;
+    const adj = width * 0.9;
     var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
     // we are appending SVG first
     const svg = d3.select("div#container").append("svg")
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", "-"
-            + adj + " -"
-            + adj + " "
-            + (width + adj * 3) + " "
-            + (height + adj * 3))
+            + 200 + " -"
+            + 30 + " "
+            + 550 + " "
+            + 200)
 
         .classed("svg-content", true);
 
@@ -850,16 +851,14 @@ function beta() {
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end")
-        .attr('fill','white');
-
+        .attr('class', 'axisWhite');
 
     var yscale = d3.scaleLinear()
         .domain([0, 2])
         .range([height, 0]);
     svg.append("g")
         .call(d3.axisLeft(yscale))
-        .attr('fill','white');
-
+        .attr('class', 'axisWhite');
 
 
     svg.selectAll("mybar")
@@ -875,28 +874,27 @@ function beta() {
 
 function eps() {
 
-    document.getElementById("funFact").innerText = "Amazon has the second highest EPS ratio amongst its peer group at 34.20, second to Google." + 
-    " This is a very good sign, as it shows large profits per dollar of its share price."  
+    document.getElementById("funFact").innerText = "Amazon has the second highest EPS ratio amongst its peer group at 34.20, second to Google." +
+        " This is a very good sign, as it shows large profits per dollar of its share price."
 
 
     d3.select("SVG").remove();
-    const width = 500;
-    const height = 500;
+    const width = 200;
+    const height = 100;
     const margin = 5;
 
-    const adj = 30;
+    const adj = width * 0.9;
     var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
     // we are appending SVG first
     const svg = d3.select("div#container").append("svg")
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", "-"
-            + adj + " -"
-            + adj + " "
-            + (width + adj * 3) + " "
-            + (height + adj * 3))
+            + 200 + " -"
+            + 30 + " "
+            + 550 + " "
+            + 200)
 
         .classed("svg-content", true);
-
     //-----------------------------DATA------------------------------//
 
 
@@ -943,14 +941,14 @@ function eps() {
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end")
-        .attr('fill','white');
-
+        .attr('class', 'axisWhite');
 
     var yscale = d3.scaleLinear()
         .domain([0, 100])
         .range([height, 0]);
     svg.append("g")
         .call(d3.axisLeft(yscale))
+        .attr('class', 'axisWhite');
 
 
 
@@ -967,25 +965,25 @@ function eps() {
 
 function oneYr() {
 
-    document.getElementById("funFact").innerText = "Amazon has by far the highest consensus estimate of 1 year target price amongst its peer group at 3,81278." + 
-    " This is likely due to it's growth prospects - Amazon has had record shattering growth rates for e-commerce in the past, and that trend is expected to continue."  
+    document.getElementById("funFact").innerText = "Amazon has by far the highest consensus estimate of 1 year target price amongst its peer group at 3,81278." +
+        " This is likely due to it's growth prospects - Amazon has had record shattering growth rates for e-commerce in the past, and that trend is expected to continue."
 
 
     d3.select("SVG").remove();
-    const width = 500;
-    const height = 500;
+    const width = 200;
+    const height = 100;
     const margin = 5;
 
-    const adj = 30;
+    const adj = width * 0.9;
     var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
     // we are appending SVG first
     const svg = d3.select("div#container").append("svg")
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", "-"
-            + adj + " -"
-            + adj + " "
-            + (width + adj * 3) + " "
-            + (height + adj * 3))
+            + 200 + " -"
+            + 30 + " "
+            + 550 + " "
+            + 200)
 
         .classed("svg-content", true);
 
@@ -1034,14 +1032,16 @@ function oneYr() {
         .call(d3.axisBottom(xscale))
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
-        .style("text-anchor", "end");
+        .style("text-anchor", "end")
+        .attr('class', 'axisWhite');
 
 
     var yscale = d3.scaleLinear()
         .domain([0, 4000])
         .range([height, 0]);
     svg.append("g")
-        .call(d3.axisLeft(yscale));
+        .call(d3.axisLeft(yscale))
+        .attr('class', 'axisWhite');
 
 
 
@@ -1280,6 +1280,260 @@ function growth() {
         .attr("class", "y axis")
         .attr("stroke", "white")
         .call(yAxis);
+}
+
+function incomeStatement() {
+
+
+
+
+    d3.select("SVG").remove();
+
+    // set the dimensions and margins of the graph
+    var margin = { top: 10, right: 30, bottom: 90, left: 40 },
+        width = 460 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+
+    const adj = 30;
+    var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
+    // we are appending SVG first
+    const svg = d3.select("div#container").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    //-----------------------------DATA------------------------------//
+
+
+
+
+
+    var nameObj = {
+        "Year": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+        "Rev": [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522],
+        "Salary": [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
+    };
+
+    const dataset = nameObj;
+
+    const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
+    const rev = [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522];
+    const salary = [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840];
+
+    finalArray = {
+        x: ['Revenue', 'Cost of Goods Sold', 'Gross Profit', 'Operating Expenses', 'Operating Income', 'Pretax Income', 'Net Income'],
+        y: [280522000, 205768000, 74754000, 60213000, 14541000, 13976000, 11588000]
+    };
+
+
+    var rearrangedData = finalArray.x.map(function (d, i) {
+        return { x: d, y: finalArray.y[i] };
+
+    })
+
+    var barPadding = 5;
+    var barWidth = (width / dataset.length);
+
+
+
+
+
+    var xscale = d3.scaleBand()
+        .range([0, width])
+        .domain(finalArray.x)
+        .padding(0.2);
+    svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(xscale))
+        .selectAll("text")
+        .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("text-anchor", "end");
+
+
+    var yscale = d3.scaleLinear()
+        .domain([0, 1000000000])
+        .range([height, 0]);
+    svg.append("g")
+        .call(d3.axisLeft(yscale))
+        .attr('fill', 'white');
+
+    // Lines
+    svg.selectAll("myline")
+        .data(rearrangedData)
+        .enter()
+        .append("line")
+        .attr("x1", function (d) { return xscale(d.x); })
+        .attr("x2", function (d) { return xscale(d.x); })
+        .attr("y1", function (d) { return yscale(d.y); })
+        .attr("y2", yscale(0))
+        .attr("stroke", "white")
+
+
+    // Circles
+    svg.selectAll("mycircle")
+        .data(rearrangedData)
+        .enter()
+        .append("circle")
+        .attr("cx", function (d) { return xscale(d.x); })
+        .attr("cy", function (d) { return yscale(d.y); })
+        .attr("r", "4")
+        .style("fill", "#69b3a2")
+        .attr("stroke", "white")
+}
+
+function statementOfCashFlows() {
+
+
+
+
+    d3.select("SVG").remove();
+
+    // set the dimensions and margins of the graph
+    var margin = { top: 10, right: 30, bottom: 90, left: 40 },
+        width = 460 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+
+    const adj = 30;
+    var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
+    // we are appending SVG first
+    const svg = d3.select("div#container").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    //-----------------------------DATA------------------------------//
+
+
+
+
+
+    var nameObj = {
+        "Year": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+        "Rev": [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522],
+        "Salary": [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
+    };
+
+    const dataset = nameObj;
+
+    const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
+    const rev = [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522];
+    const salary = [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840];
+
+    finalArray = {
+        x: ['Operating', 'Investing', 'Financing', 'Ending Cash Position'],
+        y: [38514000, -24281000, -10066000, 36410000]
+    };
+
+
+    var rearrangedData = finalArray.x.map(function (d, i) {
+        return { x: d, y: finalArray.y[i] };
+
+    })
+
+    var barPadding = 5;
+    var barWidth = (width / dataset.length);
+
+
+
+
+
+    var xscale = d3.scaleBand()
+        .range([0, width])
+        .domain(finalArray.x)
+        .padding(0.2);
+    svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(xscale))
+        .selectAll("text")
+        .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("text-anchor", "end");
+
+
+    var yscale = d3.scaleLinear()
+        .domain([-1000000000, 1000000000])
+        .range([height, 0]);
+    svg.append("g")
+        .call(d3.axisLeft(yscale))
+        .attr('fill', 'white');
+
+    // Lines
+    svg.selectAll("myline")
+        .data(rearrangedData)
+        .enter()
+        .append("line")
+        .attr("x1", function (d) { return xscale(d.x); })
+        .attr("x2", function (d) { return xscale(d.x); })
+        .attr("y1", function (d) { return yscale(d.y); })
+        .attr("y2", yscale(0))
+        .attr("stroke", "white")
+
+
+    // Circles
+    svg.selectAll("mycircle")
+        .data(rearrangedData)
+        .enter()
+        .append("circle")
+        .attr("cx", function (d) { return xscale(d.x); })
+        .attr("cy", function (d) { return yscale(d.y); })
+        .attr("r", "4")
+        .style("fill", "#69b3a2")
+        .attr("stroke", "white")
+}
+
+function balanceSheet() {
+
+    d3.select("SVG").remove();
+
+    var width = 450
+    height = 450
+    margin = 40
+
+    // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
+    var radius = Math.min(width, height) / 2 - margin
+
+    // append the svg object to the div called 'my_dataviz'
+    var svg = d3.select("div#container")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    // Create dummy data
+    var data = { 'Total Assets': 225248000, 'Total Liabilities': 163188000, 'Total Equity': 62060000 }
+
+    // set the color scale
+    var color = d3.scaleOrdinal()
+        .domain(data)
+        .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56"])
+
+    // Compute the position of each group on the pie:
+    var pie = d3.pie()
+        .value(function (d) { return d.value; })
+    var data_ready = pie(d3.entries(data))
+
+    // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+    svg
+        .selectAll('whatever')
+        .data(data_ready)
+        .enter()
+        .append('path')
+        .attr('d', d3.arc()
+            .innerRadius(0)
+            .outerRadius(radius)
+        )
+        .attr('fill', function (d) { return (color(d.data.key)) })
+        .attr("stroke", "black")
+        .style("stroke-width", "2px")
+        .style("opacity", 0.7)
+
+
 }
 
 
