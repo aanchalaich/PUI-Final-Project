@@ -69,29 +69,56 @@
 
         <div class="row">
             <div class="col animated fadeIn" style="padding: 30px; ">
-                <p style="font-size: xx-large;">Financials Page</p>
+                <p style="font-size: xxx-large; color: white;">Financials Page</p>
             </div>
         </div>
 
         <div class="row">
-            <div class="col animated fadeIn slower" style="padding: 160px; background-color: lightblue;">
-                <p style="text-align: left;">The Financials Page displays the three financial statements (Balance Sheet, Income Statement, Cash Flow) from previous years.
+            <div class="col wow fadeInLeft " data-wow-delay="0.2s" style="padding-bottom: 130px; padding-top: 100px; padding-right: 100px; padding-left: 100px; background-color: lightblue;">
+                <p style="text-align: left; margin-bottom: 150px;">The Financials Page displays the three financial statements (Balance Sheet, Income Statement, Cash Flow) from previous years.
                     These statements are very comprehensive and provide a detailed look at each of the line items for the statements.
                 </p>
+                <a href="#test" style="text-align: center; margin-top: 200"><img src="images/downArrow.png" width="30"
+                    height="30"></a>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col wow fadeIn" data-wow-delay="0.8s" style="padding: 160px; background-color: white;">
-                <p><ul>The Financials section will help you in your stock research by:
-                    <li>Displayinf full financial statements for current and previous fiscal years and quarters.</li>
-                    <li>Every line item is displayed for full detail and transparency</li>
-                  </ul></p>
+        <div class=" wow fadeInRight" data-wow-delay="0.2s" style="background-color: #CCFFCC; margin-top: 50px;">
+            <div id="test"  style="padding: 160px;">
+                <div class="col ">
+
+                   <p><ul>
+                        <p style="font-size: xx-large; text-align: left;">The Financials section will help you in your
+                            stock
+                            research by:</p>
+                        <li>
+                            <p style="font-size: x-large; text-align: left;">Displaying full financial statements for current and previous fiscal years and quarters</p>
+                        </li>
+                        <li>
+                            <p style="font-size: x-large; text-align: left;">Every line item is displayed for full detail and transparency</p>
+                        </li>
+                    </ul></p> 
+
+                    <a href="#test2"  ><img src=" images/downArrow.png" width="30"
+                        height="30"></a>
+
+
+
+                </div>
+
+
+
+
             </div>
+
+
+            
         </div>
 
-        <div class="row wow fadeIn" data-wow-delay="0.8s" style="background-color: lightblue;">
-            <div class="container wow fadeIn" data-wow-delay="0.8s">
+        <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s" style="background-color: lightblue;  margin-top: 50px;">
+            <div class="container wow fadeInLeft" data-wow-delay="0.2s">
+
+
 
                 <div class="row">
                     <div class="col" style="padding-bottom: 100px; ">
@@ -100,20 +127,35 @@
                             Click on a button to learn more about the features of this page!
                         </p>
 
+                        <div class="col wow fadeIn" data-wow-delay="0.8s" style="padding: 50px;">
+                            <img id="headImage">
+                        </div>
+
                         <div class="row">
                             <div class="col"><button class="animated fadeIn"
                                     onclick="changeImage('headImage', 'images/valuationMeasures.png'), incomeStatement()">
-                                    <p>Income Statement</p>
+                                    Income Statement
                                 </button></div>
                             <div class="col"><button class="animated fadeIn"
                                     onclick="changeImage('headImage', 'images/profitability.png'), balanceSheet()">
-                                    <p>Balance Sheet</p>
+                                    Balance Sheet
                                 </button></div>
                             <div class="col"><button class="animated fadeIn"
                                     onclick="changeImage('headImage', 'images/managementEffectiveness.png'), statementOfCashFlows()">
-                                    <p>Statement of Cash Flows</p>
+                                    Statement of Cash Flows
                                 </button></div>
                         </div>
+
+                        <div class="row">
+                            <div class="col"><button class="mx-auto animated fadeIn"
+                                style="background-color: lightblue;">
+                            </button></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                        </div>
+                        <a href="#test3" style="text-align: center; margin-top: 200"><img src="images/downArrow.png"
+                            width="30" height="30"></a>
                        
                     </div>
 
@@ -121,14 +163,25 @@
             </div>
         </div>
 
-        <div class="row wow fadeIn" data-wow-delay="0.8s" style="padding: 50px;">
-            <div class="col wow fadeIn" data-wow-delay="0.8s" style="padding: 50px;"><img id="headImage"
-                    src="images/nameImage.png" alt="Login Icon">
+       
+
+        <div id="funFactRow" class="row">
+            <div id="test3" class="col wow fadeIn" data-wow-delay="0.2s"
+                style="padding-right: 160px; padding-left: 160px; ">
+                <p id="funFact" style="color: white;">
+                </p>
             </div>
+
         </div>
 
+        <div class="row">
 
-        <div id="container" class="reveal wow fadeIn" data-wow-delay="0.8s" ></div>
+            <div id="container" class="col reveal wow fadeIn" data-wow-delay="0.8s">
+
+
+            </div>
+
+        </div>
 
         
     </div>
