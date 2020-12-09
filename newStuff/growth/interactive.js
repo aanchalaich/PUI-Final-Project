@@ -8,6 +8,20 @@ function changeImage(id, imgSource) {
 
 $(".animated").addClass("slower");
 
+function nameAmazon() {
+    d3.select("SVG").remove();
+
+    document.getElementById("funFact").innerText = "There's not much to this fun fact - the company's name is Amazon!"
+}
+
+function descriptionAmazon() {
+
+    d3.select("SVG").remove();
+
+    document.getElementById("funFact").innerText = "It's easy to skip over this section if you think you know everything about a company, but here's something you might not know from the description section:" +
+        "  Amazon.com, Inc. has a strategic relationship with NXP Semiconductors N.V. to deliver a cloud compute solution for vehicles that enable cloud-powered services. "
+}
+
 function corpGov() {
 
 
@@ -324,8 +338,8 @@ function peRatio() {
 
 function price() {
 
-    document.getElementById("funFact").innerText = "The price of Amazon as of the close of 12/04/2020 was 3,162.58." +
-        "  We can compare this across companies and see that Amazon leads in price above its peers." +
+    document.getElementById("funFact").innerText = "The price of Amazon at the close of 12/04/2020 was $3,162.58." +
+        "  We can compare this across companies and see that Amazon strongly dominates in price above its peers." +
         "  So is Amazon truly worth as much as the market says it is, or could it be overvalued?"
 
     d3.select("SVG").remove();
@@ -415,9 +429,9 @@ function price() {
 
 function previousClose() {
 
-    document.getElementById("funFact").innerText = "The previous close of Amazon as of 12/04/2020 was 3,186.73." +
+    document.getElementById("funFact").innerText = "The previous closing price of Amazon on 12/04/2020 was $3,186.73." +
         "  A stock's closing price is the standard benchmark used by investors to track its performance over time." +
-        "  So we can rely on the previous closing price of Amazon and its peers as a solid indicator of the way the market is valuing the companies."
+        "  So we can rely on the previous closing price of Amazon and its peers as a solid indicator of the way the market is valuing the companies, even with all the price fluctuation."
 
     d3.select("SVG").remove();
     d3.select("SVG").remove();
@@ -509,21 +523,26 @@ function previousClose() {
 }
 //-----------------------------Open function does not work------------------------------//
 function open() {
+    document.getElementById("funFact").innerText = "The previous closing price of Amazon as of 12/04/2020 was $3,186.73." +
+        "  A stock's closing price is the standard benchmark used by investors to track its performance over time." +
+        "  So we can rely on the previous closing price of Amazon and its peers as a solid indicator of the way the market is valuing the companies, even with all the price fluctuation."
+
     d3.select("SVG").remove();
-    const width = 500;
-    const height = 500;
+    d3.select("SVG").remove();
+    const width = 200;
+    const height = 100;
     const margin = 5;
 
-    const adj = 30;
+    const adj = width * 0.9;
     var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
     // we are appending SVG first
     const svg = d3.select("div#container").append("svg")
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", "-"
-            + adj + " -"
-            + adj + " "
-            + (width + adj * 3) + " "
-            + (height + adj * 3))
+            + 200 + " -"
+            + 30 + " "
+            + 550 + " "
+            + 200)
 
         .classed("svg-content", true);
 
@@ -573,14 +592,16 @@ function open() {
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end")
-        .attr('class', 'axisWhite');
+        .attr('class', 'axisWhite')
+
 
     var yscale = d3.scaleLinear()
         .domain([0, 3500])
         .range([height, 0]);
     svg.append("g")
         .call(d3.axisLeft(yscale))
-        .attr('class', 'axisWhite');
+        .attr('class', 'axisWhite')
+
 
 
     svg.selectAll("mybar")
@@ -783,7 +804,7 @@ function beta() {
 
     document.getElementById("funFact").innerText = "Amazon's beta is 1.2." +
         " In fact, its beta and that of its peers are all above 1, indicating more fluctuation in stock price in comparison to the overall market." +
-        " Amazon's beta is right around 1 so it is relatively stable in price fluctuations, a given considerig its diverse lines of business."
+        " Amazon's beta is right around 1 so it is relatively stable in price fluctuations, a given considering its diverse lines of business."
 
 
     d3.select("SVG").remove();
@@ -965,7 +986,7 @@ function eps() {
 
 function oneYr() {
 
-    document.getElementById("funFact").innerText = "Amazon has by far the highest consensus estimate of 1 year target price amongst its peer group at 3,81278." +
+    document.getElementById("funFact").innerText = "Amazon has by far the highest consensus estimate of 1 year target price amongst its peer group at $3,812.78." +
         " This is likely due to it's growth prospects - Amazon has had record shattering growth rates for e-commerce in the past, and that trend is expected to continue."
 
 
@@ -1057,6 +1078,12 @@ function oneYr() {
 }
 
 function earningsEstimate() {
+
+    document.getElementById("funFact").innerText = "The median EPS estimate for Amazon this quarter is 7.09." +
+        "  Low and high estimates are 4.51 and 11.16." +
+        "  Thus, we can see there is not a huge spread in EPS estimates and we can reasonably expect the actual value to end up in this range."
+
+
     d3.select("SVG").remove();
     const width = 50;
     const height = 150;
@@ -1091,7 +1118,7 @@ function earningsEstimate() {
         .domain([0, 24])
         .range([height, 0]);
     svg.call(d3.axisLeft(y))
-    .attr('class', 'axisWhite');
+        .attr('class', 'axisWhite');
 
 
     // a few features for the box
@@ -1132,6 +1159,12 @@ function earningsEstimate() {
 }
 
 function revenueEstimate() {
+
+    document.getElementById("funFact").innerText = "The revenue estimates for Amazon have a  tight spread and are quite high overall." +
+        "  The average estimate for revenue is 119.44B, and low and high estimates are $111.99B and $123.18B respectively." +
+        "  Analysts across the board seem to think that Amazon's very high revenue will remain consistent at the end of this quarter."
+
+
     d3.select("SVG").remove();
     const width = 50;
     const height = 150;
@@ -1166,7 +1199,7 @@ function revenueEstimate() {
         .domain([0, 150])
         .range([height, 0]);
     svg.call(d3.axisLeft(y))
-    .attr('class', 'axisWhite');
+        .attr('class', 'axisWhite');
 
 
     // a few features for the box
@@ -1205,16 +1238,22 @@ function revenueEstimate() {
 }
 
 function growth() {
+
+    document.getElementById("funFact").innerText = "Consensus estimates for revenue growth are 51.50% and 30.10%, respectively." +
+        "  We can compare this with the standard yearly S&P growth rate of 10%" +
+        "  Amazon is considered a growth company for a reason- it has and will continue to have above-average growth!"
+
+
     d3.select("SVG").remove();
     var models = [
         {
             "model_name": "2020",
-            "field1": 35.40,
+            "field1": 51.50,
             "field2": 10
         },
         {
             "model_name": "2021",
-            "field1": 18.30,
+            "field1": 30.10,
             "field2": 10
         },
 
@@ -1285,26 +1324,28 @@ function growth() {
         .attr("transform", `translate(0,${height - margin.top - margin.bottom})`)
         .attr("class", "axisWhite")
         .attr("fill", "white")
-        .style("font-size","30px")
+        .style("font-size", "30px")
         .call(xAxis);
     // Add the Y Axis
     svg.append("g")
         .attr("class", "y axis")
         .attr("class", "axisWhite")
         .attr("fill", "white")
-        .style("font-size","30px")
+        .style("font-size", "30px")
         .call(yAxis);
 }
 
 function incomeStatement() {
 
-
+    document.getElementById("funFact").innerText = "At the end of 2019, Amazon ended with around $280B in revenue and $11.6B in net income.  How did we get here?" +
+        "  The income statement is broken down line by line on the Yahoo Finance site. " +
+        "  We can see here that cost of good sold (COGS) cuts into a good portion of revenue, helping to bring it down to the overall net income number."
 
 
     d3.select("SVG").remove();
 
     // set the dimensions and margins of the graph
-    var margin = { top: 10, right: 30, bottom: 90, left: 40 },
+    var margin = { top: 10, right: 30, bottom: 90, left: 80 },
         width = 460 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
@@ -1358,7 +1399,7 @@ function incomeStatement() {
     var xscale = d3.scaleBand()
         .range([0, width])
         .domain(finalArray.x)
-        .padding(0.2);
+        .padding(1);
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(xscale))
@@ -1372,7 +1413,8 @@ function incomeStatement() {
         .range([height, 0]);
     svg.append("g")
         .call(d3.axisLeft(yscale))
-        .attr('fill', 'white');
+        .attr('fill', 'white')
+    //.style('text-anchor', 'middle');
 
     // Lines
     svg.selectAll("myline")
@@ -1400,13 +1442,14 @@ function incomeStatement() {
 
 function statementOfCashFlows() {
 
-
+    document.getElementById("funFact").innerText = "At end of 2019, Amazon ended with $38.5B in operating cash flow, -$24.3B in investing cash flow, and -$10.1B in financing cash flow." +
+        "  What does this tell us?  This says that Amazon had a large amount of cash available for operations-related activities, invested heavily for their business, and paid out a lot of their capital to others."
 
 
     d3.select("SVG").remove();
 
     // set the dimensions and margins of the graph
-    var margin = { top: 10, right: 30, bottom: 90, left: 40 },
+    var margin = { top: 10, right: 30, bottom: 90, left: 80 },
         width = 460 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
@@ -1460,7 +1503,7 @@ function statementOfCashFlows() {
     var xscale = d3.scaleBand()
         .range([0, width])
         .domain(finalArray.x)
-        .padding(0.2);
+        .padding(1);
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(xscale))
@@ -1470,7 +1513,7 @@ function statementOfCashFlows() {
 
 
     var yscale = d3.scaleLinear()
-        .domain([-1000000000, 1000000000])
+        .domain([-50000000, 50000000])
         .range([height, 0]);
     svg.append("g")
         .call(d3.axisLeft(yscale))
@@ -1502,6 +1545,11 @@ function statementOfCashFlows() {
 
 function balanceSheet() {
 
+    document.getElementById("funFact").innerText = "The three major line items to look out for on the balance sheet are total assets, total liabilities and total equity." +
+        "  As of the end of 2019, Amazon's assets totaled around $225B, liabilites totaled $163B and equity totaled $62B. " +
+        "  This follows the standard accounting principle, where total assets = total liabilies + total equity."
+
+
     d3.select("SVG").remove();
 
     var width = 450
@@ -1532,6 +1580,11 @@ function balanceSheet() {
         .value(function (d) { return d.value; })
     var data_ready = pie(d3.entries(data))
 
+    var arcGenerator = d3.arc()
+        .innerRadius(0)
+        .outerRadius(radius)
+
+
     // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
     svg
         .selectAll('whatever')
@@ -1547,8 +1600,21 @@ function balanceSheet() {
         .style("stroke-width", "2px")
         .style("opacity", 0.7)
 
+    svg
+        .selectAll('whatever')
+        .data(data_ready)
+        .enter()
+        .append('text')
+        .text(function (d) { return d.data.key })
+        .attr("transform", function (d) { return "translate(" + arcGenerator.centroid(d) + ")"; })
+        .style("text-anchor", "middle")
+        .style("font-size", 17)
+
+
 
 }
+
+
 
 
 
