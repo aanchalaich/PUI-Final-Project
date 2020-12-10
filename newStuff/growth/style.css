@@ -2,7 +2,9 @@
 p{
     font-size: xx-large;
     text-align: center;  
-    font-family: 'Heebo', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+
+
 
   }
 
@@ -17,6 +19,7 @@ html {
 body {
     height: 100%;
     background-image: url('images/stocks.jpg');
+    
 }
 
 
@@ -30,6 +33,7 @@ button {
    display:block;
    padding: 0;
    margin: 0;
+   font-family: 'Quicksand', sans-serif;
    
   }
 
@@ -43,14 +47,22 @@ button {
    display:block;
    padding: 0;
    margin: 0;
+   font-family: 'Quicksand', sans-serif;
+
 
   }
 
-  button:focus { outline: none; }
+  button:focus { 
+    outline: none;
+    font-family: 'Quicksand', sans-serif;
+
+  }
 
 
     input {
         position: relative;
+        font-family: 'Quicksand', sans-serif;
+
         
   }
 
@@ -75,6 +87,11 @@ div {
 
 div.row{
   margin-top:20px;
+}
+
+div.col {
+  font-family: 'Quicksand', sans-serif;
+
 }
 
 
