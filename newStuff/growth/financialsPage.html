@@ -62,9 +62,17 @@
 <body>
     <div class="container-fluid">
         <div class="row">
+            <div class="col" style="padding: 50px; ">
+                <p style="font-size: large;">Summary</p>
+                <a href="summaryPage.html"><img id='back' src='images/arrowBack.png' width="50" height="50">
+                </a>
+            </div>
             <div class="col" style="padding: 50px; ">span 4</div>
-            <div class="col" style="padding: 50px; ">span 4</div>
-            <div class="col" style="padding: 50px; ">span 4</div>
+            <div class="col" style="padding: 50px; ">
+                <p style="font-size: large;">Analysis</p>
+                <a href="analysisPage.html"><img id='next' src='images/arrow.png' width="50" height="50">
+                </a>
+            </div>
         </div>
 
         <div class="row">
@@ -74,44 +82,46 @@
         </div>
 
         <div class="row">
+            <div class="col wow fadeInLeft " data-wow-delay="0.2s" style="padding-bottom: 100px; padding-top: 100px; ">
+                <img src="images/finRec.PNG" style="border-radius: 5%; " height="70%" width="80%">
+            </div>
             <div class="col wow fadeInLeft " data-wow-delay="0.2s"
-                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; background-image: url('images/blueBackground.jpg');">
+                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
                 <p style="text-align: left; margin-bottom: 150px;">The Financials Page displays the three financial
                     statements (Balance Sheet, Income Statement, Cash Flow) from previous years.
                     These statements are very comprehensive and provide a detailed look at each of the line items for
                     the statements.
                 </p>
-                <a href="#test" style="text-align: center; margin-top: 200"><img src="images/downArrow.png" width="30"
+                <a href="#test" style="text-align: center; margin-top: 200"><img src="images/homeArrow.png" width="30"
                         height="30"></a>
             </div>
         </div>
 
-        <div class=" wow fadeInRight" data-wow-delay="0.2s" style="background-image: url('images/greenBackground.jpg'); margin-top: 50px;">
-            <div id="test" style="padding: 160px;">
-                <div class="col ">
-
-                    <p>
-                    <ul>
-                        <p style="font-size: xx-large; text-align: left;">The Financials section will help you in your
-                            stock
-                            research by:</p>
-                        <li>
-                            <p style="font-size: x-large; text-align: left;">Displaying full financial statements for
-                                current and previous fiscal years and quarters</p>
-                        </li>
-                        <li>
-                            <p style="font-size: x-large; text-align: left;">Every line item is displayed for full
-                                detail and transparency</p>
-                        </li>
-                    </ul>
-                    </p>
-
-                    <a href="#test2"><img src=" images/downArrow.png" width="30" height="30"></a>
+        <div id="test" class=" row">
+            <div class="col wow fadeInRight " data-wow-delay="0.2s" style="padding-bottom: 100px; padding-top: 100px;">
 
 
+                <p>
+                <ul style="color: white; text-align: center;">
+                    <p
+                        style="font-size: xx-large; text-align: left; padding-bottom: 100px; padding-right: 100px; padding-left: 100px;">
+                        The Financials section will help you in your
+                        stock
+                        research by:</p>
+                    <li>
+                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                            Displaying full financial statements for
+                            current and previous fiscal years and quarters</p>
+                    </li>
+                    <li>
+                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                            Every line item is displayed for full
+                            detail and transparency</p>
+                    </li>
+                </ul>
+                </p>
 
-                </div>
-
+                <a href="#test2"><img src=" images/homeArrow.png" width="30" height="30"></a>
 
 
 
@@ -119,10 +129,18 @@
 
 
 
+
+            <div class="col wow fadeInRight " data-wow-delay="0.2s"
+                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
+                <img src="images/financialStatements.png" width="500px" height="500px">
+
+            </div>
+
+
+
         </div>
 
-        <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s"
-            style="background-image: url('images/blueBackground.jpg');  margin-top: 50px;">
+        <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s" style=" margin-top: 50px;">
             <div class="container wow fadeInLeft" data-wow-delay="0.2s">
 
 
@@ -138,31 +156,25 @@
                             <img id="headImage">
                         </div>
 
-                        <div class="row">
+                        <div class="row" style="margin-left: 10%;">
                             <div class="col"><button class="animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/valuationMeasures.png'), incomeStatement()">
+                                    onclick="changeImage('headImage', 'images/incomeStatement.png'), incomeStatement()" style="border-radius: 10%">
                                     Income Statement
                                 </button></div>
                             <div class="col"><button class="animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/profitability.png'), balanceSheet()">
+                                    onclick="changeImage('headImage', 'images/balanceSheet.png'), balanceSheet()" style="border-radius: 10%">
                                     Balance Sheet
                                 </button></div>
                             <div class="col"><button class="animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/managementEffectiveness.png'), statementOfCashFlows()">
+                                    onclick="changeImage('headImage', 'images/statementOfCashFlows.png'), statementOfCashFlows()" style="border-radius: 10%">
                                     Statement of Cash Flows
                                 </button></div>
                         </div>
 
                         <div class="row">
-                            <div class="col"><button class="mx-auto animated fadeIn"
-                                    style="background-color: lightblue;">
-                                </button></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
+                            <a href="#test3" style="margin-top: 50px; margin-left: 48.5%;"><img
+                                    src="images/homeArrow.png" width="30" height="30"></a>
                         </div>
-                        <a href="#test3" style="text-align: center; margin-top: 200"><img src="images/downArrow.png"
-                                width="30" height="30"></a>
 
                     </div>
 

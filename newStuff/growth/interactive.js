@@ -528,7 +528,6 @@ function open() {
         "  So we can rely on the previous closing price of Amazon and its peers as a solid indicator of the way the market is valuing the companies, even with all the price fluctuation."
 
     d3.select("SVG").remove();
-    d3.select("SVG").remove();
     const width = 200;
     const height = 100;
     const margin = 5;

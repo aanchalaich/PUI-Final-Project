@@ -3,6 +3,7 @@ p{
     font-size: xx-large;
     text-align: center;  
     font-family: 'Quicksand', sans-serif;
+    color: white;
 
 
 
@@ -29,6 +30,7 @@ button {
     width: 150px;
    
     border: 0;
+    border-radius: 10%;
 
    display:block;
    padding: 0;
@@ -43,6 +45,7 @@ button {
     width: 150px;
     
     border: 0;
+    border-radius: 10%;
    
    display:block;
    padding: 0;
@@ -55,6 +58,7 @@ button {
   button:focus { 
     outline: none;
     font-family: 'Quicksand', sans-serif;
+    border-radius: 10%;
 
   }
 

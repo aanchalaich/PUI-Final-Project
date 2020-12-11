@@ -62,11 +62,17 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col" style="padding: 50px; "><a href="profilePage.html"><img id='back'
-                        src='images/arrowBack.png' width="50" height="50"></a></div>
+            <div class="col" style="padding: 50px; ">
+                <p style="font-size: large;">Profile</p>
+                <a href="profilePage.html"><img id='back' src='images/arrowBack.png' width="50" height="50">
+                </a>
+            </div>
             <div class="col" style="padding: 50px; ">span 4</div>
-            <div class="col" style="padding: 50px; "><a href="analysisPage.html"><img id='next' src='images/arrow.png'
-                        width="50" height="50"></a></div>
+            <div class="col" style="padding: 50px; ">
+                <p style="font-size: large;">Financials</p>
+                <a href="financialsPage.html"><img id='next' src='images/arrow.png' width="50" height="50">
+                </a>
+            </div>
         </div>
 
 
@@ -76,9 +82,13 @@
             </div>
         </div>
 
-        <div class="row" style="">
+        <div class="row">
+            <div class="col wow fadeInLeft " data-wow-delay="0.2s" style="padding-bottom: 100px; padding-top: 100px; ">
+                <img src="images/summaryProfile.png" style="border-radius: 5%; " height="70%" width="80%">
+            </div>
             <div class="col wow fadeInLeft " data-wow-delay="0.2s"
-                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; background-image: url('images/blueBackground.jpg');">
+                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
+
                 <p style="text-align: left; margin-bottom: 150px;">The "Summary" section gives you a quick look at key
                     information
                     such as the stock name,
@@ -86,48 +96,64 @@
                     This section gives you a glance at the most current statistics of a company.
                     These will allow you to quickly assess how a company is performing right now.
                 </p>
-                <a href="#test" style="text-align: center; margin-top: 200"><img src="images/downArrow.png" width="30"
+                <a href="#test" style="text-align: center; margin-top: 200"><img src="images/homeArrow.png" width="30"
                         height="30"></a>
             </div>
         </div>
 
 
-        <div class=" wow fadeInRight" data-wow-delay="0.2s"
-            style="background-image: url('images/greenBackground.jpg'); margin-top: 50px;">
-            <div id="test" style="padding: 160px;">
-                <div class="col ">
+        <div id="test" class=" row">
 
-                    <p>
-                    <ul>
-                        <p style="font-size: xx-large; text-align: left;">The Summary section will help you in your
-                            stock
-                            research by:</p>
-                        <li>
-                            <p style="font-size: x-large; text-align: left;">Highlighting the stock price that is
-                                currently
-                                being traded</p>
-                        </li>
-                        <li>
-                            <p style="font-size: x-large; text-align: left;">Highlighting the most important ratios such
-                                as
-                                PE and EPS</p>
-                        </li>
-                        <li>
-                            <p style="font-size: x-large; text-align: left;">Easily compare key metrics across members
-                                of a peer group</p>
-                    </ul>
-                    </p>
+            <div class="col wow fadeInRight " data-wow-delay="0.2s" style="padding-bottom: 100px; padding-top: 100px;">
 
-                    <a href="#test2"><img src=" images/downArrow.png" width="30" height="30"></a>
+                <p>
+                <ul style="color: white; text-align: center;">
+                    <p
+                        style="font-size: xx-large; text-align: left; padding-bottom: 100px; padding-right: 100px; padding-left: 100px;">
+                        The Summary section will help
+                        you in your
+                        stock
+                        research by:</p>
+                    <li>
+                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                            Highlighting the stock price
+                            that is
+                            currently
+                            being traded</p>
+                    </li>
+                    <li>
+                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                            Highlighting the most
+                            important ratios such
+                            as
+                            PE and EPS</p>
+                    </li>
+                    <li>
+                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                            Easily compare key metrics
+                            across members
+                            of a peer group</p>
+                </ul>
+                </p>
+                <a href="#test2" style="text-align: center; margin-top: 200"><img src=" images/homeArrow.png" width="30"
+                        height="30"></a>
 
-
-
-                </div>
 
 
 
 
             </div>
+
+            <div class="col wow fadeInRight " data-wow-delay="0.2s"
+                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
+                <img src="images/comparison.png">
+
+            </div>
+
+
+
+
+
 
 
 
@@ -141,8 +167,7 @@
 
 
 
-        <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s"
-            style="background-image: url('images/blueBackground.jpg');  margin-top: 50px;">
+        <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s" style=" margin-top: 50px;">
             <div class="container wow fadeInLeft" data-wow-delay="0.2s">
 
 
@@ -155,58 +180,57 @@
                         </p>
 
                         <div class="col wow fadeIn" data-wow-delay="0.8s" style="padding: 50px;">
-                            <img id="headImage">
+                            <img id="headImage" style="border-radius: 5%;">
                         </div>
 
                         <div class="row">
                             <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/price.png'), price()">
+                                    onclick="changeImage('headImage', 'images/price.png'), price()"
+                                    style="border-radius: 10%">
                                     Price
                                 </button></div>
                             <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/previousClose.png'), previousClose()">
+                                    onclick="changeImage('headImage', 'images/previousClose.png'), previousClose()"
+                                    style="border-radius: 10%">
                                     Previous Close
                                 </button></div>
                             <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/open.png'), open()">
-                                    Open
-                                </button></div>
-                            <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/volume.png'), volume()">
+                                    onclick="changeImage('headImage', 'images/volume.png'), volume()"
+                                    style="border-radius: 10%">
                                     Volume
                                 </button></div>
-                        </div>
-                        <div class="row">
                             <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/marketCap.png'), marketCap()">
+                                    onclick="changeImage('headImage', 'images/marketCap.png'), marketCap()"
+                                    style="border-radius: 10%">
                                     Market Cap
                                 </button></div>
+                        </div>
+                        <div class="row" style="margin-bottom: 10%;">
+
                             <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/beta.png'), beta()">
+                                    onclick="changeImage('headImage', 'images/beta.png'), beta()"
+                                    style="border-radius: 10%">
                                     Beta
                                 </button></div>
                             <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/peRatio.png'), peRatio()">
+                                    onclick="changeImage('headImage', 'images/peRatio.png'), peRatio()"
+                                    style="border-radius: 10%">
                                     PE Ratio
                                 </button></div>
                             <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/epsRatio.png'), eps()">
+                                    onclick="changeImage('headImage', 'images/epsRatio.png'), eps()"
+                                    style="border-radius: 10%">
                                     EPS Ratio
                                 </button></div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/1YrTargetPrice.png'), oneYr()">
+                                <div class="col"><button class="mx-auto animated fadeIn"
+                                    onclick="changeImage('headImage', 'images/1YrTargetPrice.png'), oneYr()"
+                                    style="border-radius: 10%">
                                     1 Yr Target Est
                                 </button></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
                         </div>
 
-                        <a href="#test3" style="text-align: center; margin-top: 200"><img src="images/downArrow.png"
+
+                        <a href="#test3" style="text-align: center; margin-top: 10%"><img src="images/homeArrow.png"
                                 width="30" height="30"></a>
 
 

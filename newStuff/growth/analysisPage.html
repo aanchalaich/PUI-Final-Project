@@ -64,9 +64,14 @@
 <body>
     <div class="container-fluid">
         <div class="row">
+            <div class="col" style="padding: 50px; ">
+                <p style="font-size: large;">Financials</p>
+                <a href="financialsPage.html"><img id='back' src='images/arrowBack.png' width="50" height="50">
+                </a>
+            </div>
             <div class="col" style="padding: 50px; ">span 4</div>
-            <div class="col" style="padding: 50px; ">span 4</div>
-            <div class="col" style="padding: 50px; ">span 4</div>
+            <div class="col" style="padding: 50px; ">
+            </div>
         </div>
 
         <div class="row">
@@ -76,60 +81,73 @@
         </div>
 
         <div class="row">
+            <div class="col wow fadeInLeft " data-wow-delay="0.2s" style="padding-bottom: 100px; padding-top: 100px; ">
+                <img src="images/analysis.PNG" style="border-radius: 5%; " height="70%" width="80%">
+            </div>
             <div class="col wow fadeInLeft " data-wow-delay="0.2s"
-                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; background-image: url('images/blueBackground.jpg');">
+                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
                 <p style="text-align: left; margin-bottom: 150px;">The Analysis tab gives analyst estimates on earnings,
                     revenue, EPS, and
                     Growth.
                     This section is helpful to look at consensus estimates for important forward-looking
                     metrics, which you can refer to in your own analysis.
                 </p>
-                <a href="#test" style="text-align: center; margin-top: 200"><img src="images/downArrow.png" width="30"
+                <a href="#test" style="text-align: center; margin-top: 200"><img src="images/homeArrow.png" width="30"
                         height="30"></a>
             </div>
         </div>
 
 
-        <div class=" wow fadeInRight" data-wow-delay="0.2s" style="background-image: url('images/greenBackground.jpg'); margin-top: 50px;">
-            <div id="test" style="padding: 160px;">
-                <div class="col ">
+        <div id="test" class=" row">
 
-                    <p>
-                    <ul>
-                        <p style="font-size: xx-large; text-align: left;">The Analysis section will help you in your
-                            stock
-                            research by:</p>
-                        <li>
-                            <p style="font-size: x-large; text-align: left;">Providing consensus estimates on earnings,
-                                revenue, EPS, and growth</p>
-                        </li>
-                        <li>
-                            <p style="font-size: x-large; text-align: left;">Providing high, low, and medium estimates
-                                for all metrics</p>
-                        </li>
-                        <li>
-                            <p style="font-size: x-large; text-align: left;">Showing a range of time frames for trend
-                                and growth estimates</p>
-                    </ul>
-                    </p>
+            <div class="col wow fadeInRight " data-wow-delay="0.2s" style="padding-bottom: 100px; padding-top: 100px;">
 
-                    <a href="#test2"><img src=" images/downArrow.png" width="30" height="30"></a>
+                <p>
+                <ul style="color: white; text-align: center;">
+                    <p
+                        style="font-size: xx-large; text-align: left; padding-bottom: 100px; padding-right: 100px; padding-left: 100px;">
+                        The Analysis section will help you in your
+                        stock
+                        research by:</p>
+                    <li>
+                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                            Providing consensus estimates on earnings,
+                            revenue, EPS, and growth</p>
+                    </li>
+                    <li>
+                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                            Providing high, low, and medium estimates
+                            for all metrics</p>
+                    </li>
+                    <li>
+                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                            Showing a range of time frames for trend
+                            and growth estimates</p>
+                </ul>
+                </p>
 
-
-
-                </div>
-
+                <a href="#test2"><img src=" images/homeArrow.png" width="30" height="30"></a>
 
 
 
             </div>
 
+            <div class="col wow fadeInRight " data-wow-delay="0.2s"
+                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
+                <img src="images/stock analysis.png" width="500px" height="500px">
+
+            </div>
+
+
+
+
+
+
 
 
         </div>
 
-        <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s"
-            style="background-image: url('images/blueBackground.jpg');  margin-top: 50px;">
+        <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s">
             <div class="container wow fadeInLeft" data-wow-delay="0.2s">
 
 
@@ -146,32 +164,27 @@
                             <img id="headImage">
                         </div>
 
-                        <div class="row">
+                        <div class="row" style="margin-left: 10%;">
                             <div id="volumeHeading" class="col"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/earningsEstimate.png'), 
-                            earningsEstimate()">
+                            earningsEstimate()" style="border-radius: 10%">
                                     Earnings Estimate
                                 </button></div>
-                            <div id="volumeValue" class="col"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/revenueEstimate.png'), 
-                                revenueEstimate()">
+                            <div id="volumeValue" class="col"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/revenueEstimates.png'), 
+                                revenueEstimate()" style="border-radius: 10%">
                                     Revenue Estimate
                                 </button></div>
 
                             <div class="col"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/growthEstimates.png'), 
-                                growth()">
+                                growth()" style="border-radius: 10%">
                                     Growth Estimates
                                 </button></div>
                         </div>
-                        <div class="row">
-                            <div class="col"><button class="mx-auto animated fadeIn"
-                                    style="background-color: lightblue;">
-                                </button></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                        </div>
 
-                        <a href="#test3" style="text-align: center; margin-top: 200"><img src="images/downArrow.png"
-                                width="30" height="30"></a>
+
+                        <div class="row">
+                            <a href="#test3" style="margin-top: 50px; margin-left: 48.5%;"><img
+                                    src="images/homeArrow.png" width="30" height="30"></a>
+                        </div>
                     </div>
 
                 </div>
