@@ -15,12 +15,14 @@ $(".animated").addClass("slower");
 //Function to provide Amazon's name when button is pressed
 function nameAmazon() {
     d3.select("SVG").remove();
+    document.getElementById("SVGRow").innerHTML = "";
     document.getElementById("funFact").innerText = "There's not much to this fun fact - the company's name is Amazon!"
 }
 
 //Function to provide Amazon's description when button is pressed
 function descriptionAmazon() {
     d3.select("SVG").remove();
+    document.getElementById("SVGRow").innerHTML = "";
     document.getElementById("funFact").innerText = "It's easy to skip over this section if you think you know everything about a company, but here's something you might not know from the description section:" +
         "  Amazon.com, Inc. has a strategic relationship with NXP Semiconductors N.V. to deliver a cloud compute solution for vehicles that enable cloud-powered services. "
 }
@@ -35,6 +37,7 @@ function corpGov() {
         "  Since Jeff Bezos's salary is directly tied to company performance, he has a personal stake in making sure Amazon does well."
 
     d3.select("SVG").remove();
+    document.getElementById("SVGRow").innerHTML = "";
 
     const width = 400;
     const height = 400;
@@ -144,6 +147,7 @@ function segment() {
     document.getElementById("funFact").innerText = "According to the sector/industry section, Amazon has three major business segments - North America, International, and Amazon Web Services (AWS)."
 
     d3.select("SVG").remove();
+    document.getElementById("SVGRow").innerHTML = "";
 
     const treeData = {
         "name": "Amazon",
