@@ -96,7 +96,7 @@ function corpGov() {
         .attr('class', 'axisWhite')
         .call(d3.axisLeft(yscale));
 
-  
+
 
     svg.append("text")
         .attr("transform", "rotate(-90)")
@@ -969,7 +969,8 @@ function earningsEstimate() {
         "  Thus, we can see there is not a huge spread in EPS estimates and we can reasonably expect the actual value to end up in this range."
 
 
-    d3.select("SVG").remove();
+    d3.selectAll("svg > *").remove();
+    document.getElementById("container").innerHTML = "";
     const width = 50;
     const height = 150;
     const margin = 5;
@@ -1061,7 +1062,8 @@ function revenueEstimate() {
         "  Analysts across the board seem to think that Amazon's very high revenue will remain consistent at the end of this quarter."
 
 
-    d3.select("SVG").remove();
+    d3.selectAll("svg > *").remove();
+    document.getElementById("container").innerHTML = "";
     const width = 50;
     const height = 150;
     const margin = 5;
@@ -1151,7 +1153,8 @@ function growth() {
         "  Amazon is considered a growth company for a reason- it has and will continue to have above-average growth!"
 
 
-    d3.select("SVG").remove();
+    d3.selectAll("svg > *").remove();
+    document.getElementById("container").innerHTML = "";
     var models = [
         {
             "model_name": "2020",
@@ -1270,7 +1273,8 @@ function incomeStatement() {
         "  We can see here that cost of good sold (COGS) cuts into a good portion of revenue, helping to bring it down to the overall net income number."
 
 
-    d3.select("SVG").remove();
+    d3.selectAll("svg > *").remove();
+    document.getElementById("container").innerHTML = "";
 
     // set the dimensions and margins of the graph
     var margin = { top: 60, right: 80, bottom: 140, left: 130 },
@@ -1375,7 +1379,8 @@ function statementOfCashFlows() {
         "  What does this tell us?  This says that Amazon had a large amount of cash available for operations-related activities, invested heavily for their business, and paid out a lot of their capital to others."
 
 
-    d3.select("SVG").remove();
+    d3.selectAll("svg > *").remove();
+    document.getElementById("container").innerHTML = "";
 
     // set the dimensions and margins of the graph
     var margin = { top: 60, right: 80, bottom: 140, left: 130 },
@@ -1478,7 +1483,8 @@ function balanceSheet() {
         "  This follows the standard accounting principle, where total assets = total liabilies + total equity."
 
 
-    d3.select("SVG").remove();
+    d3.selectAll("svg > *").remove();
+    document.getElementById("container").innerHTML = "";
 
     var width = 450
     height = 450
