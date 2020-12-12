@@ -46,42 +46,42 @@
 
         <!--Arrows -->
         <div class="row">
-            <div class="col header">
+            <div class="col-sm header">
                 <p style="font-size: large;">Financials</p>
-                <a href="financialsPage.html"><img class='back' src='images/arrowBack.png' alt="arrow">
+                <a href="financialsPage.html"><img class='img-fluid back' src='images/arrowBack.png' alt="arrow">
                 </a>
             </div>
-            <div class="col header"></div>
-            <div class="col header">
+            <div class="col-sm header"></div>
+            <div class="col-sm header">
             </div>
         </div>
 
         <!--Title-->
         <div class="row">
-            <div id="titleCol" class="col animated fadeIn">
+            <div id="titleCol" class="col-sm animated fadeIn">
                 <p id="title">Analysis Page</p>
             </div>
         </div>
 
         <!--Section 1-->
-        <div class="row">
-            <div id="introImage" class="col wow fadeInLeft " data-wow-delay="0.2s">
-                <img id="introImageSrc" src="images/analysis.PNG" alt="analysis">
+        <div class="row" style="align-items: center;">
+            <div class="col-sm wow fadeInLeft " data-wow-delay="0.2s">
+                <img class="img-fluid" id="introImageSrc" src="images/analysis.PNG" alt="analysis">
             </div>
-            <div id="introCol" class="col wow fadeInLeft " data-wow-delay="0.2s">
+            <div id="introCol" class="col-sm wow fadeInLeft " data-wow-delay="0.2s">
                 <p id="introColText">The Analysis tab gives analyst estimates on earnings,
                     revenue, EPS, and
                     Growth.
                     This section is helpful to look at consensus estimates for important forward-looking
                     metrics, which you can refer to in your own analysis.
                 </p>
-                <a class="arrow" href="#test"><img class="arrowImage" src="images/homeArrow.png" alt="arrow"></a>
+                <a class="arrow" href="#test"><img class="img-fluid arrowImage" src="images/homeArrow.png" alt="arrow"></a>
             </div>
         </div>
 
         <!--Section 2-->
-        <div id="test" class=" row">
-            <div id="sectionTwoCol" class="col wow fadeInRight " data-wow-delay="0.2s">
+        <div id="test" class=" row" style="align-items: center;">
+            <div id="sectionTwoCol" class="col-sm wow fadeInRight " data-wow-delay="0.2s">
 
 
                 <p id="sectionTwoListTitle">
@@ -103,12 +103,13 @@
                         and growth estimates
                 </ul>
 
+                <a href="#test2"><img class="img-fluid arrowImage" src=" images/homeArrow.png" alt="arrow" style="margin-top 0%;"></a>
                 
             </div>
             
 
-            <div class="sectionTwoCol wow fadeInRight" data-wow-delay="0.2s">
-                <img id="sectionTwoImageImage" src="images/stockAnalysis.png" width="500" height="500"
+            <div class="sectionTwoCol col-sm wow fadeInRight" data-wow-delay="0.2s">
+                <img class="img-fluid" id="sectionTwoImageImage" src="images/stockAnalysis.png" width="500" height="500"
                     alt="companyProfile">
 
             </div>
@@ -119,43 +120,41 @@
         </div>
 
         <!--Section 3-->
-        <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s">
-            <div class="container wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="row">
-                    <div id="sectionThreeCol" class="col">
+        <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s" style=" margin-top: 50px; align-items: center;">
+          
+                    <div id="sectionThreeCol" class="col-sm">
                         <p id="sectionThreeTitleText" class="wow fadeIn" data-wow-delay="0.2s">
                             Click on a button to learn more about the features of this page!
                         </p>
                         <div id="headImageCol" class="col wow fadeIn" data-wow-delay="0.2s">
-                            <img id="headImage" src="images/placeholder.png" alt="headImage">
+                            <img class="img-fluid" id="headImage" src="images/placeholder.png" alt="headImage">
                         </div>
-                        <div id="threeButtonRow" class="row">
-                            <div id="volumeHeading" class="col"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/earningsEstimate.png'), 
+                        <div id="threeButtonRow" class="row" style="align-items: center;">
+                            <div id="volumeHeading" class="col-sm"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/earningsEstimate.png'), 
                             earningsEstimate()">
                                     Earnings Estimate
                                 </button></div>
-                            <div id="volumeValue" class="col"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/revenueEstimates.png'), 
+                            <div id="volumeValue" class="col-sm"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/revenueEstimates.png'), 
                                 revenueEstimate()">
                                     Revenue Estimate
                                 </button></div>
 
-                            <div class="col"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/growthEstimates.png'), 
+                            <div class="col-sm"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/growthEstimates.png'), 
                                 growth()">
                                     Growth Estimates
                                 </button></div>
                         </div>
                         <div class="row">
-                            <a id="sectionThreeArrow" href="#test3"><img class="arrowImage" src="images/homeArrow.png"
+                            <a id="sectionThreeArrow" href="#test3"><img class="img-fluid arrowImage" src="images/homeArrow.png"
                                     alt="arrow"></a>
                         </div>
                     </div>
-                </div>
-            </div>
+            
         </div>
 
         <!--Section 4-->
         <div id="funFactRow" class="row">
-            <div id="test3" class="col wow fadeIn" data-wow-delay="0.2s">
+            <div id="test3" class="col-sm wow fadeIn" data-wow-delay="0.2s">
                 <p id="funFact">
                 </p>
             </div>
@@ -163,7 +162,7 @@
 
         <!--Section for graph-->
         <div class="row">
-            <div id="container" class="col reveal wow fadeIn" data-wow-delay="0.2s">
+            <div id="container" class="col-sm reveal wow fadeIn" data-wow-delay="0.2s">
             </div>
         </div>
 
