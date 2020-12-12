@@ -393,11 +393,11 @@ line {
 }
 
 @media (max-width: @screen-xs) {
-  .overlay-text{font-size: 1%;}
+  .overlay-text{font-size: 0.01%;}
 }
 
 @media (max-width: @screen-sm) {
-  .overlay-text{font-size: 5%;}
+  .overlay-text{font-size: 0.01%;}
 }
 
 
