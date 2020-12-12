@@ -392,6 +392,15 @@ line {
 
 }
 
+@media (max-width: @screen-xs) {
+  .overlay-text{font-size: 10px;}
+}
+
+@media (max-width: @screen-sm) {
+  .overlay-text{font-size: 14px;}
+}
+
+
 
 
 
