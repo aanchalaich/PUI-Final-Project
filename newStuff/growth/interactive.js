@@ -34,7 +34,7 @@ function corpGov() {
         "  What can we learn from this?" +
         "  Since Jeff Bezos's salary is directly tied to company performance, he has a personal stake in making sure Amazon does well."
 
-    d3.select("SVG").remove()
+    d3.select("SVG").remove();
 
     const width = 400;
     const height = 400;
@@ -143,7 +143,7 @@ function segment() {
 
     document.getElementById("funFact").innerText = "According to the sector/industry section, Amazon has three major business segments - North America, International, and Amazon Web Services (AWS)."
 
-    d3.select("SVG").remove()
+    d3.select("SVG").remove();
 
     const treeData = {
         "name": "Amazon",
