@@ -26,7 +26,7 @@ body {
 /**************Scroll down arrow *********/
 .arrow{
   text-align: center; 
-  margin-top: 200px;
+  
 }
 
 .arrowImage{
@@ -101,8 +101,6 @@ body {
 }
 
 #sectionTwoCol{
-  padding-bottom: 100px; 
-  padding-top: 100px;
 }
 
 /**************Content Pages Styles *********/
@@ -113,8 +111,8 @@ body {
 
 #introImageSrc{
   border-radius: 5%; 
-  height: 70%;
-  width: 80%;
+  height: 40%;
+  width: 30%;
 }
 
 #introCol{
@@ -131,33 +129,30 @@ body {
 
 #sectionTwoListTitle{
   font-size: xx-large; 
-  text-align: left; 
-  padding-bottom: 100px; 
-  padding-right: 100px; 
-  padding-left: 100px;
+  text-align: center; 
+
 }
 
 .sectionTwoListBullets{
   font-size: x-large; 
   text-align: left;  
-  padding-right: 100px; 
-  padding-left: 100px;
+
 }
 
 .sectionTwoCol{
-  padding-bottom: 100px; 
+ 
   padding-top: 100px; 
   padding-right: 100px; 
   padding-left: 100px;
 }
 
 #sectionTwoImageImage{
-  width: 500px;
-  height: 500px;
+  width: 50%;
+  height: 40%;
 }
 
 #sectionThreeCol{
-  padding-bottom: 50px;
+  padding-top: 10%;
 }
 
 #sectionThreeTitleText{
@@ -390,14 +385,6 @@ line {
   padding:1rem;
   transform:translateY(-50%);
 
-}
-
-@media (max-width: @screen-xs) {
-  .overlay-text{font-size: 0.01%;}
-}
-
-@media (max-width: @screen-sm) {
-  .overlay-text{font-size: 0.01%;}
 }
 
 
