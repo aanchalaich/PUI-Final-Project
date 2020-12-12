@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!--styles-->
+    <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -10,57 +10,39 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
 
-    <!-- Bootstrap core CSS -->
+
+    <!-- MDBootstrap-->
     <link rel="stylesheet" href="MDB-Free_4.19.2/css/bootstrap.min.css">
-    <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="MDB-Free_4.19.2/css/mdb.min.css">
-
-
-
-
-
-
-    <!-- jQuery -->
     <script type="text/javascript" src="MDB-Free_4.19.2/js/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="MDB-Free_4.19.2/js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="MDB-Free_4.19.2/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
     <script type="text/javascript" src="MDB-Free_4.19.2/js/mdb.min.js"></script>
 
+
+
+    <!-- Javascript file -->
     <script src="interactive.js"></script>
 
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="style.css">
 
+    <!--Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
 
 
+    <!-- D3 file -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 
-
-
-
-
-    <!--javascript-->
-
-    <!--<script data-main="config" src="require.js">
-    </script>
-
-    <script>
-        require(['config'], function() {
-            //require(['jqueryFile']);
-            require(['api']);
-            alert('yo');
-        });
-    </script>-->
 
 </head>
 
 <body>
     <div class="container-fluid">
+
+        <!--Arrows -->
         <div class="row">
             <div class="col" style="padding: 50px; ">
                 <p style="font-size: large;">Summary</p>
@@ -75,12 +57,14 @@
             </div>
         </div>
 
+        <!--Title-->
         <div class="row">
             <div class="col animated fadeIn" style="padding: 30px; ">
                 <p style="font-size: xxx-large; color: white;">Financials Page</p>
             </div>
         </div>
 
+        <!--Section 1-->
         <div class="row">
             <div class="col wow fadeInLeft " data-wow-delay="0.2s" style="padding-bottom: 100px; padding-top: 100px; ">
                 <img src="images/finRec.PNG" style="border-radius: 5%; " height="70%" width="80%">
@@ -97,10 +81,9 @@
             </div>
         </div>
 
+        <!--Section 2-->
         <div id="test" class=" row">
             <div class="col wow fadeInRight " data-wow-delay="0.2s" style="padding-bottom: 100px; padding-top: 100px;">
-
-
                 <p>
                 <ul style="color: white; text-align: center;">
                     <p
@@ -120,91 +103,70 @@
                     </li>
                 </ul>
                 </p>
-
                 <a href="#test2"><img src=" images/homeArrow.png" width="30" height="30"></a>
-
-
-
             </div>
-
-
-
-
             <div class="col wow fadeInRight " data-wow-delay="0.2s"
                 style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
                 <img src="images/financialStatements.png" width="500px" height="500px">
-
             </div>
-
-
-
         </div>
-
+      
+        <!--Section 3-->
         <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s" style=" margin-top: 50px;">
             <div class="container wow fadeInLeft" data-wow-delay="0.2s">
-
-
-
                 <div class="row">
                     <div class="col" style="padding-bottom: 100px; ">
-
                         <p class="wow fadeIn" data-wow-delay="0.8s" style="text-align: center; margin-bottom: 50px;">
                             Click on a button to learn more about the features of this page!
                         </p>
-
                         <div class="col wow fadeIn" data-wow-delay="0.8s" style="padding: 50px;">
                             <img id="headImage">
                         </div>
-
                         <div class="row" style="margin-left: 10%;">
                             <div class="col"><button class="animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/incomeStatement.png'), incomeStatement()" style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/incomeStatement.png'), incomeStatement()"
+                                    style="border-radius: 10%">
                                     Income Statement
                                 </button></div>
                             <div class="col"><button class="animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/balanceSheet.png'), balanceSheet()" style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/balanceSheet.png'), balanceSheet()"
+                                    style="border-radius: 10%">
                                     Balance Sheet
                                 </button></div>
                             <div class="col"><button class="animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/statementOfCashFlows.png'), statementOfCashFlows()" style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/statementOfCashFlows.png'), statementOfCashFlows()"
+                                    style="border-radius: 10%">
                                     Statement of Cash Flows
                                 </button></div>
                         </div>
-
                         <div class="row">
                             <a href="#test3" style="margin-top: 50px; margin-left: 48.5%;"><img
                                     src="images/homeArrow.png" width="30" height="30"></a>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
 
-
-
+        <!--Section 4-->
         <div id="funFactRow" class="row">
             <div id="test3" class="col wow fadeIn" data-wow-delay="0.2s"
                 style="padding-right: 160px; padding-left: 160px; ">
                 <p id="funFact" style="color: white;">
                 </p>
             </div>
-
         </div>
-
+        
+        <!--Section for graph-->
         <div class="row">
-
             <div id="container" class="col reveal wow fadeIn" data-wow-delay="0.8s">
-
-
             </div>
-
         </div>
 
 
     </div>
 
+    <!--Script to control scrolling-->
     <script>
 
         window.addEventListener('scroll', reveal);

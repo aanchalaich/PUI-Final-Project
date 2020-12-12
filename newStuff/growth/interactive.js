@@ -1,46 +1,48 @@
+
+//Enables WOW (sections appearing upon scrolling) functionality
 $(document).ready(function () {
     new WOW().init();
 });
 
+//Changes image when button is pressed
 function changeImage(id, imgSource) {
     document.getElementById(id).src = imgSource;
 }
 
+//Function to fade in transitions more slowly
 $(".animated").addClass("slower");
 
+//Function to provide Amazon's name when button is pressed
 function nameAmazon() {
     d3.select("SVG").remove();
-
     document.getElementById("funFact").innerText = "There's not much to this fun fact - the company's name is Amazon!"
 }
 
+//Function to provide Amazon's description when button is pressed
 function descriptionAmazon() {
-
     d3.select("SVG").remove();
-
     document.getElementById("funFact").innerText = "It's easy to skip over this section if you think you know everything about a company, but here's something you might not know from the description section:" +
         "  Amazon.com, Inc. has a strategic relationship with NXP Semiconductors N.V. to deliver a cloud compute solution for vehicles that enable cloud-powered services. "
 }
 
+//NOTE: Many of these graph functions modified from https://www.d3-graph-gallery.com/
+
+//Function to provide Amazon's corporate governance info when button is pressed
 function corpGov() {
-
-
-
     document.getElementById("funFact").innerText = "Jeff Bezos's salary is only $81,840, a little more than the median American average salary!" +
         "  He has never even taken a stock award - he simply owns 16% of Amazon." +
         "  What can we learn from this?" +
         "  Since Jeff Bezos's salary is directly tied to company performance, he has a personal stake in making sure Amazon does well."
-
 
     d3.select("SVG").remove()
 
     const width = 400;
     const height = 400;
     const margin = 0;
+    //var margin = { top: 60, right: 80, bottom: 140, left: 130 },
 
     const adj = width * 0.3;
-    var paddingLeft = 50, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
-    // we are appending SVG first
+    var paddingLeft = 50, paddingRight = 40, paddingTop = 10, paddingBottom = 0;
     const svg = d3.select("div#container").append("svg")
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", "-"
@@ -51,27 +53,6 @@ function corpGov() {
 
         .classed("svg-content", true);
 
-
-
-
-    //-----------------------------DATA------------------------------//
-
-
-
-
-
-    var nameObj = {
-        "Year": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-        "Rev": [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522],
-        "Salary": [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
-    };
-
-    const dataset = nameObj;
-
-    const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
-    const rev = [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522];
-    const salary = [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840];
-
     finalArray = {
         x: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
         y: [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522]
@@ -79,7 +60,7 @@ function corpGov() {
 
     finalArray2 = {
         x: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-        y: [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
+        y: [.081840, .081840, .081840, .081840, .081840, .081840, .081840, .081840, .081840, .081840, .081840, .081840, .081840, .081840, .081840]
     };
 
     var rearrangedData = finalArray.x.map(function (d, i) {
@@ -112,8 +93,16 @@ function corpGov() {
         .attr('class', 'axisWhite')
         .call(d3.axisLeft(yscale));
 
+  
 
-
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - 40)
+        .attr("x", 0 - (height / 4))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .text("Value ($ millions)");
 
     var yscale2 = d3.scaleLinear()
         .domain([d3.min(finalArray2.y), d3.max(finalArray2.y)])
@@ -149,6 +138,7 @@ function corpGov() {
         .attr("d", valueline2(rearrangedData2));
 }
 
+//Function to provide Amazon's segment graph when button is pressed
 function segment() {
 
     document.getElementById("funFact").innerText = "According to the sector/industry section, Amazon has three major business segments - North America, International, and Amazon Web Services (AWS)."
@@ -245,6 +235,7 @@ function segment() {
         .text(d => d.data.name);
 }
 
+//Function to provide Amazon's pe ratio graph when button is pressed
 function peRatio() {
     document.getElementById("funFact").innerText = "You can see from the Summary Page that Amazon has a very high PE ratio of 90+." +
         "  Generally, the lower the PE ratio the more undervalued a stock is and the better of a buy it could be." +
@@ -269,24 +260,6 @@ function peRatio() {
 
         .classed("svg-content", true);
 
-    //-----------------------------DATA------------------------------//
-
-
-
-
-
-    var nameObj = {
-        "Year": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-        "Rev": [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522],
-        "Salary": [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
-    };
-
-    const dataset = nameObj;
-
-    const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
-    const rev = [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522];
-    const salary = [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840];
-
     finalArray = {
         x: ['AMZN', 'EBAY', 'BABA', 'GOOG', 'BAIDU'],
         y: [92.47, 7.07, 28.71, 35.32, 11.23]
@@ -297,13 +270,6 @@ function peRatio() {
         return { x: d, y: finalArray.y[i] };
 
     })
-
-    var barPadding = 5;
-    var barWidth = (width / dataset.length);
-
-
-
-
 
     var xscale = d3.scaleBand()
         .range([0, width])
@@ -324,6 +290,27 @@ function peRatio() {
         .call(d3.axisLeft(yscale))
         .attr('class', 'axisWhite');
 
+    svg.append("text")
+        .attr("transform",
+            "translate(" + (width / 2) + " ," +
+            (height + 50) + ")")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("Company");
+
+
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - 70)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("PE Ratio");
+
+
 
     svg.selectAll("mybar")
         .data(rearrangedData)
@@ -336,6 +323,7 @@ function peRatio() {
         .attr("fill", "#69b3a2")
 }
 
+//Function to provide Amazon's price graph when button is pressed
 function price() {
 
     document.getElementById("funFact").innerText = "The price of Amazon at the close of 12/04/2020 was $3,162.58." +
@@ -360,24 +348,6 @@ function price() {
 
         .classed("svg-content", true);
 
-    //-----------------------------DATA------------------------------//
-
-
-
-
-
-    var nameObj = {
-        "Year": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-        "Rev": [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522],
-        "Salary": [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
-    };
-
-    const dataset = nameObj;
-
-    const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
-    const rev = [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522];
-    const salary = [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840];
-
     finalArray = {
         x: ['AMZN', 'EBAY', 'BABA', 'GOOG', 'BAIDU'],
         y: [3198.21, 50.03, 271.02, 1824.52, 271.02]
@@ -388,13 +358,6 @@ function price() {
         return { x: d, y: finalArray.y[i] };
 
     })
-
-    var barPadding = 5;
-    var barWidth = (width / dataset.length);
-
-
-
-
 
     var xscale = d3.scaleBand()
         .range([0, width])
@@ -408,12 +371,34 @@ function price() {
         .style("text-anchor", "end")
         .attr('class', 'axisWhite');
 
+
     var yscale = d3.scaleLinear()
         .domain([0, 3500])
         .range([height, 0]);
     svg.append("g")
         .call(d3.axisLeft(yscale))
         .attr('class', 'axisWhite');
+
+    svg.append("text")
+        .attr("transform",
+            "translate(" + (width / 2) + " ," +
+            (height + 50) + ")")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("Company");
+
+
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - 70)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("Price ($)");
+
 
 
     svg.selectAll("mybar")
@@ -427,6 +412,7 @@ function price() {
         .attr("fill", "#69b3a2")
 }
 
+//Function to provide Amazon's previous close pricing graph when button is pressed
 function previousClose() {
 
     document.getElementById("funFact").innerText = "The previous closing price of Amazon on 12/04/2020 was $3,186.73." +
@@ -452,23 +438,6 @@ function previousClose() {
 
         .classed("svg-content", true);
 
-    //-----------------------------DATA------------------------------//
-
-
-
-
-
-    var nameObj = {
-        "Year": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-        "Rev": [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522],
-        "Salary": [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
-    };
-
-    const dataset = nameObj;
-
-    const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
-    const rev = [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522];
-    const salary = [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840];
 
     finalArray = {
         x: ['AMZN', 'EBAY', 'BABA', 'GOOG', 'BAIDU'],
@@ -481,13 +450,6 @@ function previousClose() {
 
     })
 
-    var barPadding = 5;
-    var barWidth = (width / dataset.length);
-
-
-
-
-
     var xscale = d3.scaleBand()
         .range([0, width])
         .domain(finalArray.x)
@@ -508,6 +470,26 @@ function previousClose() {
         .call(d3.axisLeft(yscale))
         .attr('class', 'axisWhite')
 
+    svg.append("text")
+        .attr("transform",
+            "translate(" + (width / 2) + " ," +
+            (height + 50) + ")")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("Company");
+
+
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - 70)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("Price ($)");
+
 
 
     svg.selectAll("mybar")
@@ -521,99 +503,8 @@ function previousClose() {
         .attr("fill", "#69b3a2")
 
 }
-//-----------------------------Open function does not work------------------------------//
-function open() {
-    document.getElementById("funFact").innerText = "The previous closing price of Amazon as of 12/04/2020 was $3,186.73." +
-        "  A stock's closing price is the standard benchmark used by investors to track its performance over time." +
-        "  So we can rely on the previous closing price of Amazon and its peers as a solid indicator of the way the market is valuing the companies, even with all the price fluctuation."
 
-    d3.select("SVG").remove();
-    const width = 200;
-    const height = 100;
-    const margin = 5;
-
-    const adj = width * 0.9;
-    var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
-    // we are appending SVG first
-    const svg = d3.select("div#container").append("svg")
-        .attr("preserveAspectRatio", "xMinYMin meet")
-        .attr("viewBox", "-"
-            + 200 + " -"
-            + 30 + " "
-            + 550 + " "
-            + 200)
-
-        .classed("svg-content", true);
-
-    //-----------------------------DATA------------------------------//
-
-
-
-
-
-    var nameObj = {
-        "Year": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-        "Rev": [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522],
-        "Salary": [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
-    };
-
-    const dataset = nameObj;
-
-    const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
-    const rev = [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522];
-    const salary = [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840];
-
-    finalArray = {
-        x: ['AMZN', 'EBAY', 'BABA', 'GOOG', 'BAIDU'],
-        y: [3198.21, 50.03, 271.02, 1824.52, 144.30]
-    };
-
-
-    var rearrangedData = finalArray.x.map(function (d, i) {
-        return { x: d, y: finalArray.y[i] };
-
-    })
-
-    var barPadding = 5;
-    var barWidth = (width / dataset.length);
-
-
-
-
-
-    var xscale = d3.scaleBand()
-        .range([0, width])
-        .domain(finalArray.x)
-        .padding(0.2);
-    svg.append("g")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(xscale))
-        .selectAll("text")
-        .attr("transform", "translate(-10,0)rotate(-45)")
-        .style("text-anchor", "end")
-        .attr('class', 'axisWhite')
-
-
-    var yscale = d3.scaleLinear()
-        .domain([0, 3500])
-        .range([height, 0]);
-    svg.append("g")
-        .call(d3.axisLeft(yscale))
-        .attr('class', 'axisWhite')
-
-
-
-    svg.selectAll("mybar")
-        .data(rearrangedData)
-        .enter()
-        .append("rect")
-        .attr("x", function (d) { return xscale(d.x); })
-        .attr("y", function (d) { return yscale(d.y); })
-        .attr("width", xscale.bandwidth())
-        .attr("height", function (d) { return height - yscale(d.y); })
-        .attr("fill", "#69b3a2")
-}
-
+//Function to provide Amazon's volume graph when button is pressed
 function volume() {
     document.getElementById("funFact").innerText = "Now here is some interesting data - Alibaba (Baba) is leading in volume amongst its peer group." +
         "  What does this mean?" +
@@ -639,24 +530,6 @@ function volume() {
 
         .classed("svg-content", true);
 
-    //-----------------------------DATA------------------------------//
-
-
-
-
-
-    var nameObj = {
-        "Year": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-        "Rev": [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522],
-        "Salary": [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
-    };
-
-    const dataset = nameObj;
-
-    const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
-    const rev = [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522];
-    const salary = [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840];
-
     finalArray = {
         x: ['AMZN', 'EBAY', 'BABA', 'GOOG', 'BAIDU'],
         y: [2913.611, 4791.038, 15527.567, 1378.166, 2450.206]
@@ -667,13 +540,6 @@ function volume() {
         return { x: d, y: finalArray.y[i] };
 
     })
-
-    var barPadding = 5;
-    var barWidth = (width / dataset.length);
-
-
-
-
 
     var xscale = d3.scaleBand()
         .range([0, width])
@@ -694,6 +560,26 @@ function volume() {
         .call(d3.axisLeft(yscale))
         .attr('class', 'axisWhite');
 
+    svg.append("text")
+        .attr("transform",
+            "translate(" + (width / 2) + " ," +
+            (height + 50) + ")")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("Company");
+
+
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - 70)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("Volume (thousands)");
+
 
     svg.selectAll("mybar")
         .data(rearrangedData)
@@ -707,6 +593,7 @@ function volume() {
 
 }
 
+//Function to provide Amazon's market capitalization graph when button is pressed
 function marketCap() {
 
     document.getElementById("funFact").innerText = "Not suprisingly, Amazon is in the top of its peer group for market share, followed closely by Google and Alibaba." +
@@ -732,24 +619,6 @@ function marketCap() {
 
         .classed("svg-content", true);
 
-    //-----------------------------DATA------------------------------//
-
-
-
-
-
-    var nameObj = {
-        "Year": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-        "Rev": [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522],
-        "Salary": [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
-    };
-
-    const dataset = nameObj;
-
-    const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
-    const rev = [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522];
-    const salary = [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840];
-
     finalArray = {
         x: ['AMZN', 'EBAY', 'BABA', 'GOOG', 'BAIDU'],
         y: [1587, 35.136, 719.581, 1235, 49.139]
@@ -760,13 +629,6 @@ function marketCap() {
         return { x: d, y: finalArray.y[i] };
 
     })
-
-    var barPadding = 5;
-    var barWidth = (width / dataset.length);
-
-
-
-
 
     var xscale = d3.scaleBand()
         .range([0, width])
@@ -787,6 +649,26 @@ function marketCap() {
         .call(d3.axisLeft(yscale))
         .attr('class', 'axisWhite');
 
+    svg.append("text")
+        .attr("transform",
+            "translate(" + (width / 2) + " ," +
+            (height + 50) + ")")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("Company");
+
+
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - 70)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("$ (billions)");
+
 
     svg.selectAll("mybar")
         .data(rearrangedData)
@@ -799,6 +681,7 @@ function marketCap() {
         .attr("fill", "#69b3a2")
 }
 
+//Function to provide Amazon's beta graph when button is pressed
 function beta() {
 
     document.getElementById("funFact").innerText = "Amazon's beta is 1.2." +
@@ -825,23 +708,6 @@ function beta() {
 
         .classed("svg-content", true);
 
-    //-----------------------------DATA------------------------------//
-
-
-
-
-
-    var nameObj = {
-        "Year": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-        "Rev": [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522],
-        "Salary": [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
-    };
-
-    const dataset = nameObj;
-
-    const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
-    const rev = [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522];
-    const salary = [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840];
 
     finalArray = {
         x: ['AMZN', 'EBAY', 'BABA', 'GOOG', 'BAIDU'],
@@ -853,13 +719,6 @@ function beta() {
         return { x: d, y: finalArray.y[i] };
 
     })
-
-    var barPadding = 5;
-    var barWidth = (width / dataset.length);
-
-
-
-
 
     var xscale = d3.scaleBand()
         .range([0, width])
@@ -880,6 +739,27 @@ function beta() {
         .call(d3.axisLeft(yscale))
         .attr('class', 'axisWhite');
 
+    svg.append("text")
+        .attr("transform",
+            "translate(" + (width / 2) + " ," +
+            (height + 50) + ")")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("Company");
+
+
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - 70)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("Beta");
+
+
 
     svg.selectAll("mybar")
         .data(rearrangedData)
@@ -892,6 +772,7 @@ function beta() {
         .attr("fill", "#69b3a2")
 }
 
+//Function to provide Amazon's eps graph when button is pressed
 function eps() {
 
     document.getElementById("funFact").innerText = "Amazon has the second highest EPS ratio amongst its peer group at 34.20, second to Google." +
@@ -915,23 +796,6 @@ function eps() {
             + 200)
 
         .classed("svg-content", true);
-    //-----------------------------DATA------------------------------//
-
-
-
-
-
-    var nameObj = {
-        "Year": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-        "Rev": [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522],
-        "Salary": [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
-    };
-
-    const dataset = nameObj;
-
-    const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
-    const rev = [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522];
-    const salary = [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840];
 
     finalArray = {
         x: ['AMZN', 'EBAY', 'BABA', 'GOOG', 'BAIDU'],
@@ -943,13 +807,6 @@ function eps() {
         return { x: d, y: finalArray.y[i] };
 
     })
-
-    var barPadding = 5;
-    var barWidth = (width / dataset.length);
-
-
-
-
 
     var xscale = d3.scaleBand()
         .range([0, width])
@@ -970,6 +827,26 @@ function eps() {
         .call(d3.axisLeft(yscale))
         .attr('class', 'axisWhite');
 
+    svg.append("text")
+        .attr("transform",
+            "translate(" + (width / 2) + " ," +
+            (height + 50) + ")")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("Company");
+
+
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - 70)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("EPS");
+
 
 
     svg.selectAll("mybar")
@@ -983,6 +860,7 @@ function eps() {
         .attr("fill", "#69b3a2")
 }
 
+//Function to provide Amazon's one year target price graph when button is pressed
 function oneYr() {
 
     document.getElementById("funFact").innerText = "Amazon has by far the highest consensus estimate of 1 year target price amongst its peer group at $3,812.78." +
@@ -1007,23 +885,6 @@ function oneYr() {
 
         .classed("svg-content", true);
 
-    //-----------------------------DATA------------------------------//
-
-
-
-
-
-    var nameObj = {
-        "Year": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-        "Rev": [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522],
-        "Salary": [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
-    };
-
-    const dataset = nameObj;
-
-    const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
-    const rev = [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522];
-    const salary = [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840];
 
     finalArray = {
         x: ['AMZN', 'EBAY', 'BABA', 'GOOG', 'BAIDU'],
@@ -1035,11 +896,6 @@ function oneYr() {
         return { x: d, y: finalArray.y[i] };
 
     })
-
-    var barPadding = 5;
-    var barWidth = (width / dataset.length);
-
-
 
 
 
@@ -1063,6 +919,27 @@ function oneYr() {
         .call(d3.axisLeft(yscale))
         .attr('class', 'axisWhite');
 
+    svg.append("text")
+        .attr("transform",
+            "translate(" + (width / 2) + " ," +
+            (height + 50) + ")")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("Company");
+
+
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - 70)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("Price ($)");
+
+
 
 
     svg.selectAll("mybar")
@@ -1076,6 +953,7 @@ function oneYr() {
         .attr("fill", "#69b3a2")
 }
 
+//Function to provide Amazon's arnings estimate graph when button is pressed
 function earningsEstimate() {
 
     document.getElementById("funFact").innerText = "The median EPS estimate for Amazon this quarter is 7.09." +
@@ -1144,6 +1022,16 @@ function earningsEstimate() {
         .attr("stroke", "white")
         .style("fill", "#69b3a2")
 
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - 50)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("EPS");
+
     // show median, min and max horizontal lines
     svg
         .selectAll("toto")
@@ -1157,6 +1045,7 @@ function earningsEstimate() {
         .attr("stroke", "white")
 }
 
+//Function to provide Amazon's revenue estimate graph when button is pressed
 function revenueEstimate() {
 
     document.getElementById("funFact").innerText = "The revenue estimates for Amazon have a  tight spread and are quite high overall." +
@@ -1223,6 +1112,16 @@ function revenueEstimate() {
         .attr("stroke", "white")
         .style("fill", "#69b3a2")
 
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - 50)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'small')
+        .text("Revenue ($ millions)");
+
     // show median, min and max horizontal lines
     svg
         .selectAll("toto")
@@ -1236,6 +1135,7 @@ function revenueEstimate() {
         .attr("stroke", "white")
 }
 
+//Function to provide Amazon's growth estimate graph when button is pressed
 function growth() {
 
     document.getElementById("funFact").innerText = "Consensus estimates for revenue growth are 51.50% and 30.10%, respectively." +
@@ -1261,7 +1161,7 @@ function growth() {
     var container = d3.select('div#container'),
         width = 720,
         height = 420,
-        margin = { top: 30, right: 20, bottom: 30, left: 50 },
+        margin = { top: 60, right: 50, bottom: 100, left: 120 },
         barPadding = .2,
         axisTicks = { qty: 5, outerSize: 0, dateFormat: '%m-%d' };
     var svg = container
@@ -1332,8 +1232,29 @@ function growth() {
         .attr("fill", "white")
         .style("font-size", "30px")
         .call(yAxis);
+
+    svg.append("text")
+        .attr("transform",
+            "translate(" + (width / 3) + " ," +
+            (height - 80) + ")")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'x-large')
+        .text("Year");
+
+
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - 100)
+        .attr("x", 0 - (height / 3))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'x-large')
+        .text("% Growth");
 }
 
+//Function to provide Amazon's price income statement graph when button is pressed
 function incomeStatement() {
 
     document.getElementById("funFact").innerText = "At the end of 2019, Amazon ended with around $280B in revenue and $11.6B in net income.  How did we get here?" +
@@ -1344,7 +1265,7 @@ function incomeStatement() {
     d3.select("SVG").remove();
 
     // set the dimensions and margins of the graph
-    var margin = { top: 10, right: 30, bottom: 90, left: 80 },
+    var margin = { top: 60, right: 80, bottom: 140, left: 130 },
         width = 460 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
@@ -1359,23 +1280,6 @@ function incomeStatement() {
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
 
-    //-----------------------------DATA------------------------------//
-
-
-
-
-
-    var nameObj = {
-        "Year": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-        "Rev": [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522],
-        "Salary": [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
-    };
-
-    const dataset = nameObj;
-
-    const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
-    const rev = [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522];
-    const salary = [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840];
 
     finalArray = {
         x: ['Revenue', 'Cost of Goods Sold', 'Gross Profit', 'Operating Expenses', 'Operating Income', 'Pretax Income', 'Net Income'],
@@ -1388,13 +1292,6 @@ function incomeStatement() {
 
     })
 
-    var barPadding = 5;
-    var barWidth = (width / dataset.length);
-
-
-
-
-
     var xscale = d3.scaleBand()
         .range([0, width])
         .domain(finalArray.x)
@@ -1403,6 +1300,7 @@ function incomeStatement() {
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(xscale))
         .selectAll("text")
+        .attr('font-size', 'small')
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end");
 
@@ -1411,9 +1309,32 @@ function incomeStatement() {
         .domain([0, 1000000000])
         .range([height, 0]);
     svg.append("g")
+        .attr('font-size', 'large')
         .call(d3.axisLeft(yscale))
         .attr('fill', 'white')
+
     //.style('text-anchor', 'middle');
+
+    svg.append("text")
+        .attr("transform",
+            "translate(" + (width / 2) + " ," +
+            (height + 120) + ")")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'large')
+        .text("Line Item");
+
+
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - 100)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'large')
+        .text("$ (thousands)");
+
 
     // Lines
     svg.selectAll("myline")
@@ -1439,6 +1360,7 @@ function incomeStatement() {
         .attr("stroke", "white")
 }
 
+//Function to provide Amazon's statement of cash flows graph when button is pressed
 function statementOfCashFlows() {
 
     document.getElementById("funFact").innerText = "At end of 2019, Amazon ended with $38.5B in operating cash flow, -$24.3B in investing cash flow, and -$10.1B in financing cash flow." +
@@ -1448,7 +1370,7 @@ function statementOfCashFlows() {
     d3.select("SVG").remove();
 
     // set the dimensions and margins of the graph
-    var margin = { top: 10, right: 30, bottom: 90, left: 80 },
+    var margin = { top: 60, right: 80, bottom: 140, left: 130 },
         width = 460 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
@@ -1463,23 +1385,6 @@ function statementOfCashFlows() {
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
 
-    //-----------------------------DATA------------------------------//
-
-
-
-
-
-    var nameObj = {
-        "Year": [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
-        "Rev": [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522],
-        "Salary": [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840]
-    };
-
-    const dataset = nameObj;
-
-    const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
-    const rev = [8490, 10711, 14835, 19166, 24509, 34204, 48077, 61093, 74452, 88988, 107006, 135987, 177866, 232887, 280522];
-    const salary = [81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840, 81840];
 
     finalArray = {
         x: ['Operating', 'Investing', 'Financing', 'Ending Cash Position'],
@@ -1492,13 +1397,6 @@ function statementOfCashFlows() {
 
     })
 
-    var barPadding = 5;
-    var barWidth = (width / dataset.length);
-
-
-
-
-
     var xscale = d3.scaleBand()
         .range([0, width])
         .domain(finalArray.x)
@@ -1508,6 +1406,7 @@ function statementOfCashFlows() {
         .call(d3.axisBottom(xscale))
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
+        .attr('font-size', 'small')
         .style("text-anchor", "end");
 
 
@@ -1516,7 +1415,28 @@ function statementOfCashFlows() {
         .range([height, 0]);
     svg.append("g")
         .call(d3.axisLeft(yscale))
+        .attr('font-size', 'small')
         .attr('fill', 'white');
+
+    svg.append("text")
+        .attr("transform",
+            "translate(" + (width / 2) + " ," +
+            (height + 120) + ")")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'large')
+        .text("Line Item");
+
+
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - 120)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .attr('stroke', 'white')
+        .attr('font-size', 'large')
+        .text("$ (thousands)");
 
     // Lines
     svg.selectAll("myline")
@@ -1542,6 +1462,7 @@ function statementOfCashFlows() {
         .attr("stroke", "white")
 }
 
+//Function to provide Amazon's balance sheet graph when button is pressed
 function balanceSheet() {
 
     document.getElementById("funFact").innerText = "The three major line items to look out for on the balance sheet are total assets, total liabilities and total equity." +
