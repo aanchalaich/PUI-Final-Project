@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <title>Tutorial</title>
+    <meta charset="UTF-8">
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -15,10 +17,10 @@
     <!-- MDBootstrap-->
     <link rel="stylesheet" href="MDB-Free_4.19.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="MDB-Free_4.19.2/css/mdb.min.css">
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/jquery.min.js"></script>
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/popper.min.js"></script>
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/mdb.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/jquery.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/popper.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/bootstrap.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/mdb.min.js"></script>
 
 
 
@@ -46,17 +48,17 @@
 
         <!--Arrows -->
         <div class="row">
-            <div id="header" class="col" >
+            <div class="col header" >
                 <p style="font-size: large;">Home</p>
                 <a href="homePage.html">
-                    <img id='back' src='images/arrowBack.png'>
+                    <img class='next' src='images/arrowBack.png' alt="arrow">
                 </a>
             </div>
-            <div id="header" class="col" >span 4</div>
-            <div id="header" class="col" >
+            <div class="col header" >span 4</div>
+            <div class="col header" >
                 <p style="font-size: large;">Profile</p>
                 <a href="profilePage.html">
-                    <img id='next' src='images/arrow.png'>
+                    <img class='next' src='images/arrow.png' alt="arrow">
                 </a>
             </div>
         </div>
@@ -71,26 +73,26 @@
         <!--Section 1-->
         <div class="row">
             <div class="col wow fadeInRight " data-wow-delay="0.2s">
-                <img src="images/yahooLogo.png" width="80%" height="80%" style="margin-left: 5%">
+                <img id="yahooLogo" src="images/yahooLogo.png" alt="yahooLogo">
             </div>
             <div id="introCol" class="col wow fadeIn " data-wow-delay="0.2s">
-                <p id="introColText">At the top of the page, you'll get a
+                <p class="introColText">At the top of the page, you'll get a
                     brief description of what this section on Yahoo Finance is.
                 </p>
-                <a class="arrow" href="#test"><img class="arrowImage" src="images/homeArrow.png" ></a>
+                <a class="arrow" href="#test"><img class="arrowImage" src="images/homeArrow.png" alt="arrow"></a>
             </div>
         </div>
 
         <!--Section 2-->
         <div id="test" class="row">
             <div id="sectionTwoCol" class="col wow fadeIn " data-wow-delay="0.2s">
-                <p style="text-align: left; margin-bottom: 150px; color: white;">Over here, we'll tell you exactly why
+                <p class="introColText">Over here, we'll tell you exactly why
                     this section is so important when analyzing a stock.
                 </p>
-                <a class="arrow" href="#test2"><img class="arrowImage" src="images/homeArrow.png" ></a>
+                <a class="arrow" href="#test2"><img class="arrowImage" src="images/homeArrow.png" alt="arrow"></a>
             </div>
             <div class="col wow fadeInLeft " data-wow-delay="0.2s">
-                <img id="emojiImage" src="images/emoji.png">
+                <img id="emojiImage" src="images/emoji.png" alt="emoji">
             </div>
         </div>
 
@@ -104,7 +106,7 @@
                             you'll get to see what each one tells you!
                         </p>
                         <div id="headImageCol" class="col wow fadeIn" data-wow-delay="0.8s">
-                            <img id="headImage">
+                            <img id="headImage" src="images/placeholder.png" alt="headImage">
                         </div>
                         <div class="row">
                             <div class="col"><button class="mx-auto"
@@ -125,7 +127,7 @@
                                 </button></div>
                         </div>
                         <div class="row">
-                            <a id="sectionThreeArrow" href="#test3"><img class="arrowImage" src="images/homeArrow.png"></a>
+                            <a id="sectionThreeArrow" href="#test3"><img class="arrowImage" src="images/homeArrow.png" alt="arrow"></a>
                         </div>
                     </div>
                 </div>
@@ -141,13 +143,13 @@
                     <br> You'll get to see Amazon's numbers that we can obtain from Yahoo Finance, and how that affects
                     how we analyze the company.
                 </p>
-                <img src="images/investing.png">
+                <img src="images/investing.png" alt="investing">
             </div>
         </div>
 
         <!--Arrow-->
         <div class="row">
-            <a id="sectionFourArrow" href="#test4"><img class="arrowImage" src="images/homeArrow.png" ></a>
+            <a id="sectionFourArrow" href="#test4"><img class="arrowImage" src="images/homeArrow.png" alt="arrow"></a>
         </div>
 
         <!--Section 5-->
@@ -155,7 +157,7 @@
             <div id="sectionFiveCol" class="col wow fadeIn " data-wow-delay="0.2s">
                 <p id="sectionFiveText">You see? We make
                     learning finance as easy as possible!</p>
-                </p>
+                
             </div>
         </div>
 

@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <title>Summary Page</title>
+    <meta charset="UTF-8">
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -15,10 +17,10 @@
     <!-- MDBootstrap-->
     <link rel="stylesheet" href="MDB-Free_4.19.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="MDB-Free_4.19.2/css/mdb.min.css">
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/jquery.min.js"></script>
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/popper.min.js"></script>
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/mdb.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/jquery.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/popper.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/bootstrap.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/mdb.min.js"></script>
 
 
 
@@ -44,15 +46,15 @@
 
         <!--Arrows -->
         <div class="row">
-            <div id="header" class="col">
+            <div class="col header">
                 <p style="font-size: large;">Profile</p>
-                <a href="profilePage.html"><img id='back' src='images/arrowBack.png'>
+                <a href="profilePage.html"><img class='back' src='images/arrowBack.png' alt="arrow">
                 </a>
             </div>
-            <div id="header" class="col">span 4</div>
-            <div id="header" class="col">
+            <div class="col header">span 4</div>
+            <div class="col header">
                 <p style="font-size: large;">Financials</p>
-                <a href="financialsPage.html"><img id='next' src='images/arrow.png'>
+                <a href="financialsPage.html"><img class='next' src='images/arrow.png' alt="arrow">
                 </a>
             </div>
         </div>
@@ -67,7 +69,7 @@
         <!--Section 1-->
         <div class="row">
             <div id="introImage" class="col wow fadeInLeft " data-wow-delay="0.2s">
-                <img id="introImageSrc" src="images/summaryProfile.png">
+                <img id="introImageSrc" src="images/summaryProfile.png" alt="summary">
             </div>
             <div id="introCol" class="col wow fadeInLeft " data-wow-delay="0.2s">
                 <p id="introColText">The "Summary" section gives you a quick look at key
@@ -77,45 +79,43 @@
                     This section gives you a glance at the most current statistics of a company.
                     These will allow you to quickly assess how a company is performing right now.
                 </p>
-                <a class="arrow" href="#test"><img class="arrowImage" src="images/homeArrow.png"></a>
+                <a class="arrow" href="#test"><img class="arrowImage" src="images/homeArrow.png" alt="arrow"></a>
             </div>
         </div>
 
         <!--Section 2-->
         <div id="test" class=" row">
             <div id="sectionTwoCol" class="col wow fadeInRight " data-wow-delay="0.2s">
-                <p>
                 <ul>
-                    <p id="sectionTwoListTitle">
+                    <li id="sectionTwoListTitle">
                         The Summary section will help
                         you in your
                         stock
-                        research by:</p>
+                        research by:
                     <li>
-                        <p class="sectionTwoListBullets">
+                        <li class="sectionTwoListBullets">
                             Highlighting the stock price
                             that is
                             currently
-                            being traded</p>
+                            being traded
                     </li>
                     <li>
-                        <p class="sectionTwoListBullets">
+                        <li class="sectionTwoListBullets">
                             Highlighting the most
                             important ratios such
                             as
-                            PE and EPS</p>
+                            PE and EPS
                     </li>
                     <li>
-                        <p class="sectionTwoListBullets">
+                        <li class="sectionTwoListBullets">
                             Easily compare key metrics
                             across members
-                            of a peer group</p>
+                            of a peer group
                 </ul>
-                </p>
-                <a class="arrow" href="#test2"><img class="arrowImage" src=" images/homeArrow.png"></a>
+                <a class="arrow" href="#test2"><img class="arrowImage" src=" images/homeArrow.png" alt="arrow"></a>
             </div>
-            <div id="sectionTwoCol" class="col wow fadeInRight " data-wow-delay="0.2s">
-                <img src="images/comparison.png">
+            <div class="sectionTwoCol col wow fadeInRight" data-wow-delay="0.2s">
+                <img src="images/comparison.png" alt="comparison">
             </div>
         </div>
 
@@ -128,7 +128,7 @@
                             Click on a button to learn more about the features of this page!
                         </p>
                         <div id="headImageCol" class="col wow fadeIn" data-wow-delay="0.8s">
-                            <img id="headImage">
+                            <img id="headImage" src="images/placeholder.png" alt="headImage">
                         </div>
                         <div class="row">
                             <div class="col"><button class="mx-auto animated fadeIn"
@@ -166,8 +166,8 @@
                                     1 Yr Target Est
                                 </button></div>
                         </div>
-                        <a id="sectionThreeArrow" href="#test3"><img class="arrowImage"
-                            src="images/homeArrow.png" style="margin-right: 48.5%;"></a>
+                        <a id="sectionThreeArrow" href="#test3"><img class="arrowImage" src="images/homeArrow.png"
+                                style="margin-right: 48.5%;" alt="arrow"></a>
                     </div>
                 </div>
             </div>

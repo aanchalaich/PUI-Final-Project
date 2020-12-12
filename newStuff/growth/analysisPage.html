@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <title>Analysis Page</title>
+    <meta charset="UTF-8">
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -15,10 +17,10 @@
     <!-- MDBootstrap-->
     <link rel="stylesheet" href="MDB-Free_4.19.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="MDB-Free_4.19.2/css/mdb.min.css">
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/jquery.min.js"></script>
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/popper.min.js"></script>
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/mdb.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/jquery.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/popper.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/bootstrap.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/mdb.min.js"></script>
 
 
 
@@ -44,13 +46,13 @@
 
         <!--Arrows -->
         <div class="row">
-            <div id="header" class="col">
+            <div class="col header">
                 <p style="font-size: large;">Financials</p>
-                <a href="financialsPage.html"><img id='back' src='images/arrowBack.png'>
+                <a href="financialsPage.html"><img class='back' src='images/arrowBack.png' alt="arrow">
                 </a>
             </div>
-            <div id="header" class="col" style="padding: 50px; ">span 4</div>
-            <div id="header" class="col" style="padding: 50px; ">
+            <div class="col header">span 4</div>
+            <div class="col header">
             </div>
         </div>
 
@@ -64,7 +66,7 @@
         <!--Section 1-->
         <div class="row">
             <div id="introImage" class="col wow fadeInLeft " data-wow-delay="0.2s">
-                <img id="introImageSrc" src="images/analysis.PNG">
+                <img id="introImageSrc" src="images/analysis.PNG" alt="analysis">
             </div>
             <div id="introCol" class="col wow fadeInLeft " data-wow-delay="0.2s">
                 <p id="introColText">The Analysis tab gives analyst estimates on earnings,
@@ -73,40 +75,38 @@
                     This section is helpful to look at consensus estimates for important forward-looking
                     metrics, which you can refer to in your own analysis.
                 </p>
-                <a class="arrow" href="#test"><img class="arrowImage" src="images/homeArrow.png"></a>
+                <a class="arrow" href="#test"><img class="arrowImage" src="images/homeArrow.png" alt="arrow"></a>
             </div>
         </div>
 
         <!--Section 2-->
         <div id="test" class=" row">
             <div id="sectionTwoCol" class="col wow fadeInRight " data-wow-delay="0.2s">
-                <p>
+
                 <ul>
-                    <p id="sectionTwoListTitle">
+                    <li id="sectionTwoListTitle">
                         The Analysis section will help you in your
                         stock
-                        research by:</p>
+                        research by:
                     <li>
-                        <p class="sectionTwoListBullets">
-                            Providing consensus estimates on earnings,
-                            revenue, EPS, and growth</p>
+                    <li class="sectionTwoListBullets">
+                        Providing consensus estimates on earnings,
+                        revenue, EPS, and growth
                     </li>
-                    <li>
-                        <p class="sectionTwoListBullets">
+                    <li class="sectionTwoListBullets">
                             Providing high, low, and medium estimates
-                            for all metrics</p>
+                            for all metrics
                     </li>
-                    <li>
-                        <p class="sectionTwoListBullets">
+                    <li class="sectionTwoListBullets">
                             Showing a range of time frames for trend
-                            and growth estimates</p>
+                            and growth estimates
                 </ul>
-                </p>
-                <a class="arrow" href="#test2"><img class="arrowImage" src=" images/homeArrow.png"></a>
+
+                <a class="arrow" href="#test2"><img class="arrowImage" src=" images/homeArrow.png" alt="arrow"></a>
             </div>
 
-            <div id="sectionTwoCol" class="col wow fadeInRight " data-wow-delay="0.2s">
-                <img id="sectionTwoImage" src="images/companyProfile.png">
+            <div class="sectionTwoCol wow fadeInRight" data-wow-delay="0.2s">
+                <img id="sectionTwoImageImage" src="images/stockAnalysis.png" alt="companyProfile">
 
             </div>
         </div>
@@ -120,7 +120,7 @@
                             Click on a button to learn more about the features of this page!
                         </p>
                         <div id="headImageCol" class="col wow fadeIn" data-wow-delay="0.8s">
-                            <img id="headImage">
+                            <img id="headImage" src="images/placeholder.png" alt="headImage">
                         </div>
                         <div id="threeButtonRow" class="row">
                             <div id="volumeHeading" class="col"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/earningsEstimate.png'), 
@@ -138,8 +138,8 @@
                                 </button></div>
                         </div>
                         <div class="row">
-                            <a id="sectionThreeArrow" href="#test3"><img class="arrowImage"
-                                src="images/homeArrow.png"></a>
+                            <a id="sectionThreeArrow" href="#test3"><img class="arrowImage" src="images/homeArrow.png"
+                                    alt="arrow"></a>
                         </div>
                     </div>
                 </div>

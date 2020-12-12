@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <title>Profile Page</title>
+    <meta charset="UTF-8">
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -15,10 +17,10 @@
     <!-- MDBootstrap-->
     <link rel="stylesheet" href="MDB-Free_4.19.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="MDB-Free_4.19.2/css/mdb.min.css">
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/jquery.min.js"></script>
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/popper.min.js"></script>
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="MDB-Free_4.19.2/js/mdb.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/jquery.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/popper.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/bootstrap.min.js"></script>
+    <script src="MDB-Free_4.19.2/js/mdb.min.js"></script>
 
 
 
@@ -43,17 +45,17 @@
 
         <!--Arrows -->
         <div class="row">
-            <div id="header" class="col">
+            <div class="col header">
                 <p style="font-size: large;">Tutorial</p>
                 <a href="tutorial.html">
-                    <img id='next' src='images/arrowBack.png'>
+                    <img class='next' src='images/arrowBack.png' alt="arrow">
                 </a>
             </div>
-            <div id="header" class="col">span 4</div>
-            <div id="header" class="col">
+            <div class="col header">span 4</div>
+            <div class="col header">
                 <p style="font-size: large;">Summary</p>
                 <a href="summaryPage.html">
-                    <img id='next' src='images/arrow.png'>
+                    <img class='next' src='images/arrow.png' alt="arrow">
                 </a>
             </div>
         </div>
@@ -68,7 +70,7 @@
         <!--Section 1-->
         <div class="row">
             <div id="introImage" class="col wow fadeInLeft " data-wow-delay="0.2s">
-                <img id="introImageSrc" src="images/profileProfile.PNG">
+                <img id="introImageSrc" src="images/profileProfile.PNG" alt="profile">
             </div>
             <div id="introCol" class="col wow fadeInLeft " data-wow-delay="0.2s">
                 <p id="introColText">The first thing you should do when you land on the
@@ -79,39 +81,37 @@
                     you go into the financial analysis. You need to know what the company is before you know about its
                     stock information!
                 </p>
-                <a class="arrow" href="#test"><img class="arrowImage" src="images/homeArrow.png"></a>
+                <a class="arrow" href="#test"><img class="arrowImage" src="images/homeArrow.png" alt="arrow"></a>
             </div>
         </div>
 
         <!--Section 2-->
         <div id="test" class="row">
             <div id="sectionTwoCol" class="col wow fadeInRight " data-wow-delay="0.2s">
-                <p>
+                
                 <ul>
-                    <p id="sectionTwoListTitle">
+                    <li id="sectionTwoListTitle">
                         The Profile section will help you in your
                         stock
-                        research by:</p>
-                    <li>
-                        <p class="sectionTwoListBullets">
-                            Telling you what the company does</p>
+                        research by:
                     </li>
-                    <li>
-                        <p class="sectionTwoListBullets">
+                    <li class="sectionTwoListBullets">
+                            Telling you what the company does
+                    </li>
+                    <li class="sectionTwoListBullets">
                             Categorizing it into industries and sectors
-                        </p>
+                       
                     </li>
-                    <li>
-                        <p class="sectionTwoListBullets">
+                    <li class="sectionTwoListBullets">
                             Telling you how their board of directors is
-                            structured and how senior leadership gets compensated</p>
+                            structured and how senior leadership gets compensated
                 </ul>
-                </p>
+                
 
-                <a class="arrow" href="#test2"><img class="arrowImage" src=" images/homeArrow.png"></a>
+                <a class="arrow" href="#test2"><img class="arrowImage" src=" images/homeArrow.png" alt="arrow"></a>
             </div>
-            <div id="sectionTwoCol" class="col wow fadeInRight " data-wow-delay="0.2s">
-                <img id="sectionTwoImage" src="images/companyProfile.png">
+            <div class="sectionTwoCol col wow fadeInRight" data-wow-delay="0.2s">
+                <img id="sectionTwoImage" src="images/companyProfile.png" alt="companyProfile">
             </div>
         </div>
 
@@ -124,7 +124,7 @@
                             Click on a button to learn more about the features of this page!
                         </p>
                         <div id="headImageCol" class="col wow fadeIn" data-wow-delay="0.8s">
-                            <img id="headImage">
+                            <img id="headImage" src="images/placeholder.png" alt="headImage">
                         </div>
                         <div class="row">
                             <div class="col"><button class="mx-auto"
@@ -146,7 +146,7 @@
                         </div>
                         <div class="row">
                             <a id="sectionThreeArrow" href="#test3"><img class="arrowImage"
-                                    src="images/homeArrow.png"></a>
+                                    src="images/homeArrow.png" alt="arrow"></a>
                         </div>
                     </div>
                 </div>
