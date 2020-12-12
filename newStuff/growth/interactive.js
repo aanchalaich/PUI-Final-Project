@@ -246,7 +246,7 @@ function peRatio() {
         "  However, Amazon is expected to have much higher growth than companies like Apply or Microsoft, so its PE ratio is actually a good signal." +
         " This is one reason why it is considered a growth company."
 
-    d3.select("SVG").remove();
+    d3.selectAll("svg > *").remove();
     document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
@@ -335,7 +335,7 @@ function price() {
         "  We can compare this across companies and see that Amazon strongly dominates in price above its peers." +
         "  So is Amazon truly worth as much as the market says it is, or could it be overvalued?"
 
-    d3.select("SVG").remove();
+    d3.selectAll("svg > *").remove();
     document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
@@ -425,7 +425,7 @@ function previousClose() {
         "  A stock's closing price is the standard benchmark used by investors to track its performance over time." +
         "  So we can rely on the previous closing price of Amazon and its peers as a solid indicator of the way the market is valuing the companies, even with all the price fluctuation."
 
-    d3.select("SVG").remove();
+    d3.selectAll("svg > *").remove();
     document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
@@ -517,7 +517,7 @@ function volume() {
         "  It means the market activity for Alibaba is much stronger than that of Amazon, and the security is more liquid as well."
 
 
-    d3.select("SVG").remove();
+    d3.selectAll("svg > *").remove();
     document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
@@ -606,7 +606,7 @@ function marketCap() {
         " Now you can start to see why its share price is so high -  its market Cap is high but volume is low, creating an almost inflated share price."
 
 
-    d3.select("SVG").remove();
+    d3.selectAll("svg > *").remove();
     document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
@@ -695,7 +695,7 @@ function beta() {
         " Amazon's beta is right around 1 so it is relatively stable in price fluctuations, a given considering its diverse lines of business."
 
 
-    d3.select("SVG").remove();
+    d3.selectAll("svg > *").remove();
     document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
@@ -785,7 +785,7 @@ function eps() {
         " This is a very good sign, as it shows large profits per dollar of its share price."
 
 
-    d3.select("SVG").remove();
+    d3.selectAll("svg > *").remove();
     document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
@@ -874,7 +874,7 @@ function oneYr() {
         " This is likely due to it's growth prospects - Amazon has had record shattering growth rates for e-commerce in the past, and that trend is expected to continue."
 
 
-    d3.select("SVG").remove();
+    d3.selectAll("svg > *").remove();
     document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
