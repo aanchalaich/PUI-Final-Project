@@ -247,6 +247,7 @@ function peRatio() {
         " This is one reason why it is considered a growth company."
 
     d3.select("SVG").remove();
+    document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
     const margin = 5;
@@ -335,6 +336,7 @@ function price() {
         "  So is Amazon truly worth as much as the market says it is, or could it be overvalued?"
 
     d3.select("SVG").remove();
+    document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
     const margin = 5;
@@ -424,7 +426,7 @@ function previousClose() {
         "  So we can rely on the previous closing price of Amazon and its peers as a solid indicator of the way the market is valuing the companies, even with all the price fluctuation."
 
     d3.select("SVG").remove();
-    d3.select("SVG").remove();
+    document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
     const margin = 5;
@@ -516,7 +518,7 @@ function volume() {
 
 
     d3.select("SVG").remove();
-    d3.select("SVG").remove();
+    document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
     const margin = 5;
@@ -605,7 +607,7 @@ function marketCap() {
 
 
     d3.select("SVG").remove();
-    d3.select("SVG").remove();
+    document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
     const margin = 5;
@@ -694,7 +696,7 @@ function beta() {
 
 
     d3.select("SVG").remove();
-    d3.select("SVG").remove();
+    document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
     const margin = 5;
@@ -784,6 +786,7 @@ function eps() {
 
 
     d3.select("SVG").remove();
+    document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
     const margin = 5;
@@ -872,6 +875,7 @@ function oneYr() {
 
 
     d3.select("SVG").remove();
+    document.getElementById("container").innerHTML = "";
     const width = 200;
     const height = 100;
     const margin = 5;
