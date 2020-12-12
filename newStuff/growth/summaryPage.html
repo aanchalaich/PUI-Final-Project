@@ -44,83 +44,77 @@
 
         <!--Arrows -->
         <div class="row">
-            <div class="col" style="padding: 50px; ">
+            <div id="header" class="col">
                 <p style="font-size: large;">Profile</p>
-                <a href="profilePage.html"><img id='back' src='images/arrowBack.png' width="50" height="50">
+                <a href="profilePage.html"><img id='back' src='images/arrowBack.png'>
                 </a>
             </div>
-            <div class="col" style="padding: 50px; ">span 4</div>
-            <div class="col" style="padding: 50px; ">
+            <div id="header" class="col">span 4</div>
+            <div id="header" class="col">
                 <p style="font-size: large;">Financials</p>
-                <a href="financialsPage.html"><img id='next' src='images/arrow.png' width="50" height="50">
+                <a href="financialsPage.html"><img id='next' src='images/arrow.png'>
                 </a>
             </div>
         </div>
 
         <!--Title-->
         <div class="row">
-            <div class="col animated fadeIn" style="padding: 30px;">
-                <p style="font-size: xxx-large; color: white;">Summary Page</p>
+            <div id="titleCol" class="col animated fadeIn">
+                <p id="title">Summary Page</p>
             </div>
         </div>
 
         <!--Section 1-->
         <div class="row">
-            <div class="col wow fadeInLeft " data-wow-delay="0.2s" style="padding-bottom: 100px; padding-top: 100px; ">
-                <img src="images/summaryProfile.png" style="border-radius: 5%; " height="70%" width="80%">
+            <div id="introImage" class="col wow fadeInLeft " data-wow-delay="0.2s">
+                <img id="introImageSrc" src="images/summaryProfile.png">
             </div>
-            <div class="col wow fadeInLeft " data-wow-delay="0.2s"
-                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
-
-                <p style="text-align: left; margin-bottom: 150px;">The "Summary" section gives you a quick look at key
+            <div id="introCol" class="col wow fadeInLeft " data-wow-delay="0.2s">
+                <p id="introColText">The "Summary" section gives you a quick look at key
                     information
                     such as the stock name,
                     price, and return.
                     This section gives you a glance at the most current statistics of a company.
                     These will allow you to quickly assess how a company is performing right now.
                 </p>
-                <a href="#test" style="text-align: center; margin-top: 200"><img src="images/homeArrow.png" width="30"
-                        height="30"></a>
+                <a class="arrow" href="#test"><img class="arrowImage" src="images/homeArrow.png"></a>
             </div>
         </div>
 
         <!--Section 2-->
         <div id="test" class=" row">
-            <div class="col wow fadeInRight " data-wow-delay="0.2s" style="padding-bottom: 100px; padding-top: 100px;">
+            <div id="sectionTwoCol" class="col wow fadeInRight " data-wow-delay="0.2s">
                 <p>
-                <ul style="color: white; text-align: center;">
-                    <p
-                        style="font-size: xx-large; text-align: left; padding-bottom: 100px; padding-right: 100px; padding-left: 100px;">
+                <ul>
+                    <p id="sectionTwoListTitle">
                         The Summary section will help
                         you in your
                         stock
                         research by:</p>
                     <li>
-                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                        <p class="sectionTwoListBullets">
                             Highlighting the stock price
                             that is
                             currently
                             being traded</p>
                     </li>
                     <li>
-                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                        <p class="sectionTwoListBullets">
                             Highlighting the most
                             important ratios such
                             as
                             PE and EPS</p>
                     </li>
                     <li>
-                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                        <p class="sectionTwoListBullets">
                             Easily compare key metrics
                             across members
                             of a peer group</p>
                 </ul>
                 </p>
-                <a href="#test2" style="text-align: center; margin-top: 200"><img src=" images/homeArrow.png" width="30"
-                        height="30"></a>
+                <a class="arrow" href="#test2"><img class="arrowImage" src=" images/homeArrow.png"></a>
             </div>
-            <div class="col wow fadeInRight " data-wow-delay="0.2s"
-                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
+            <div id="sectionTwoCol" class="col wow fadeInRight " data-wow-delay="0.2s">
                 <img src="images/comparison.png">
             </div>
         </div>
@@ -129,59 +123,51 @@
         <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s" style=" margin-top: 50px;">
             <div class="container wow fadeInLeft" data-wow-delay="0.2s">
                 <div class="row">
-                    <div class="col" style="padding-bottom: 50px;">
-                        <p class="wow fadeIn" data-wow-delay="0.8s" style="text-align: center; ">
+                    <div id="sectionThreeCol" class="col">
+                        <p id="sectionThreeTitleText" class="wow fadeIn" data-wow-delay="0.8s">
                             Click on a button to learn more about the features of this page!
                         </p>
-                        <div class="col wow fadeIn" data-wow-delay="0.8s" style="padding: 50px;">
-                            <img id="headImage" style="border-radius: 5%;">
+                        <div id="headImageCol" class="col wow fadeIn" data-wow-delay="0.8s">
+                            <img id="headImage">
                         </div>
                         <div class="row">
                             <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/price.png'), price()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/price.png'), price()">
                                     Price
                                 </button></div>
                             <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/previousClose.png'), previousClose()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/previousClose.png'), previousClose()">
                                     Previous Close
                                 </button></div>
                             <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/volume.png'), volume()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/volume.png'), volume()">
                                     Volume
                                 </button></div>
                             <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/marketCap.png'), marketCap()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/marketCap.png'), marketCap()">
                                     Market Cap
                                 </button></div>
                         </div>
                         <div class="row" style="margin-bottom: 10%;">
                             <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/beta.png'), beta()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/beta.png'), beta()">
                                     Beta
                                 </button></div>
                             <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/peRatio.png'), peRatio()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/peRatio.png'), peRatio()">
                                     PE Ratio
                                 </button></div>
                             <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/epsRatio.png'), eps()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/epsRatio.png'), eps()">
                                     EPS Ratio
                                 </button></div>
                             <div class="col"><button class="mx-auto animated fadeIn"
-                                    onclick="changeImage('headImage', 'images/1YrTargetPrice.png'), oneYr()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/1YrTargetPrice.png'), oneYr()">
                                     1 Yr Target Est
                                 </button></div>
                         </div>
-                        <a href="#test3" style="text-align: center; margin-top: 10%"><img src="images/homeArrow.png"
-                                width="30" height="30"></a>
+                        <a id="sectionThreeArrow" href="#test3"><img class="arrowImage"
+                            src="images/homeArrow.png" style="margin-right: 48.5%;"></a>
                     </div>
                 </div>
             </div>
@@ -189,13 +175,12 @@
 
         <!--Section 4-->
         <div id="funFactRow" class="row">
-            <div id="test3" class="col wow fadeIn" data-wow-delay="0.2s"
-                style="padding-right: 160px; padding-left: 160px; ">
-                <p id="funFact" style="color: white;">
+            <div id="test3" class="col wow fadeIn" data-wow-delay="0.2s">
+                <p id="funFact">
                 </p>
             </div>
         </div>
-        
+
         <!--Section for graph-->
         <div class="row">
             <div id="container" class="col reveal wow fadeIn" data-wow-delay="0.8s">

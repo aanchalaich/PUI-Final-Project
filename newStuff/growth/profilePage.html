@@ -43,36 +43,35 @@
 
         <!--Arrows -->
         <div class="row">
-            <div class="col" style="padding: 50px; ">
+            <div id="header" class="col">
                 <p style="font-size: large;">Tutorial</p>
                 <a href="tutorial.html">
-                    <img id='next' src='images/arrowBack.png' width="50" height="50">
+                    <img id='next' src='images/arrowBack.png'>
                 </a>
             </div>
-            <div class="col" style="padding: 50px; ">span 4</div>
-            <div class="col" style="padding: 50px; ">
+            <div id="header" class="col">span 4</div>
+            <div id="header" class="col">
                 <p style="font-size: large;">Summary</p>
                 <a href="summaryPage.html">
-                    <img id='next' src='images/arrow.png' width="50" height="50">
+                    <img id='next' src='images/arrow.png'>
                 </a>
             </div>
         </div>
 
         <!--Title-->
         <div class="row">
-            <div class="col" style="padding: 30px; ">
-                <p style="font-size: xxx-large; color: white;">Profile Page</p>
+            <div id="titleCol" class="col">
+                <p id="title">Profile Page</p>
             </div>
         </div>
 
         <!--Section 1-->
         <div class="row">
-            <div class="col wow fadeInLeft " data-wow-delay="0.2s" style="padding-bottom: 100px; padding-top: 100px; ">
-                <img src="images/profileProfile.PNG" style="border-radius: 5%; " height="70%" width="80%">
+            <div id="introImage" class="col wow fadeInLeft " data-wow-delay="0.2s">
+                <img id="introImageSrc" src="images/profileProfile.PNG">
             </div>
-            <div class="col wow fadeInLeft " data-wow-delay="0.2s"
-                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
-                <p style="text-align: left; margin-bottom: 150px;">The first thing you should do when you land on the
+            <div id="introCol" class="col wow fadeInLeft " data-wow-delay="0.2s">
+                <p id="introColText">The first thing you should do when you land on the
                     Yahoo Finance website is
                     to go to the "Profile" section.
                     Going to this section first will give you the basic information you need to know about the company
@@ -80,42 +79,39 @@
                     you go into the financial analysis. You need to know what the company is before you know about its
                     stock information!
                 </p>
-                <a href="#test" style="text-align: center; margin-top: 200"><img src="images/homeArrow.png" width="30"
-                        height="30"></a>
+                <a class="arrow" href="#test"><img class="arrowImage" src="images/homeArrow.png"></a>
             </div>
         </div>
 
         <!--Section 2-->
         <div id="test" class="row">
-            <div class="col wow fadeInRight " data-wow-delay="0.2s" style="padding-bottom: 100px; padding-top: 100px;">
+            <div id="sectionTwoCol" class="col wow fadeInRight " data-wow-delay="0.2s">
                 <p>
-                <ul style="color: white; text-align: center;">
-                    <p
-                        style="font-size: xx-large; text-align: left; padding-bottom: 100px; padding-right: 100px; padding-left: 100px;">
+                <ul>
+                    <p id="sectionTwoListTitle">
                         The Profile section will help you in your
                         stock
                         research by:</p>
                     <li>
-                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                        <p class="sectionTwoListBullets">
                             Telling you what the company does</p>
                     </li>
                     <li>
-                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                        <p class="sectionTwoListBullets">
                             Categorizing it into industries and sectors
                         </p>
                     </li>
                     <li>
-                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                        <p class="sectionTwoListBullets">
                             Telling you how their board of directors is
                             structured and how senior leadership gets compensated</p>
                 </ul>
                 </p>
 
-                <a href="#test2"><img src=" images/homeArrow.png" width="30" height="30"></a>
+                <a class="arrow" href="#test2"><img class="arrowImage" src=" images/homeArrow.png"></a>
             </div>
-            <div class="col wow fadeInRight " data-wow-delay="0.2s"
-                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
-                <img src="images/companyProfile.png" width="500px" height="500px">
+            <div id="sectionTwoCol" class="col wow fadeInRight " data-wow-delay="0.2s">
+                <img id="sectionTwoImage" src="images/companyProfile.png">
             </div>
         </div>
 
@@ -123,38 +119,34 @@
         <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s">
             <div class="container wow fadeInLeft" data-wow-delay="0.2s">
                 <div class="row">
-                    <div class="col" style="padding-bottom: 50px;">
-                        <p class="wow fadeIn" data-wow-delay="0.8s" style="text-align: center; margin-bottom: 50px;">
+                    <div id="sectionThreeCol" class="col">
+                        <p id="sectionThreeTitleText" class="wow fadeIn" data-wow-delay="0.8s">
                             Click on a button to learn more about the features of this page!
                         </p>
-                        <div class="col wow fadeIn" data-wow-delay="0.8s" style="padding: 50px;">
+                        <div id="headImageCol" class="col wow fadeIn" data-wow-delay="0.8s">
                             <img id="headImage">
                         </div>
                         <div class="row">
                             <div class="col"><button class="mx-auto"
-                                    onclick="changeImage('headImage', 'images/nameImage.png'), nameAmazon()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/nameImage.png'), nameAmazon()">
                                     Name
                                 </button></div>
                             <div class="col"><button class="mx-auto"
-                                    onclick="changeImage('headImage', 'images/sectorIndustry.png'), segment()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/sectorIndustry.png'), segment()">
                                     Sector/Industry
                                 </button></div>
                             <div class="col"><button class="mx-auto"
-                                    onclick="changeImage('headImage', 'images/description.png'), descriptionAmazon()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/description.png'), descriptionAmazon()">
                                     Description
                                 </button></div>
                             <div class="col "><button class="mx-auto"
-                                    onclick="changeImage('headImage', 'images/corporateGovernance.png'); corpGov()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/corporateGovernance.png'); corpGov()">
                                     Corporate Governance
                                 </button></div>
                         </div>
                         <div class="row">
-                            <a href="#test3" style="margin-top: 50px; margin-left: 48.5%;"><img
-                                    src="images/homeArrow.png" width="30" height="30"></a>
+                            <a id="sectionThreeArrow" href="#test3"><img class="arrowImage"
+                                    src="images/homeArrow.png"></a>
                         </div>
                     </div>
                 </div>
@@ -165,13 +157,12 @@
 
         <!--Section 4-->
         <div id="funFactRow" class="row">
-            <div id="test3" class="col wow fadeIn" data-wow-delay="0.2s"
-                style="padding-right: 160px; padding-left: 160px; ">
-                <p id="funFact" style="color: white;">
+            <div id="test3" class="col wow fadeIn" data-wow-delay="0.2s">
+                <p id="funFact">
                 </p>
             </div>
         </div>
-        
+
         <!--Section for graph-->
         <div class="row">
             <div id="container" class="col reveal wow fadeIn" data-wow-delay="0.8s">

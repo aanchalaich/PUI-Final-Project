@@ -44,73 +44,69 @@
 
         <!--Arrows -->
         <div class="row">
-            <div class="col" style="padding: 50px; ">
+            <div id="header" class="col">
                 <p style="font-size: large;">Financials</p>
-                <a href="financialsPage.html"><img id='back' src='images/arrowBack.png' width="50" height="50">
+                <a href="financialsPage.html"><img id='back' src='images/arrowBack.png'>
                 </a>
             </div>
-            <div class="col" style="padding: 50px; ">span 4</div>
-            <div class="col" style="padding: 50px; ">
+            <div id="header" class="col" style="padding: 50px; ">span 4</div>
+            <div id="header" class="col" style="padding: 50px; ">
             </div>
         </div>
 
         <!--Title-->
         <div class="row">
-            <div class="col animated fadeIn" style="padding: 30px; ">
-                <p style="font-size: xxx-large; color: white;">Analysis Page</p>
+            <div id="titleCol" class="col animated fadeIn">
+                <p id="title">Analysis Page</p>
             </div>
         </div>
 
         <!--Section 1-->
         <div class="row">
-            <div class="col wow fadeInLeft " data-wow-delay="0.2s" style="padding-bottom: 100px; padding-top: 100px; ">
-                <img src="images/analysis.PNG" style="border-radius: 5%; " height="70%" width="80%">
+            <div id="introImage" class="col wow fadeInLeft " data-wow-delay="0.2s">
+                <img id="introImageSrc" src="images/analysis.PNG">
             </div>
-            <div class="col wow fadeInLeft " data-wow-delay="0.2s"
-                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
-                <p style="text-align: left; margin-bottom: 150px;">The Analysis tab gives analyst estimates on earnings,
+            <div id="introCol" class="col wow fadeInLeft " data-wow-delay="0.2s">
+                <p id="introColText">The Analysis tab gives analyst estimates on earnings,
                     revenue, EPS, and
                     Growth.
                     This section is helpful to look at consensus estimates for important forward-looking
                     metrics, which you can refer to in your own analysis.
                 </p>
-                <a href="#test" style="text-align: center; margin-top: 200"><img src="images/homeArrow.png" width="30"
-                        height="30"></a>
+                <a class="arrow" href="#test"><img class="arrowImage" src="images/homeArrow.png"></a>
             </div>
         </div>
 
         <!--Section 2-->
         <div id="test" class=" row">
-            <div class="col wow fadeInRight " data-wow-delay="0.2s" style="padding-bottom: 100px; padding-top: 100px;">
+            <div id="sectionTwoCol" class="col wow fadeInRight " data-wow-delay="0.2s">
                 <p>
-                <ul style="color: white; text-align: center;">
-                    <p
-                        style="font-size: xx-large; text-align: left; padding-bottom: 100px; padding-right: 100px; padding-left: 100px;">
+                <ul>
+                    <p id="sectionTwoListTitle">
                         The Analysis section will help you in your
                         stock
                         research by:</p>
                     <li>
-                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                        <p class="sectionTwoListBullets">
                             Providing consensus estimates on earnings,
                             revenue, EPS, and growth</p>
                     </li>
                     <li>
-                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                        <p class="sectionTwoListBullets">
                             Providing high, low, and medium estimates
                             for all metrics</p>
                     </li>
                     <li>
-                        <p style="font-size: x-large; text-align: left;  padding-right: 100px; padding-left: 100px;">
+                        <p class="sectionTwoListBullets">
                             Showing a range of time frames for trend
                             and growth estimates</p>
                 </ul>
                 </p>
-                <a href="#test2"><img src=" images/homeArrow.png" width="30" height="30"></a>
+                <a class="arrow" href="#test2"><img class="arrowImage" src=" images/homeArrow.png"></a>
             </div>
 
-            <div class="col wow fadeInRight " data-wow-delay="0.2s"
-                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
-                <img src="images/stock analysis.png" width="500px" height="500px">
+            <div id="sectionTwoCol" class="col wow fadeInRight " data-wow-delay="0.2s">
+                <img id="sectionTwoImage" src="images/companyProfile.png">
 
             </div>
         </div>
@@ -119,31 +115,31 @@
         <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s">
             <div class="container wow fadeInLeft" data-wow-delay="0.2s">
                 <div class="row">
-                    <div class="col" style="padding-bottom: 100px; ">
-                        <p class="wow fadeIn" data-wow-delay="0.8s" style="text-align: center; margin-bottom: 50px;">
+                    <div id="sectionThreeCol" class="col">
+                        <p id="sectionThreeTitleText" class="wow fadeIn" data-wow-delay="0.8s">
                             Click on a button to learn more about the features of this page!
                         </p>
-                        <div class="col wow fadeIn" data-wow-delay="0.8s" style="padding: 50px;">
+                        <div id="headImageCol" class="col wow fadeIn" data-wow-delay="0.8s">
                             <img id="headImage">
                         </div>
-                        <div class="row" style="margin-left: 10%;">
+                        <div id="threeButtonRow" class="row">
                             <div id="volumeHeading" class="col"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/earningsEstimate.png'), 
-                            earningsEstimate()" style="border-radius: 10%">
+                            earningsEstimate()">
                                     Earnings Estimate
                                 </button></div>
                             <div id="volumeValue" class="col"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/revenueEstimates.png'), 
-                                revenueEstimate()" style="border-radius: 10%">
+                                revenueEstimate()">
                                     Revenue Estimate
                                 </button></div>
 
                             <div class="col"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/growthEstimates.png'), 
-                                growth()" style="border-radius: 10%">
+                                growth()">
                                     Growth Estimates
                                 </button></div>
                         </div>
                         <div class="row">
-                            <a href="#test3" style="margin-top: 50px; margin-left: 48.5%;"><img
-                                    src="images/homeArrow.png" width="30" height="30"></a>
+                            <a id="sectionThreeArrow" href="#test3"><img class="arrowImage"
+                                src="images/homeArrow.png"></a>
                         </div>
                     </div>
                 </div>
@@ -152,9 +148,8 @@
 
         <!--Section 4-->
         <div id="funFactRow" class="row">
-            <div id="test3" class="col wow fadeIn" data-wow-delay="0.2s"
-                style="padding-right: 160px; padding-left: 160px; ">
-                <p id="funFact" style="color: white;">
+            <div id="test3" class="col wow fadeIn" data-wow-delay="0.2s">
+                <p id="funFact">
                 </p>
             </div>
         </div>

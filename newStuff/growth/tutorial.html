@@ -46,25 +46,25 @@
 
         <!--Arrows -->
         <div class="row">
-            <div class="col" style="padding: 50px; ">
+            <div id="header" class="col" >
                 <p style="font-size: large;">Home</p>
                 <a href="homePage.html">
-                    <img id='back' src='images/arrowBack.png' width="50" height="50">
+                    <img id='back' src='images/arrowBack.png'>
                 </a>
             </div>
-            <div class="col" style="padding: 50px; ">span 4</div>
-            <div class="col" style="padding: 50px; ">
+            <div id="header" class="col" >span 4</div>
+            <div id="header" class="col" >
                 <p style="font-size: large;">Profile</p>
                 <a href="profilePage.html">
-                    <img id='next' src='images/arrow.png' width="50" height="50">
+                    <img id='next' src='images/arrow.png'>
                 </a>
             </div>
         </div>
 
         <!--Title-->
         <div class="row">
-            <div class="col animated fadeIn" style="padding: 30px;">
-                <p style="font-size: xxx-large; color: white;">Yahoo Finance Tutorial</p>
+            <div id="titleCol" class="col animated fadeIn" >
+                <p id="title">Yahoo Finance Tutorial</p>
             </div>
         </div>
 
@@ -73,29 +73,24 @@
             <div class="col wow fadeInRight " data-wow-delay="0.2s">
                 <img src="images/yahooLogo.png" width="80%" height="80%" style="margin-left: 5%">
             </div>
-            <div class="col wow fadeIn " data-wow-delay="0.2s"
-                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
-                <p style="text-align: left; margin-bottom: 150px; color: white;">At the top of the page, you'll get a
+            <div id="introCol" class="col wow fadeIn " data-wow-delay="0.2s">
+                <p id="introColText">At the top of the page, you'll get a
                     brief description of what this section on Yahoo Finance is.
                 </p>
-                <a href="#test" style="text-align: center; margin-top: 200"><img src="images/homeArrow.png" width="30"
-                        height="30"></a>
+                <a class="arrow" href="#test"><img class="arrowImage" src="images/homeArrow.png" ></a>
             </div>
         </div>
 
         <!--Section 2-->
         <div id="test" class="row">
-            <div class="col wow fadeIn " data-wow-delay="0.2s"
-                style="padding-bottom: 100px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
+            <div id="sectionTwoCol" class="col wow fadeIn " data-wow-delay="0.2s">
                 <p style="text-align: left; margin-bottom: 150px; color: white;">Over here, we'll tell you exactly why
                     this section is so important when analyzing a stock.
                 </p>
-                <a href="#test2" style="text-align: center; margin-top: 200"><img src="images/homeArrow.png" width="30"
-                        height="30"></a>
+                <a class="arrow" href="#test2"><img class="arrowImage" src="images/homeArrow.png" ></a>
             </div>
             <div class="col wow fadeInLeft " data-wow-delay="0.2s">
-                <img src="images/emoji.png" width="75%" height="75%"
-                    style="margin-left: 15%; margin-top: 10%; margin-bottom: 20%;">
+                <img id="emojiImage" src="images/emoji.png">
             </div>
         </div>
 
@@ -103,39 +98,34 @@
         <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s">
             <div class="container wow fadeInLeft" data-wow-delay="0.2s">
                 <div class="row">
-                    <div class="col" style="padding-bottom: 50px;">
-                        <p class="wow fadeIn" data-wow-delay="0.8s" style="text-align: center; margin-bottom: 50px;">
+                    <div id="sectionThreeCol" class="col">
+                        <p id="sectionThreeTitleText" class="wow fadeIn" data-wow-delay="0.8s">
                             Each page of Yahoo finance consists of some key data points you should look out for. Here,
                             you'll get to see what each one tells you!
                         </p>
-                        <div class="col wow fadeIn" data-wow-delay="0.8s" style="padding: 50px;">
+                        <div id="headImageCol" class="col wow fadeIn" data-wow-delay="0.8s">
                             <img id="headImage">
                         </div>
                         <div class="row">
                             <div class="col"><button class="mx-auto"
-                                    onclick="changeImage('headImage', 'images/nameImage.png'), nameAmazon()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/nameImage.png'), nameAmazon()">
                                     Name
                                 </button></div>
                             <div class="col"><button class="mx-auto"
-                                    onclick="changeImage('headImage', 'images/sectorIndustry.png'), segment()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/sectorIndustry.png'), segment()">
                                     Sector/Industry
                                 </button></div>
                             <div class="col"><button class="mx-auto"
-                                    onclick="changeImage('headImage', 'images/description.png'), descriptionAmazon()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/description.png'), descriptionAmazon()">
                                     Description
                                 </button></div>
                             <div class="col "><button class="mx-auto"
-                                    onclick="changeImage('headImage', 'images/corporateGovernance.png'); corpGov()"
-                                    style="border-radius: 10%">
+                                    onclick="changeImage('headImage', 'images/corporateGovernance.png'); corpGov()">
                                     Corporate Governance
                                 </button></div>
                         </div>
                         <div class="row">
-                            <a href="#test3" style="margin-top: 50px; margin-left: 48.5%;"><img
-                                    src="images/homeArrow.png" width="30" height="30"></a>
+                            <a id="sectionThreeArrow" href="#test3"><img class="arrowImage" src="images/homeArrow.png"></a>
                         </div>
                     </div>
                 </div>
@@ -145,9 +135,8 @@
 
         <!--Section 4-->
         <div id="test3" class="row">
-            <div class="col wow fadeIn " data-wow-delay="0.2s"
-                style="padding-bottom: 50px; padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
-                <p style="text-align: left; margin-bottom: 150px; color: white;">To help you apply everything you learn,
+            <div id="sectionFourCol" class="col wow fadeIn " data-wow-delay="0.2s">
+                <p id="sectionFourText">To help you apply everything you learn,
                     we'll walk you through a case study of a company you know and love - Amazon!
                     <br> You'll get to see Amazon's numbers that we can obtain from Yahoo Finance, and how that affects
                     how we analyze the company.
@@ -158,14 +147,13 @@
 
         <!--Arrow-->
         <div class="row">
-            <a href="#test4" style="margin-left: 48.5%;"><img src="images/homeArrow.png" width="30" height="30"></a>
+            <a id="sectionFourArrow" href="#test4"><img class="arrowImage" src="images/homeArrow.png" ></a>
         </div>
 
         <!--Section 5-->
         <div id="test4" class="row">
-            <div class="col wow fadeIn " data-wow-delay="0.2s"
-                style=" padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
-                <p style="text-align: left;  color: white; font-size: xxx-large; margin-left: 10%;">You see? We make
+            <div id="sectionFiveCol" class="col wow fadeIn " data-wow-delay="0.2s">
+                <p id="sectionFiveText">You see? We make
                     learning finance as easy as possible!</p>
                 </p>
             </div>
@@ -173,33 +161,31 @@
 
          <!--Section 6-->
         <div class="row">
-            <div class="col wow fadeInLeft " data-wow-delay="0.2s"
-                style=" padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
-                <p style="color: white;">Click here to go back to home</p>
+            <div id="sectionSixHomeText" class="col wow fadeInLeft " data-wow-delay="0.2s">
+                <p>Click here to go back to home</p>
                 <a href="tutorial.html">
-                    <p style="color: yellow;">Home</p>
+                    <p class="option">Home</p>
                 </a>
             </div>
-            <div class="col wow fadeInLeft " data-wow-delay="0.2s"
-                style=" padding-top: 100px; padding-right: 100px; padding-left: 100px; ">
+            <div id="sectionSixContentText" class="col wow fadeInLeft " data-wow-delay="0.2s">
                 <p style="color: white;">Start with a section below</p>
                 <a href="profilePage.html">
-                    <p style="color:yellow">
+                    <p class="option" >
                         Profile
                     </p>
                 </a>
                 <a href="summaryPage.html">
-                    <p style="color: yellow;">
+                    <p class="option">
                         Summary
                     </p>
                 </a>
                 <a href="financialsPage.html">
-                    <p style="color: yellow;">
+                    <p class="option" >
                         Financials
                     </p>
                 </a>
                 <a href="analysisPage.html">
-                    <p style="color: yellow;">
+                    <p class="option" >
                         Analysis
                     </p>
                 </a>
