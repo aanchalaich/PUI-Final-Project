@@ -130,6 +130,9 @@ body {
   color: yellow;
 }
 
+.homeSection{
+  padding-top: 2%;
+}
 
 
 /**************Content Pages Styles *********/
@@ -151,12 +154,17 @@ body {
 }
 
 #introCol{
-  padding-top: 2%; 
+  padding: 2%; 
 
 }
 
 .introColText{
-  text-align: left; 
+
+  margin-bottom: 150px;
+}
+
+#introColText{
+
   margin-bottom: 150px;
 }
 
@@ -200,7 +208,7 @@ body {
 }
 
 #funFactRow{
-  padding: 0;
+  padding: 2%;
   margin: 0; 
 }
 
@@ -268,14 +276,6 @@ body {
   
 }
 
-#sectionSixHomeText{
-
-
-}
-
-#sectionSixContentText{
-
-}
 
 #yahooLogo{
   width: 80%;
