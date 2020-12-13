@@ -44,15 +44,15 @@ function corpGov() {
     const margin = 0;
     //var margin = { top: 60, right: 80, bottom: 140, left: 130 },
 
-    const adj = width * 0.3;
+    const adj = width * 0.6;
     var paddingLeft = 50, paddingRight = 40, paddingTop = 10, paddingBottom = 0;
     const svg = d3.select("div#container").append("svg")
-        .attr("preserveAspectRatio", "xMinYMin meet")
-        .attr("viewBox", "-"
-            + 150 + " -"
-            + 50 + " "
-            + (width + adj * 3) + " "
-            + (height + adj * 3))
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", "-"
+        + 50 + " -"
+        + 30 + " "
+        + 500 + " "
+        + 300)
 
         .classed("svg-content", true);
 
