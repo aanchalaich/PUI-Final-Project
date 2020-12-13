@@ -4,6 +4,7 @@ p{
     text-align: center;  
     font-family: 'Quicksand', sans-serif;
     color: white;
+    font-size-adjust: 0.5;
   }
 
 /**************HTML*********/
@@ -139,7 +140,7 @@ body {
 
 .sectionTwoCol{
  
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 #sectionTwoImageImage{
@@ -148,7 +149,7 @@ body {
 }
 
 #sectionThreeCol{
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 #sectionThreeTitleText{
@@ -165,8 +166,8 @@ body {
 }
 
 #funFactRow{
-  padding-right: 160px; 
-  padding-left: 160px; 
+  padding: 0;
+  margin: 0; 
 }
 
 #funFact{
@@ -364,25 +365,21 @@ line {
 }
 
 #funFactRow{
-  margin-top: 100px;;
+  margin-top: 5%;;
 }
 
-.home {
-  width:100%;
-  margin:1rem auto;
-  position: relative;
+
+.col-xs-equal {
+  width: 33%;
+  float: left;
+  
 }
-
-.overlay-text {
-
-  position: absolute;
-  top:50%;
-  left:0;
-  padding:1rem;
-  transform:translateY(-50%);
-
+@media (min-width: 576px) {
+.col-sm-equal {
+      width: 33%;
+      float: left;
+  }
 }
-
 
 
 
