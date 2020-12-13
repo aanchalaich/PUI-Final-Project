@@ -47,12 +47,12 @@ function corpGov() {
     const adj = width * 0.6;
     var paddingLeft = 50, paddingRight = 40, paddingTop = 10, paddingBottom = 0;
     const svg = d3.select("div#container").append("svg")
-    .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("viewBox", "-"
-        + 50 + " -"
-        + 30 + " "
-        + 500 + " "
-        + 300)
+        .attr("preserveAspectRatio", "xMinYMin meet")
+        .attr("viewBox", "-"
+            + 50 + " -"
+            + 30 + " "
+            + 500 + " "
+            + 300)
 
         .classed("svg-content", true);
 
@@ -149,9 +149,9 @@ function segment() {
 
     document.getElementById("funFact").innerText = "According to the sector/industry section, Amazon has three major business segments - North America, International, and Amazon Web Services (AWS)."
 
-    
 
-    
+
+
 }
 
 //Function to provide Amazon's pe ratio graph when button is pressed
@@ -1070,117 +1070,87 @@ function growth() {
 
     d3.selectAll("svg > *").remove();
     document.getElementById("container").innerHTML = "";
-    var models = [
-        {
-            "model_name": "2020",
-            "field1": 51.50,
-            "field2": 10
-        },
-        {
-            "model_name": "2021",
-            "field1": 30.10,
-            "field2": 10
-        },
 
-    ];
+    const width = 200;
+    const height = 100;
+    const margin = 5;
 
-    var container = d3.select('div#container'),
-        width = 720,
-        height = 420,
-        margin = { top: 60, right: 50, bottom: 100, left: 120 },
-        barPadding = .2,
-        axisTicks = { qty: 5, outerSize: 0, dateFormat: '%m-%d' };
-    var svg = container
-        .append("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .append("g")
-        .attr("transform", `translate(${margin.left},${margin.top})`);
+    const adj = width * 0.9;
+    var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
+    // we are appending SVG first
+    const svg = d3.select("div#container").append("svg")
+        .attr("preserveAspectRatio", "xMinYMin meet")
+        .attr("viewBox", "-"
+            + 200 + " -"
+            + 30 + " "
+            + 550 + " "
+            + 200)
+
+        .classed("svg-content", true);
+
+    finalArray = {
+        x: ['2020', '2021'],
+        y: [51.50, 30.30]
+    };
 
 
-    var xScale0 = d3.scaleBand().range([0, width - margin.left - margin.right]).padding(barPadding)
-    var xScale1 = d3.scaleBand()
-    var yScale = d3.scaleLinear().range([height - margin.top - margin.bottom, 0])
+    var rearrangedData = finalArray.x.map(function (d, i) {
+        return { x: d, y: finalArray.y[i] };
 
-    var xAxis = d3.axisBottom(xScale0).tickSizeOuter(axisTicks.outerSize);
-    var yAxis = d3.axisLeft(yScale).ticks(axisTicks.qty).tickSizeOuter(axisTicks.outerSize);
+    })
 
-    xScale0.domain(models.map(d => d.model_name))
-    xScale1.domain(['field1', 'field2']).range([0, xScale0.bandwidth()])
-    yScale.domain([0, d3.max(models, d => d.field1 > d.field2 ? d.field1 : d.field2)])
-
-
-    var model_name = svg.selectAll(".model_name")
-        .data(models)
-        .enter().append("g")
-        .attr("class", "model_name")
-        .attr("transform", d => `translate(${xScale0(d.model_name)},0)`);
-
-    model_name.selectAll(".bar.field1")
-        .data(d => [d])
-        .enter()
-        .append("rect")
-        .attr("class", "bar field1")
-        .attr("fill", "#69b3a2")
-        .attr("x", d => xScale1('field1'))
-        .attr("y", d => yScale(d.field1))
-        .attr("width", xScale1.bandwidth())
-        .attr("height", d => {
-            return height - margin.top - margin.bottom - yScale(d.field1)
-        });
-
-
-    model_name.selectAll(".bar.field2")
-        .data(d => [d])
-        .enter()
-        .append("rect")
-        .attr("class", "bar field2")
-        .attr("fill", "#ffffff")
-        .attr("x", d => xScale1('field2'))
-        .attr("y", d => yScale(d.field2))
-        .attr("width", xScale1.bandwidth())
-        .attr("height", d => {
-            return height - margin.top - margin.bottom - yScale(d.field2)
-        });
-
-    // Add the X Axis
+    var xscale = d3.scaleBand()
+        .range([0, width])
+        .domain(finalArray.x)
+        .padding(0.2);
     svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", `translate(0,${height - margin.top - margin.bottom})`)
-        .attr("class", "axisWhite")
-        .attr("fill", "white")
-        .style("font-size", "30px")
-        .call(xAxis);
-    // Add the Y Axis
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(xscale))
+        .selectAll("text")
+        .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("text-anchor", "end")
+        .attr('class', 'axisWhite');
+
+    var yscale = d3.scaleLinear()
+        .domain([0, 100])
+        .range([height, 0]);
     svg.append("g")
-        .attr("class", "y axis")
-        .attr("class", "axisWhite")
-        .attr("fill", "white")
-        .style("font-size", "30px")
-        .call(yAxis);
+        .call(d3.axisLeft(yscale))
+        .attr('class', 'axisWhite');
 
     svg.append("text")
         .attr("transform",
-            "translate(" + (width / 3) + " ," +
-            (height - 80) + ")")
+            "translate(" + (width / 2) + " ," +
+            (height + 50) + ")")
         .style("text-anchor", "middle")
         .attr('stroke', 'white')
-        .attr('font-size', 'x-large')
+        .attr('font-size', 'small')
         .text("Year");
 
 
     svg.append("text")
         .attr("transform", "rotate(-90)")
-        .attr("y", 0 - 100)
-        .attr("x", 0 - (height / 3))
+        .attr("y", 0 - 70)
+        .attr("x", 0 - (height / 2))
         .attr("dy", "1em")
         .style("text-anchor", "middle")
         .attr('stroke', 'white')
-        .attr('font-size', 'x-large')
-        .text("% Growth");
+        .attr('font-size', 'small')
+        .text("Revenue Growth (%)");
+
+
+
+    svg.selectAll("mybar")
+        .data(rearrangedData)
+        .enter()
+        .append("rect")
+        .attr("x", function (d) { return xscale(d.x); })
+        .attr("y", function (d) { return yscale(d.y); })
+        .attr("width", xscale.bandwidth())
+        .attr("height", function (d) { return height - yscale(d.y); })
+        .attr("fill", "#69b3a2")
 }
 
-//Function to provide Amazon's price income statement graph when button is pressed
 function incomeStatement() {
 
     document.getElementById("funFact").innerText = "At the end of 2019, Amazon ended with around $280B in revenue and $11.6B in net income.  How did we get here?" +
@@ -1190,23 +1160,22 @@ function incomeStatement() {
 
     d3.selectAll("svg > *").remove();
     document.getElementById("container").innerHTML = "";
+    const width = 150;
+    const height = 100;
+    const margin = 0;
 
-    // set the dimensions and margins of the graph
-    var margin = { top: 60, right: 80, bottom: 140, left: 130 },
-        width = 460 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
-
-
-    const adj = 30;
+    const adj = width * 0.9;
     var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
     // we are appending SVG first
     const svg = d3.select("div#container").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
+        .attr("preserveAspectRatio", "xMinYMin meet")
+        .attr("viewBox", "-"
+            + 170 + " -"
+            + 20 + " "
+            + 450 + " "
+            + 220)
 
+        .classed("svg-content", true);
 
     finalArray = {
         x: ['Revenue', 'Cost of Goods Sold', 'Gross Profit', 'Operating Expenses', 'Operating Income', 'Pretax Income', 'Net Income'],
@@ -1296,23 +1265,22 @@ function statementOfCashFlows() {
 
     d3.selectAll("svg > *").remove();
     document.getElementById("container").innerHTML = "";
+    const width = 150;
+    const height = 100;
+    const margin = 0;
 
-    // set the dimensions and margins of the graph
-    var margin = { top: 60, right: 80, bottom: 140, left: 130 },
-        width = 460 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
-
-
-    const adj = 30;
+    const adj = width * 0.9;
     var paddingLeft = 60, paddingRight = 40, paddingTop = 10, paddingBottom = 10;
     // we are appending SVG first
     const svg = d3.select("div#container").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
+        .attr("preserveAspectRatio", "xMinYMin meet")
+        .attr("viewBox", "-"
+            + 170 + " -"
+            + 20 + " "
+            + 450 + " "
+            + 220)
 
+        .classed("svg-content", true);
 
     finalArray = {
         x: ['Operating', 'Investing', 'Financing', 'Ending Cash Position'],
@@ -1401,9 +1369,9 @@ function balanceSheet() {
     d3.selectAll("svg > *").remove();
     document.getElementById("container").innerHTML = "";
 
-    var width = 450
-    height = 450
-    margin = 40
+    var width = 250
+    height = 250
+    margin = 0
 
     // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
     var radius = Math.min(width, height) / 2 - margin
