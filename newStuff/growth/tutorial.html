@@ -65,114 +65,132 @@
 
         <!--Title-->
         <div class="row">
-            <div id="titleCol" class="col-sm animated fadeIn">
-                <p id="title">Yahoo Finance Tutorial</p>
-            </div>
+            <p id="title" class="col-sm animated fadeIn">A Tutorial of our Web Tool</p>
         </div>
 
         <!--Section 1-->
-        <div class="row">
-            <div class="col-sm wow fadeInLeft " data-wow-delay="0.2s">
-                <img id="yahooLogo" src="images/yahooLogo.png" alt="yahooLogo">
+
+        <div class="section wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="row">
+                <div class="col-sm" >
+                    <img class="introImageSrc img-fluid" id="introImageSrc" src="images/yahooFinance.png" alt="profile">
+                </div>
             </div>
-            <div id="introCol" class="col-sm wow fadeInLeft " data-wow-delay="0.2s">
-                <p class="introColText">At the top of the page, you'll get a
-                    brief description of what this section on Yahoo Finance is.
-                </p>
-                <a class="arrow" href="#test"><img class="img-fluid arrowImage" src="images/homeArrow.png"
-                        alt="arrow"></a>
+            <div class="row">
+                <div id="introCol" class="col-sm" >
+                    <p id="introColText">At the top of the page, you'll get a brief overview of what the section of
+                        Yahoo
+                        Finance is.
+                    </p>
+                    <a class="arrow" href="#test"><img class="img-fluid arrowImage" src="images/homeArrow.png"
+                            alt="arrow"></a>
+                </div>
             </div>
         </div>
 
+
         <!--Section 2-->
-        <div id="test" class="row">
-            <div id="sectionTwoCol" class="col-sm wow fadeInRight " data-wow-delay="0.2s">
-                <p class="introColText fadeInRight">Over here, we'll tell you exactly why
-                    this section is so important when analyzing a stock.
-                </p>
-                <a class="arrow" href="#test2"><img class="img-fluid arrowImage" src="images/homeArrow.png"
-                        alt="arrow"></a>
+        <div id="test" class="section wow fadeInRight" data-wow-delay="0.2s">
+            <div class="row">
+                <div class="col-sm">
+                    <img class="introImageSrc img-fluid" src="images/emoji.jpg" alt="profile">
+                </div>
             </div>
-            <div class="col-sm wow fadeInRight " data-wow-delay="0.2s">
-                <img id="emojiImage" class="img-fluid" src="images/emoji.png" alt="emoji">
+            <div class="row">
+                <div id="introCol" class="col-sm" data-wow-delay="0.2s">
+                    <p id="introColText">Over here, we'll tell you exactly why this section is so important when
+                        analyzing a
+                        stock.
+                    </p>
+                    <a class="arrow" href="#test2"><img class="img-fluid arrowImage" src="images/homeArrow.png"
+                            alt="arrow"></a>
+                </div>
             </div>
         </div>
 
         <!--Section 3-->
-        <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s" style="align-items: center;">
+        <div id="test2" class="section wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="row">
+                <div id="sectionThreeCol" class="col-sm">
+                    <p id="sectionThreeTitleText" >
+                        Each page of Yahoo Finance consists of some key data points you should look out for.
+                        Play around witht he buttons b below!
+                    </p>
+                    <div id="headImageCol" class="col-sm">
+                        <img class="img-fluid" id="headImage" src="images/placeholder.png" alt="headImage">
+                    </div>
+                    <div class="row buttonRow">
+                        <div class="col-sm"><button class="mx-auto"
+                                onclick="changeImage('headImage', 'images/nameImage.png'), nameAmazon()">
+                                Name
+                            </button></div>
+                        <div class="col-sm"><button class="mx-auto"
+                                onclick="changeImage('headImage', 'images/sectorIndustry.png'), segment()">
+                                Sector/Industry
+                            </button></div>
+                        <div class="col-sm"><button class="mx-auto"
+                                onclick="changeImage('headImage', 'images/description.png'), descriptionAmazon()">
+                                Description
+                            </button></div>
+                        <div class="col-sm "><button class="mx-auto"
+                                onclick="changeImage('headImage', 'images/corporateGovernance.png'); corpGov()">
+                                Corporate Governance
+                            </button></div>
+                    </div>
+                    <div class="row">
+                        <a id="sectionThreeArrow" href="#test3"><img class="img-fluid arrowImage"
+                                src="images/homeArrow.png" alt="arrow"></a>
+                    </div>
+                </div>
 
-            <div id="sectionThreeCol" class="col-sm">
-                <p id="sectionThreeTitleText" class="wow fadeIn" data-wow-delay="0.2s">
-                    Each page of Yahoo finance consists of some key data points you should look out for. Here,
-                    you'll get to see what each one tells you!
-                </p>
-                <div id="headImageCol" class="col-sm wow fadeIn" data-wow-delay="0.2s">
-                    <img class="img-fluid" id="headImage" src="images/placeholder.png" alt="headImage">
-                </div>
-                <div id="buttonRow" class="row">
-                    <div class="col-sm"><button class="mx-auto"
-                            onclick="changeImage('headImage', 'images/nameImage.png'), nameAmazon()">
-                            Name
-                        </button></div>
-                    <div class="col-sm"><button class="mx-auto"
-                            onclick="changeImage('headImage', 'images/sectorIndustry.png'), segment()">
-                            Sector/Industry
-                        </button></div>
-                    <div class="col-sm"><button class="mx-auto"
-                            onclick="changeImage('headImage', 'images/description.png'), descriptionAmazon()">
-                            Description
-                        </button></div>
-                    <div class="col-sm "><button class="mx-auto"
-                            onclick="changeImage('headImage', 'images/corporateGovernance.png'); corpGov()">
-                            Corporate Governance
-                        </button></div>
-                </div>
-                <div class="row">
-                    <a id="sectionThreeArrow" href="#test3"><img class="img-fluid arrowImage" src="images/homeArrow.png"
-                            alt="arrow"></a>
-                </div>
+
             </div>
-
         </div>
 
 
         <!--Section 4-->
-        <div id="test3" class="row">
-            <div id="sectionFourCol" class="col-sm wow fadeIn " data-wow-delay="0.2s">
-                <p id="sectionFourText">To help you apply everything you learn,
-                    we'll walk you through a case study of a company you know and love - Amazon!
-                    <br> You'll get to see Amazon's numbers that we can obtain from Yahoo Finance, and how that affects
-                    how we analyze the company.
-                </p>
-                <img class="img-fluid" src="images/investing.png" alt="investing">
+        <div id="test3" class="section wow fadeInRight" data-wow-delay="0.2s">
+            <div class="row">
+                <div class="col-sm">
+                    <img class="img-fluid" id="introImageSrc" src="images/amazon.png" alt="investing image">
+                </div>
+            </div>
+            <div class="row">
+                <div id="introCol" class="col-sm">
+                    <p id="introColText">To help you apply everything you learn,
+                        we'll walk you through a case study of a company you know and love - Amazon!
+                        <br> You'll get to see Amazon's numbers that we can obtain from Yahoo Finance, and how that
+                        affects
+                        how we analyze the company.
+                    </p>
+                    <a class="arrow" href="#test4"><img class="img-fluid arrowImage" src="images/homeArrow.png"
+                            alt="arrow"></a>
+                </div>
             </div>
         </div>
 
-        <!--Arrow-->
-        <div class="row">
-            <a id="sectionFourArrow" href="#test4"><img class="img-fluid arrowImage" src="images/homeArrow.png"
-                    alt="arrow"></a>
-        </div>
 
         <!--Section 5-->
-        <div id="test4" class="row">
-            <div id="sectionFiveCol" class="col-sm wow fadeIn " data-wow-delay="0.2s">
-                <p id="sectionFiveText">You see? We make
-                    learning finance as easy as possible!</p>
+        <div id="test4" class="section wow fadeInLeft" data-wow-delay="0.2s">
+            <div  class="row">
+                <div id="sectionFiveCol" class="col-sm">
+                    <p id="sectionFiveText" class="wow fadeIn" style="text-align: center;">You see? We make
+                        learning finance as easy as possible!</p>
 
+                </div>
             </div>
         </div>
 
         <!--Section 6-->
-        <div class="row">
-            <div id="sectionSixHomeText" class="col-sm wow fadeInLeft " data-wow-delay="0.2s">
+        <div class="section wow fadeInLeft" data-wow-delay="0.2s">
+            <div id="sectionSixHomeText" class="col-sm">
                 <p>Click here to go back to home</p>
-                <a href="tutorial.html">
+                <a href="homePage.html">
                     <p class="option">Home</p>
                 </a>
             </div>
-            <div id="sectionSixContentText" class="col-sm wow fadeInLeft " data-wow-delay="0.2s">
-                <p style="color: white;">Start with a section below</p>
+            <div id="sectionSixContentText" class="col-sm">
+                <p>Start with a section below</p>
                 <a href="profilePage.html">
                     <p class="option">
                         Profile

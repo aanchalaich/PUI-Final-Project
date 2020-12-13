@@ -68,109 +68,98 @@
         </div>
 
         <!--Section 1-->
-        <div class="row" style="align-items: center;">
-            <div class="col-sm wow fadeInLeft " data-wow-delay="0.2s">
-                <img class="img-fluid" id="introImageSrc" src="images/profileProfile.PNG" alt="profile">
+        <div class="section wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="row">
+                <div class="col-sm">
+                    <img class="img-fluid" id="introImageSrc" src="images/profileProfile.PNG" alt="profile">
+                </div>
             </div>
-        </div>
-        <div class="row" style="align-items: center;">
-            <div id="introCol" class="col-sm wow fadeInLeft " data-wow-delay="0.2s">
-                <p id="introColText">The first thing you should do when you land on the
-                    Yahoo Finance website is
-                    to go to the "Profile" section.
-                    Going to this section first will give you the basic information you need to know about the company
-                    before
-                    you go into the financial analysis. You need to know what the company is before you know about its
-                    stock information!
-                </p>
-                <a class="arrow" href="#test"><img class="img-fluid arrowImage" src="images/homeArrow.png"
-                        alt="arrow"></a>
+            <div class="row">
+                <div id="introCol" class="col-sm">
+                    <p id="introColText">The first thing you should do when you land on the
+                        Yahoo Finance website is
+                        to go to the "Profile" section.
+                        Going to this section first will give you the basic information you need to know about the
+                        company
+                        before
+                        you go into the financial analysis. You need to know what the company is before you know about
+                        its
+                        stock information!
+                    </p>
+                    <a class="arrow" href="#test"><img class="img-fluid arrowImage" src="images/homeArrow.png"
+                            alt="arrow"></a>
+                </div>
             </div>
         </div>
 
 
         <!--Section 2-->
-        <div class="wow fadeInRight" id="test">
+        
+        <div id="test" class="section wow fadeInRight" data-wow-delay="0.2s">
             <div class="row">
-                <div class="sectionTwoCol col-sm " data-wow-delay="0.2s">
+                <div class="sectionTwoCol col-sm">
                     <img class="img-fluid" id="sectionTwoImage" src="images/companyProfile.png" alt="companyProfile">
                 </div>
             </div>
-            <div class="row" style="align-items: center;">
-                <div id="sectionTwoCol" class="col-sm  " data-wow-delay="0.2s">
-
-
+            <div class="row">
+                <div id="sectionTwoCol" class="col-sm">
                     <p id="sectionTwoListTitle">
                         The Profile section will help you in your
                         stock
                         research by:</p>
-
                     <ul>
-
                         <li class="sectionTwoListBullets">
                             Telling you what the company does
                         </li>
                         <li class="sectionTwoListBullets">
                             Categorizing it into industries and sectors
-
                         </li>
                         <li class="sectionTwoListBullets">
                             Telling you how their board of directors is
                             structured and how senior leadership gets compensated
                     </ul>
-
-
-
                 </div>
-
-                
-
             </div>
-            <div class="row" >
-                <a class="mx-auto arrow " href="#test2" ><img class="img-fluid arrowImage" src=" images/homeArrow.png"
-                        alt="arrow" ></a>
+            <div class="row">
+                <a class="mx-auto arrow " href="#test2"><img class="img-fluid arrowImage" src=" images/homeArrow.png"
+                        alt="arrow"></a>
             </div>
         </div>
 
         <!--Section 3-->
-        <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s" style="align-items: center;">
-
-
-            <div id="sectionThreeCol" class="col-sm">
-                <p id="sectionThreeTitleText" class="wow fadeIn" data-wow-delay="0.2s">
-                    Click on a button to learn more about the features of this page!
-                </p>
-                <div id="headImageCol" class="col-sm wow fadeIn" data-wow-delay="0.2s">
-                    <img class="img-fluid" id="headImage" src="images/placeholder.png" alt="headImage">
-                </div>
-                <div class="row buttonRow">
-                    <div class="col-sm"><button class="mx-auto"
-                            onclick="changeImage('headImage', 'images/nameImage.png'), nameAmazon()" >
-                            Name
-                        </button></div>
-                    <div class="col-sm"><button class="mx-auto"
-                            onclick="changeImage('headImage', 'images/sectorIndustry.png'), segment()"
-                            >
-                            Sector/Industry
-                        </button></div>
-                    <div class="col-sm"><button class="mx-auto"
-                            onclick="changeImage('headImage', 'images/description.png'), descriptionAmazon()"
-                           >
-                            Description
-                        </button></div>
-                    <div class="col-sm "><button class="mx-auto"
-                            onclick="changeImage('headImage', 'images/corporateGovernance.png'); corpGov()"
-                            >
-                            Corporate Governance
-                        </button></div>
-                </div>
-                <div class="row">
-                    <a id="sectionThreeArrow" href="#test3"><img class="img-fluid arrowImage" src="images/homeArrow.png"
-                            alt="arrow"></a>
+        <div id="test3" class="section wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="row">
+                <div id="sectionThreeCol" class="col-sm">
+                    <p id="sectionThreeTitleText" >
+                        Click on a button to learn more about the features of this page!
+                    </p>
+                    <div id="headImageCol">
+                        <img class="img-fluid" id="headImage" src="images/placeholder.png" alt="headImage">
+                    </div>
+                    <div class="row buttonRow">
+                        <div class="col-sm"><button class="mx-auto"
+                                onclick="changeImage('headImage', 'images/nameImage.png'), nameAmazon()">
+                                Name
+                            </button></div>
+                        <div class="col-sm"><button class="mx-auto"
+                                onclick="changeImage('headImage', 'images/sectorIndustry.png'), segment()">
+                                Sector/Industry
+                            </button></div>
+                        <div class="col-sm"><button class="mx-auto"
+                                onclick="changeImage('headImage', 'images/description.png'), descriptionAmazon()">
+                                Description
+                            </button></div>
+                        <div class="col-sm "><button class="mx-auto"
+                                onclick="changeImage('headImage', 'images/corporateGovernance.png'); corpGov()">
+                                Corporate Governance
+                            </button></div>
+                    </div>
+                    <div class="row">
+                        <a id="sectionThreeArrow" href="#test3"><img class="img-fluid arrowImage"
+                                src="images/homeArrow.png" alt="arrow"></a>
+                    </div>
                 </div>
             </div>
-
-
         </div>
 
 
@@ -184,7 +173,7 @@
         </div>
 
         <!--Section for graph-->
-        <div id="SVGRow" class="row">
+        <div class="row">
             <div id="container" class="col-sm reveal wow fadeIn" data-wow-delay="0.8s">
             </div>
         </div>

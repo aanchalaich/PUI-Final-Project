@@ -37,6 +37,19 @@ body {
     padding: 0%;
     
 }
+
+.row{
+  align-items: center;
+}
+
+.section{
+  padding-top: 5%;
+}
+
+
+.col{
+  align-items: center;
+}
 /**************Scroll down arrow *********/
 .arrow{
   text-align: center; 
@@ -69,6 +82,8 @@ body {
 #title{
   font-size: xx-large; 
   color: white;
+  
+
 }
 
 /**************Home Page Styles *********/
@@ -76,6 +91,7 @@ body {
   width: 50%;
   height: 50%;
   margin-left: 25%;
+  
 }
 
 #yahooFinanceLogo{
@@ -123,6 +139,12 @@ body {
 }
 
 #introImageSrc{
+  border-radius: 5%; 
+  height: 50%;
+  width: 40%;
+}
+
+.introImageSrc{
   border-radius: 5%; 
   height: 50%;
   width: 40%;
@@ -198,6 +220,18 @@ body {
 
 /**************Tutorial Page Styles *********/
 
+#yahooLogo{
+
+  height: 5%;
+  width: 40%;
+  padding-bottom: 100px; 
+  padding-top: 100px;
+}
+#emoji{
+  width: 10%;
+  height: 10%;
+
+}
 #emojiImage{
   width: 75%; 
   height: 75%;
@@ -224,28 +258,23 @@ body {
 }
 
 #sectionFiveCol{
-  padding-top: 100px; 
-  padding-right: 100px; 
-  padding-left: 100px; 
+
 }
 
 #sectionFiveText{
   text-align: left;  
   color: white; 
   font-size: xx-large; 
-  margin-left: 10%;
+  
 }
 
 #sectionSixHomeText{
-  padding-top: 100px; 
-  padding-right: 100px; 
-  padding-left: 100px; 
+
+
 }
 
 #sectionSixContentText{
-  padding-top: 100px; 
-  padding-right: 100px; 
-  padding-left: 100px; 
+
 }
 
 #yahooLogo{
