@@ -144,10 +144,12 @@ function corpGov() {
 //Function to provide Amazon's segment graph when button is pressed
 function segment() {
 
-    document.getElementById("funFact").innerText = "According to the sector/industry section, Amazon has three major business segments - North America, International, and Amazon Web Services (AWS)."
-
     d3.select("SVG").remove();
     document.getElementById("container").innerHTML = "";
+
+    document.getElementById("funFact").innerText = "According to the sector/industry section, Amazon has three major business segments - North America, International, and Amazon Web Services (AWS)."
+
+    
 
     
 }
