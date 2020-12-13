@@ -68,6 +68,8 @@
             <div class="col-sm wow fadeInLeft " data-wow-delay="0.2s">
                 <img class="img-fluid" id="introImageSrc" src="images/analysis.PNG" alt="analysis">
             </div>
+        </div>
+        <div class="row" style="align-items: center;">
             <div id="introCol" class="col-sm wow fadeInLeft " data-wow-delay="0.2s">
                 <p id="introColText">The Analysis tab gives analyst estimates on earnings,
                     revenue, EPS, and
@@ -75,77 +77,86 @@
                     This section is helpful to look at consensus estimates for important forward-looking
                     metrics, which you can refer to in your own analysis.
                 </p>
-                <a class="arrow" href="#test"><img class="img-fluid arrowImage" src="images/homeArrow.png" alt="arrow"></a>
+                <a class="arrow" href="#test"><img class="img-fluid arrowImage" src="images/homeArrow.png"
+                        alt="arrow"></a>
             </div>
         </div>
 
         <!--Section 2-->
-        <div id="test" class=" row" style="align-items: center;">
-            <div id="sectionTwoCol" class="col-sm wow fadeInRight " data-wow-delay="0.2s">
-
-
-                <p id="sectionTwoListTitle">
-                    The Analysis section will help you in your
-                    stock
-                    research by:
-                </p>
-                <ul>
-                    <li class="sectionTwoListBullets">
-                        Providing consensus estimates on earnings,
-                        revenue, EPS, and growth
-                    </li>
-                    <li class="sectionTwoListBullets">
-                        Providing high, low, and medium estimates
-                        for all metrics
-                    </li>
-                    <li class="sectionTwoListBullets">
-                        Showing a range of time frames for trend
-                        and growth estimates
-                </ul>
-
-                <a href="#test2"><img class="img-fluid arrowImage" src=" images/homeArrow.png" alt="arrow" style="margin-top 0%;"></a>
-                
+        <div id="test" class="wow fadeInRight">
+            <div class=" row">
+                <div class="sectionTwoCol col-sm " data-wow-delay="0.2s">
+                    <img class="img-fluid" src="images/stockAnalysis.png" width="500" height="500" alt="companyProfile">
+                </div>
             </div>
-            
+            <div class="row" style="align-items: center;">
 
-            
+                <div id="sectionTwoCol" class="col-sm wow fadeInRight " data-wow-delay="0.2s">
+
+
+                    <p id="sectionTwoListTitle">
+                        The Analysis section will help you in your
+                        stock
+                        research by:
+
+                    <ul>
+                        <li class="sectionTwoListBullets">
+                            Providing consensus estimates on earnings, revenue, EPS, and growth
+                        </li>
+
+                        <li class="sectionTwoListBullets">
+                            Providing high, low, and medium estimates for all metrics
+                        </li>
+                        <li class="sectionTwoListBullets">
+                            Showing a range of time frames for trend and growth estimates
+                        </li>
+                    </ul>
+                    </p>
+
+                    <a class="arrow" href="#test2"><img class="img-fluid arrowImage" src=" images/homeArrow.png"
+                            alt="arrow"></a>
+                </div>
+
+            </div>
         </div>
 
-        <div class="row" >
-            <a href="#test2"><img class="arrowImage" src=" images/homeArrow.png" alt="arrow" style="margin-top 0%;"></a>
-        </div>
+
+
+
+
 
         <!--Section 3-->
-        <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s" style=" margin-top: 50px; align-items: center;">
-          
-                    <div id="sectionThreeCol" class="col-sm">
-                        <p id="sectionThreeTitleText" class="wow fadeIn" data-wow-delay="0.2s">
-                            Click on a button to learn more about the features of this page!
-                        </p>
-                        <div id="headImageCol" class="col wow fadeIn" data-wow-delay="0.2s">
-                            <img class="img-fluid" id="headImage" src="images/placeholder.png" alt="headImage">
-                        </div>
-                        <div id="threeButtonRow" class="row" style="align-items: center;">
-                            <div id="volumeHeading" class="col-sm"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/earningsEstimate.png'), 
-                            earningsEstimate()">
-                                    Earnings Estimate
-                                </button></div>
-                            <div id="volumeValue" class="col-sm"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/revenueEstimates.png'), 
-                                revenueEstimate()">
-                                    Revenue Estimate
-                                </button></div>
+        <div id="test2" class="row wow fadeInLeft" data-wow-delay="0.2s"
+            style=" margin-top: 50px; align-items: center;">
 
-                            <div class="col-sm"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/growthEstimates.png'), 
+            <div id="sectionThreeCol" class="col-sm">
+                <p id="sectionThreeTitleText" class="wow fadeIn" data-wow-delay="0.2s">
+                    Click on a button to learn more about the features of this page!
+                </p>
+                <div id="headImageCol" class="col wow fadeIn" data-wow-delay="0.2s">
+                    <img class="img-fluid" id="headImage" src="images/placeholder.png" alt="headImage">
+                </div>
+                <div id="threeButtonRow" class="row" style="align-items: center;">
+                    <div id="volumeHeading" class="col-sm"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/earningsEstimate.png'), 
+                            earningsEstimate()">
+                            Earnings Estimate
+                        </button></div>
+                    <div id="volumeValue" class="col-sm"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/revenueEstimates.png'), 
+                                revenueEstimate()">
+                            Revenue Estimate
+                        </button></div>
+
+                    <div class="col-sm"><button class="animated fadeIn" onclick="changeImage('headImage', 'images/growthEstimates.png'), 
                                 growth()">
-                                    Growth Estimates
-                                </button></div>
-                        </div>
-                        <div class="row">
-                            <a id="sectionThreeArrow" href="#test3"><img class="img-fluid arrowImage" src="images/homeArrow.png"
-                                    alt="arrow"></a>
-                        </div>
-                    </div>
-            
+                            Growth Estimates
+                        </button></div>
+                </div>
+                <div class="row">
+                    <a id="sectionThreeArrow" href="#test3"><img class="img-fluid arrowImage" src="images/homeArrow.png"
+                            alt="arrow"></a>
+                </div>
+            </div>
+
         </div>
 
         <!--Section 4-->
