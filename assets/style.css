@@ -7,17 +7,7 @@ p{
     font-size-adjust: 0.5;
   }
 
-  /*@media (min-width: 576px) {
-    p {
-          font-size: 1.5rem;
-      }
-    }
-  
-  @media (min-width: 768px) {
-    p {
-          font-size: 2rem;
-      }
-    }*/
+
 
 /**************HTML*********/
 html {
@@ -38,6 +28,8 @@ body {
     
 }
 
+/**************Rows, Columns, and Sections*********/
+
 .row{
   align-items: center;
 }
@@ -45,7 +37,6 @@ body {
 .section{
   padding-top: 5%;
 }
-
 
 .col{
   align-items: center;
@@ -82,49 +73,10 @@ body {
 #title{
   font-size: xx-large; 
   color: white;
-  
 
 }
 
 /**************Home Page Styles *********/
-#homeSectionOneImage{
-  width: 50%;
-  height: 50%;
-  margin-left: 25%;
-  
-}
-
-#yahooFinanceLogo{
-  width:75%;
-  height: 75%;
-  margin-left: 15%;
-  margin-top: 10%; 
-  margin-bottom: 10%;
-}
-
-#homeSection3{
-  padding-top: 100px; 
-  padding-right: 100px; 
-  padding-left: 100px; 
-}
-
-#websiteDescription{
-  text-align: left;  
-  color: white; 
-  font-size: xx-large;
-}
-
-#clickHereLeftSide{
-  padding-top: 100px; 
-  padding-right: 100px; 
-  padding-left: 100px;
-}
-
-#clickHereRightSide{
-  padding-top: 100px; 
-  padding-right: 100px; 
-  padding-left: 100px;
-}
 
 .option{
   color: yellow;
@@ -136,10 +88,6 @@ body {
 
 
 /**************Content Pages Styles *********/
-#introImage{
-  padding-bottom: 100px; 
-  padding-top: 100px;
-}
 
 #introImageSrc{
   border-radius: 5%; 
@@ -155,16 +103,9 @@ body {
 
 #firstSection{
   padding: 2%; 
-
-}
-
-.introColText{
-
-  margin-bottom: 2%;
 }
 
 #firstSectionText{
-
   margin-bottom: 2%;
 }
 
@@ -181,13 +122,7 @@ body {
 }
 
 .secondSection{
- 
   padding-top: 5%;
-}
-
-#sectionTwoImageImage{
-  width: 50%;
-  height: 40%;
 }
 
 #thirdSection{
@@ -238,60 +173,55 @@ body {
 }
 
 
-#yahooLogo{
-
-  height: 5%;
-  width: 40%;
-  padding-bottom: 100px; 
-  padding-top: 100px;
-}
-#emoji{
-  width: 10%;
-  height: 10%;
-
-}
-#emojiImage{
-  width: 75%; 
-  height: 75%;
-  margin-left: 15%; 
-  margin-top: 10%; 
-  margin-bottom: 20%;
-}
-
-#sectionFourCol{
-  padding-bottom: 50px; 
-  padding-top: 100px; 
-  padding-right: 100px; 
-  padding-left: 100px;
-}
-
-#sectionFourText{
-  text-align: left; 
-  margin-bottom: 150px; 
-  color: white;
-}
-
-#sectionFourArrow{
-  margin-left: 48.5%;
-}
-
-
-
 #fifthSectionText{
   text-align: left;  
   color: white; 
   font-size: xx-large; 
-  
 }
 
 
-#yahooLogo{
-  width: 80%;
-  height: 80%;
-  margin-left: 5%;
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+
 }
 
-/**************Other Styles *********/
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+/**************Graphs *********/
+
+.axisWhite {
+  stroke: white;
+}
+
+.ticks path {
+  stroke: white;
+  opacity: 0.3;
+}
+
+.domain {
+  fill: none;
+  stroke: white;
+  stroke-width: 1px;
+}
+
+.tick {
+  fill: none;
+  stroke: white;
+  stroke-width: 1px;
+}
+
+line {
+  fill: none;
+  stroke: white;
+  stroke-width: 1px;
+}
+
+
+/**************Miscellaneous *********/
 
 button {
     background: #eeeeee;
@@ -318,7 +248,6 @@ button {
    
    display:block;
    padding: 0;
-   margin: %;
    font-family: 'Quicksand', sans-serif;
 
 
@@ -334,9 +263,7 @@ button {
 
     input {
         position: relative;
-        font-family: 'Quicksand', sans-serif;
-
-        
+        font-family: 'Quicksand', sans-serif; 
   }
 
 
@@ -368,48 +295,6 @@ div.col {
   font-family: 'Quicksand', sans-serif;
 
 }
-
-
-
-.reveal{
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-
-}
-
-.reveal.active{
-  transform: translateY(0px);
-  opacity: 1;
-}
-
-.axisWhite {
-  stroke: white;
-}
-
-.ticks path {
-  stroke: white;
-  opacity: 0.3;
-}
-
-.domain {
-  fill: none;
-  stroke: white;
-  stroke-width: 1px;
-}
-
-.tick {
-  fill: none;
-  stroke: white;
-  stroke-width: 1px;
-}
-
-line {
-  fill: none;
-  stroke: white;
-  stroke-width: 1px;
-}
-
 .col .wow .fadeIn{
   margin-top: 50px;
 }

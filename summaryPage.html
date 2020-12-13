@@ -15,20 +15,20 @@
 
 
     <!-- MDBootstrap-->
-    <link rel="stylesheet" href="MDB-Free_4.19.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="MDB-Free_4.19.2/css/mdb.min.css">
-    <script src="MDB-Free_4.19.2/js/jquery.min.js"></script>
-    <script src="MDB-Free_4.19.2/js/popper.min.js"></script>
-    <script src="MDB-Free_4.19.2/js/bootstrap.min.js"></script>
-    <script src="MDB-Free_4.19.2/js/mdb.min.js"></script>
+    <link rel="stylesheet" href="assets/MDB-Free_4.19.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/MDB-Free_4.19.2/css/mdb.min.css">
+    <script src="assets/MDB-Free_4.19.2/js/jquery.min.js"></script>
+    <script src="assets/MDB-Free_4.19.2/js/popper.min.js"></script>
+    <script src="assets/MDB-Free_4.19.2/js/bootstrap.min.js"></script>
+    <script src="assets/MDB-Free_4.19.2/js/mdb.min.js"></script>
 
 
 
     <!-- Javascript file -->
-    <script src="interactive.js"></script>
+    <script src="assets/interactive.js"></script>
 
     <!-- CSS file -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
 
     <!--Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -48,13 +48,13 @@
         <div class="row">
             <div class="col-xs-equal header">
                 <p style="font-size: large;">Profile</p>
-                <a href="profilePage.html"><img class='img-fluid back' src='images/arrowBack.png' alt="arrow">
+                <a href="profilePage.html"><img class='img-fluid back' src='assets/images/arrowBack.png' alt="arrow">
                 </a>
             </div>
             <div class="col-xs-equal header"></div>
             <div class="col-xs-equal header">
                 <p style="font-size: large;">Financials</p>
-                <a href="financialsPage.html"><img class='img-fluid next' src='images/arrow.png' alt="arrow">
+                <a href="financialsPage.html"><img class='img-fluid next' src='assets/images/arrow.png' alt="arrow">
                 </a>
             </div>
         </div>
@@ -70,7 +70,7 @@
         <div class="section wow fadeInLeft" data-wow-delay="0.2s">
             <div class="row">
                 <div class="col-sm">
-                    <img class="img-fluid" id="introImageSrc" src="images/summaryProfile.png" alt="summary">
+                    <img class="img-fluid" id="introImageSrc" src="assets/images/summaryProfile.png" alt="summary">
                 </div>
             </div>
             <div class="row" style="align-items: center;">
@@ -82,7 +82,7 @@
                         This section gives you a glance at the most current statistics of a company.
                         These will allow you to quickly assess how a company is performing right now.
                     </p>
-                    <a class="arrow" href="#test"><img class="img-fluid arrowImage" src="images/homeArrow.png"
+                    <a class="arrow" href="#test"><img class="img-fluid arrowImage" src="assets/images/homeArrow.png"
                             alt="arrow"></a>
                 </div>
             </div>
@@ -93,19 +93,16 @@
         <div class="wow fadeInRight" id="test" data-wow-delay="0.2s">
             <div class=" row">
                 <div class="secondSection col-sm ">
-                    <img class="img-fluid" src="images/comparison.png" alt="comparison">
+                    <img class="img-fluid" src="assets/images/comparison.png" alt="comparison">
                 </div>
             </div>
             <div class="row">
-
                 <div class="col-sm">
-
                     <p id="secondSectionListTitle">
                         The Summary section will help
                         you in your
                         stock
                         research by:</p>
-
                     <ul>
                         <li class="secondSectionListBullets">
                             Highlighting the stock price
@@ -113,27 +110,21 @@
                             currently
                             being traded
                         </li>
-
                         <li class="secondSectionListBullets">
                             Highlighting the most
                             important ratios such
                             as
                             PE and EPS
                         </li>
-
                         <li class="secondSectionListBullets">
                             Easily compare key metrics
                             across members
                             of a peer group
                     </ul>
-
-
                 </div>
-
-
             </div>
             <div class="row">
-                <a class="mx-auto arrow" href="#test2"><img class="img-fluid arrowImage" src=" images/homeArrow.png"
+                <a class="mx-auto arrow" href="#test2"><img class="img-fluid arrowImage" src="assets/images/homeArrow.png"
                         alt="arrow"></a>
             </div>
         </div>
@@ -146,47 +137,47 @@
                     Click on a button to learn more about the features of this page!
                 </p>
                 <div id="headImageCol">
-                    <img class="img-fluid" id="headImage" src="images/placeholder.png" alt="headImage">
+                    <img class="img-fluid" id="headImage" src="assets/images/placeholder.png" alt="headImage">
                 </div>
                 <div class="row buttonRow">
                     <div class="col-sm"><button class="mx-auto animated fadeIn"
-                            onclick="changeImage('headImage', 'images/price.png'), price()">
+                            onclick="changeImage('headImage', 'assets/images/price.png'), price()">
                             Price
                         </button></div>
                     <div class="col-sm"><button class="mx-auto animated fadeIn"
-                            onclick="changeImage('headImage', 'images/previousClose.png'), previousClose()">
+                            onclick="changeImage('headImage', 'assets/images/previousClose.png'), previousClose()">
                             Previous Close
                         </button></div>
                     <div class="col-sm"><button class="mx-auto animated fadeIn"
-                            onclick="changeImage('headImage', 'images/volume.png'), volume()">
+                            onclick="changeImage('headImage', 'assets/images/volume.png'), volume()">
                             Volume
                         </button></div>
                     <div class="col-sm"><button class="mx-auto animated fadeIn"
-                            onclick="changeImage('headImage', 'images/marketCap.png'), marketCap()">
+                            onclick="changeImage('headImage', 'assets/images/marketCap.png'), marketCap()">
                             Market Cap
                         </button></div>
                 </div>
                 <div class="row buttonRow">
                     <div class="col-sm"><button class="mx-auto animated fadeIn"
-                            onclick="changeImage('headImage', 'images/beta.png'), beta()">
+                            onclick="changeImage('headImage', 'assets/images/beta.png'), beta()">
                             Beta
                         </button></div>
                     <div class="col-sm"><button class="mx-auto animated fadeIn"
-                            onclick="changeImage('headImage', 'images/peRatio.png'), peRatio()">
+                            onclick="changeImage('headImage', 'assets/images/peRatio.png'), peRatio()">
                             PE Ratio
                         </button></div>
                     <div class="col-sm"><button class="mx-auto animated fadeIn"
-                            onclick="changeImage('headImage', 'images/epsRatio.png'), eps()">
+                            onclick="changeImage('headImage', 'assets/images/epsRatio.png'), eps()">
                             EPS Ratio
                         </button></div>
                     <div class="col-sm"><button class="mx-auto animated fadeIn"
-                            onclick="changeImage('headImage', 'images/1YrTargetPrice.png'), oneYr()">
+                            onclick="changeImage('headImage', 'assets/images/1YrTargetPrice.png'), oneYr()">
                             1 Yr Target Est
                         </button></div>
                 </div>
 
                 <div class="row">
-                    <a id="thirdSectionArrow" href="#test3"><img class="img-fluid arrowImage" src="images/homeArrow.png"
+                    <a id="thirdSectionArrow" href="#test3"><img class="img-fluid arrowImage" src="assets/images/homeArrow.png"
                             alt="arrow"></a>
                 </div>
 
